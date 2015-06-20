@@ -2,5 +2,6 @@
 ![](http://www.brandsoftheworld.com/sites/default/files/styles/logo-thumbnail/public/052011/microsoft_.net_.png?itok=yeSwxY-i)
 
 # RiotApi.NET
-Riot Games Api for .NET written in C#. The project is bundles with a web MVC client also written.
+Riot Games Api for .NET written in C#. The project is bundled with a web ASP.NET MVC client that interacts with the 
+api.
 
