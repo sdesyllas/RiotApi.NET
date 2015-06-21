@@ -1,5 +1,8 @@
 ﻿namespace RiotApi.Net.RestClient.Helpers
 {
+    /// <summary>
+    /// All enumerations for the REST api needs
+    /// </summary>
     public class Enums
     {
         public enum GameMode

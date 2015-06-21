@@ -6,9 +6,9 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("RiotApi.Net.RestClient")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("Client for Riot Games REST API")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany("Spyros Desyllas")]
 [assembly: AssemblyProduct("RiotApi.Net.RestClient")]
 [assembly: AssemblyCopyright("Copyright ©  2015")]
 [assembly: AssemblyTrademark("")]
