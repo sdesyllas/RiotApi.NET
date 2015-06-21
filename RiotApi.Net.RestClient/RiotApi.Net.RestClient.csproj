@@ -44,7 +44,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Dto\Champion\ChampionDto.cs" />
     <Compile Include="Dto\Champion\ChampionListDto.cs" />
     <Compile Include="Dto\LolStatus\ShardDto.cs" />
     <Compile Include="RiotHttpClient.cs" />
