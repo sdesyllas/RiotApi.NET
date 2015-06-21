@@ -45,6 +45,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Dto\Champion\ChampionListDto.cs" />
+    <Compile Include="Dto\CurrentGame\CurrentGameInfo.cs" />
+    <Compile Include="Helpers\Enums.cs" />
     <Compile Include="Dto\LolStatus\ShardDto.cs" />
     <Compile Include="RiotHttpClient.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
