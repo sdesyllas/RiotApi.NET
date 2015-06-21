@@ -5,3 +5,5 @@
 Riot Games Api for .NET written in C#. The project is bundled with a web ASP.NET MVC client that interacts with the 
 api.
 
+# Third party libraries used
+* Newtonsoft.Json 7.0.1-beta3
