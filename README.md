@@ -14,10 +14,11 @@ is needed!
 
 
 
-# RiotApi.NET web ASP.NET MVC User Interface **WORK IN PROGRESS**
+# RiotApi.NET web ASP.NET MVC User Interface 
 > (WORK IN PROGRESS)
 
-# RiotApi.NET Android application **WORK IN PROGRESS**
+# RiotApi.NET Android application 
+<img src="http://icons.iconarchive.com/icons/carlosjj/google-jfk/128/android-icon.png"/>
 > (WORK IN PROGRESS)
 
 
