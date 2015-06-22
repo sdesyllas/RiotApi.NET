@@ -2,8 +2,24 @@
 ![](http://www.brandsoftheworld.com/sites/default/files/styles/logo-thumbnail/public/052011/microsoft_.net_.png?itok=yeSwxY-i)
 
 # RiotApi.NET
-Riot Games Api for .NET written in C#. The project is bundled with a web ASP.NET MVC client that interacts with the 
-api.
+> (WORK IN PROGRESS)
+
+
+This is a .net Api for Riot Games League of Legends written in C#. The goal of this ptoject is to provide a higher 
+level of interaction with the Riot's API Rest service, json responses are deserialized to objects and all methods of the
+service are called via an Interface with all supported methods as documented by Riot.
+
+In other words this projects is a simple C# client with no special configuration or magic tricks, only an api key
+is needed
+
+
+
+# RiotApi.NET web ASP.NET MVC User Interface **WORK IN PROGRESS**
+> (WORK IN PROGRESS)
+
+# RiotApi.NET Android application **WORK IN PROGRESS**
+> (WORK IN PROGRESS)
+
 
 # Third party libraries used
 * [Newtonsoft.Json 7.0.1-beta3](https://github.com/JamesNK/Newtonsoft.Json)
