@@ -32,7 +32,7 @@ namespace RiotApi.Net.RestClient.Dto.CurrentGame
         /// </summary>
         [JsonProperty(PropertyName = "gameMode")]
         [JsonConverter(typeof(StringEnumConverter))]
-        public Helpers.Enums.GameMode gameMode { get; set; }
+        public Helpers.Enums.GameMode GameMode { get; set; }
 
         /// <summary>
         /// The queue type (queue types are documented on the Game Constants page)
