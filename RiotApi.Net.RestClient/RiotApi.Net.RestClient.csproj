@@ -50,6 +50,13 @@
     <Compile Include="Dto\FeaturedGames\FeaturedGames.cs" />
     <Compile Include="Dto\Game\RecentGamesDto.cs" />
     <Compile Include="Dto\League\LeagueDto.cs" />
+    <Compile Include="Dto\LolStaticData\Generic\BasicDataDto.cs" />
+    <Compile Include="Dto\LolStaticData\Generic\BasicDataStatsDto.cs" />
+    <Compile Include="Dto\LolStaticData\Generic\GoldDto.cs" />
+    <Compile Include="Dto\LolStaticData\Generic\ImageDto.cs" />
+    <Compile Include="Dto\LolStaticData\Generic\MetaDataDto.cs" />
+    <Compile Include="Dto\LolStaticData\Rune\RuneDto.cs" />
+    <Compile Include="Dto\LolStaticData\Rune\RuneListDto.cs" />
     <Compile Include="Helpers\Enums.cs" />
     <Compile Include="Dto\LolStatus\ShardDto.cs" />
     <Compile Include="RiotHttpClient.cs" />
