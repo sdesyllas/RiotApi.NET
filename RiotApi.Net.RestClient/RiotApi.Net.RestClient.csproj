@@ -47,6 +47,8 @@
     <Compile Include="Configuration\RiotApiConfig.cs" />
     <Compile Include="Dto\Champion\ChampionListDto.cs" />
     <Compile Include="Dto\CurrentGame\CurrentGameInfo.cs" />
+    <Compile Include="Dto\FeaturedGames\FeaturedGames.cs" />
+    <Compile Include="Dto\Game\RecentGamesDto.cs" />
     <Compile Include="Helpers\Enums.cs" />
     <Compile Include="Dto\LolStatus\ShardDto.cs" />
     <Compile Include="RiotHttpClient.cs" />
