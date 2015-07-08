@@ -1,10 +1,6 @@
 ﻿using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace RiotApi.Net.RestClient.Dto.Game
 {
@@ -26,7 +22,7 @@ namespace RiotApi.Net.RestClient.Dto.Game
         public IEnumerable<GameDto> SummonerId { get; set; }
 
         /// <summary>
-        /// GameDto
+        /// GameDto  This object contains game information.
         /// </summary>
         public class GameDto
         {
@@ -125,7 +121,7 @@ namespace RiotApi.Net.RestClient.Dto.Game
         }
 
         /// <summary>
-        /// PlayerDto
+        /// PlayerDto This object contains player information.
         /// </summary>
         public class PlayerDto
         {
@@ -149,7 +145,7 @@ namespace RiotApi.Net.RestClient.Dto.Game
         }
 
         /// <summary>
-        /// RawStatsDto
+        /// RawStatsDto This object contains raw stat information.
         /// </summary>
         public class RawStatsDto
         {
