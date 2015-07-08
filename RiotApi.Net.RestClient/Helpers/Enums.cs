@@ -51,5 +51,23 @@
             KING_PORO,
             COUNTER_PICK
         }
+
+        public enum QueueType
+        {
+            RANKED_SOLO_5x5,
+            RANKED_TEAM_3x3,
+            RANKED_TEAM_5x5
+        }
+
+        public enum Tier
+        {
+            CHALLENGER,
+            MASTER,
+            DIAMOND,
+            PLATINUM, //I WISH!!!
+            GOLD,
+            SILVER,
+            BRONZE
+        }
     }
 }
