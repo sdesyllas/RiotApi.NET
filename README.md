@@ -8,8 +8,8 @@ This is a .net Api for Riot Games League of Legends written in C#. The goal of t
 level of interaction with the Riot's API Rest service, json responses are deserialized to objects and all methods of the
 service are called via an Interface with all supported methods as documented by Riot.
 
-In other words this project is a simple C# client with no special configuration or magic tricks, only an api key
-is needed!
+In other words this project is a C# wrapper client that can be used within any kind of .net application or other
+kind of application using .net mono framework.
 
 
 
