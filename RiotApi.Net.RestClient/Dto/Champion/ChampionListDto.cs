@@ -6,7 +6,7 @@ namespace RiotApi.Net.RestClient.Dto.Champion
     /// <summary>
     /// ChampionListDto - This object contains a collection of champion information.
     /// </summary>
-    public class ChampionListDto
+    public class ChampionListDto : RiotDto
     {
         /// <summary>
         /// champions	List[ChampionDto]	The collection of champion information.

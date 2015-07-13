@@ -1,6 +1,4 @@
 ﻿using Newtonsoft.Json;
-using Newtonsoft.Json.Converters;
-using RiotApi.Net.RestClient.Dto.LolStaticData.Generic;
 using System.Collections.Generic;
 
 namespace RiotApi.Net.RestClient.Dto.LolStaticData.Mastery
@@ -8,7 +6,7 @@ namespace RiotApi.Net.RestClient.Dto.LolStaticData.Mastery
     /// <summary>
     /// This object contains mastery list data.
     /// </summary>
-    public class MasteryListDto
+    public class MasteryListDto : RiotDto
     {
         /// <summary>
         /// No description available from Riot Documentation

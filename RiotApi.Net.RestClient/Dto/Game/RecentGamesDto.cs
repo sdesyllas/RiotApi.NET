@@ -7,7 +7,7 @@ namespace RiotApi.Net.RestClient.Dto.Game
     /// <summary>
     /// RecentGamesDto
     /// </summary>
-    public class RecentGamesDto
+    public class RecentGamesDto : RiotDto
     {
         /// <summary>
         /// Collection of recent games played (max 10).

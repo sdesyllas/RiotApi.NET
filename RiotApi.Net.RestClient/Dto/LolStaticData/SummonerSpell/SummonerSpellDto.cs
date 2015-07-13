@@ -7,7 +7,7 @@ namespace RiotApi.Net.RestClient.Dto.LolStaticData.SummonerSpell
     /// <summary>
     /// This object contains summoner spell data.
     /// </summary>
-    public class SummonerSpellDto
+    public class SummonerSpellDto : RiotDto
     {
         /// <summary>
         /// No description available from Riot Documentation

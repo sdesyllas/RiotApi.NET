@@ -7,7 +7,7 @@ namespace RiotApi.Net.RestClient.Dto.LolStaticData.Item
     /// <summary>
     /// This object contains item list data.
     /// </summary>
-    public class ItemListDto
+    public class ItemListDto : RiotDto
     {
         /// <summary>
         /// No description available from Riot Documentation

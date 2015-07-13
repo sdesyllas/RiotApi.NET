@@ -8,7 +8,7 @@ namespace RiotApi.Net.RestClient.Dto.LolStaticData.Mastery
     /// <summary>
     /// This object contains mastery data.
     /// </summary>
-    public class MasteryDto
+    public class MasteryDto : RiotDto
     {
         /// <summary>
         /// No description available from Riot Documentation

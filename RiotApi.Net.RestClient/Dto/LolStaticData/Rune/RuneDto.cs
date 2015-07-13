@@ -7,7 +7,7 @@ namespace RiotApi.Net.RestClient.Dto.LolStaticData.Rune
     /// <summary>
     /// RuneDto - This object contains rune data.
     /// </summary>
-    public class RuneDto
+    public class RuneDto : RiotDto
     {
         /// <summary>
         /// No description available from Riot Documentation

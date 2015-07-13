@@ -7,7 +7,7 @@ namespace RiotApi.Net.RestClient.Dto.CurrentGame
     /// <summary>
     /// Current Game Info
     /// </summary>
-    public class CurrentGameInfo
+    public class CurrentGameInfo : RiotDto
     {
         /// <summary>
         /// List[BannedChampion]	Banned champion information

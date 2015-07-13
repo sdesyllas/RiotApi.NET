@@ -7,7 +7,7 @@ namespace RiotApi.Net.RestClient.Dto.LolStaticData.Champion
     /// <summary>
     /// This object contains champion data.
     /// </summary>
-    public class ChampionDto
+    public class ChampionDto : RiotDto
     {
         /// <summary>
         /// No description available from Riot Documentation

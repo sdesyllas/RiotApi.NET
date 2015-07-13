@@ -6,7 +6,7 @@ namespace RiotApi.Net.RestClient.Dto.LolStatus
     /// <summary>
     /// LOL Status for each shard
     /// </summary>
-    public class ShardDto
+    public class ShardDto : RiotDto
     {
         /// <summary>
         /// hostname	string

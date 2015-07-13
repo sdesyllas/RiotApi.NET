@@ -7,7 +7,7 @@ namespace RiotApi.Net.RestClient.Dto.FeaturedGames
     /// <summary>
     /// FeaturedGames
     /// </summary>
-    public class FeaturedGames
+    public class FeaturedGames : RiotDto
     {
         /// <summary>
         /// ClientRefreshInterval  The suggested interval to wait before requesting FeaturedGames again

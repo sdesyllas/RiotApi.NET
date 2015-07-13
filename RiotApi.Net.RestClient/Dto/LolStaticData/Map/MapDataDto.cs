@@ -6,7 +6,7 @@ namespace RiotApi.Net.RestClient.Dto.LolStaticData.Map
     /// <summary>
     /// This object contains map details data. 
     /// </summary>
-    public class MapDataDto
+    public class MapDataDto : RiotDto
     {
         /// <summary>
         /// No description available from Riot Documentation

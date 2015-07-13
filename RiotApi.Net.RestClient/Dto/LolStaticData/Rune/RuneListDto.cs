@@ -1,17 +1,13 @@
 ﻿using Newtonsoft.Json;
 using RiotApi.Net.RestClient.Dto.LolStaticData.Generic;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace RiotApi.Net.RestClient.Dto.LolStaticData.Rune
 {
     /// <summary>
     /// Not all data specified below is returned by default. See the runeListData parameter for more information.
     /// </summary>
-    public class RuneListDto
+    public class RuneListDto : RiotDto
     {
         /// <summary>
         /// No description available from Riot Documentation

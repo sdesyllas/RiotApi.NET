@@ -7,9 +7,9 @@ namespace RiotApi.Net.RestClient.Dto.LolStaticData.Item
     /// <summary>
     /// This object contains item data.
     /// </summary>
-    public class ItemDto
+    public class ItemDto : RiotDto
     {
-/// <summary>
+        /// <summary>
         /// No description available from Riot Documentation
         /// </summary>
         [JsonProperty(PropertyName = "colloq")]

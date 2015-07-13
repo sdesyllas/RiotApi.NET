@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace RiotApi.Net.RestClient.Dto.League
 {
-    public class LeagueDto
+    public class LeagueDto : RiotDto
     {
         /// <summary>
         /// The requested league entries.

@@ -84,6 +84,7 @@
     <Compile Include="Dto\LolStaticData\SummonerSpell\SummonerSpellDto.cs" />
     <Compile Include="Dto\Match\Generic\ParticipantFrame.cs" />
     <Compile Include="Dto\Match\Generic\Position.cs" />
+    <Compile Include="Dto\RiotDto.cs" />
     <Compile Include="Helpers\Enums.cs" />
     <Compile Include="Dto\LolStatus\ShardDto.cs" />
     <Compile Include="IRiotClient.cs" />

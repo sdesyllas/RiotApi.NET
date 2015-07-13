@@ -6,7 +6,7 @@ namespace RiotApi.Net.RestClient.Dto.LolStaticData.LanguageStrings
     /// <summary>
     /// This object contains language strings data.
     /// </summary>
-    public class LanguageStringsDto
+    public class LanguageStringsDto : RiotDto
     {
         /// <summary>
         /// No description available from Riot Documentation

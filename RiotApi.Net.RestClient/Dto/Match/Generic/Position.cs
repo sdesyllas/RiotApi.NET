@@ -5,7 +5,7 @@ namespace RiotApi.Net.RestClient.Dto.Match.Generic
     /// <summary>
     /// This object contains participant frame position information
     /// </summary>
-    public class Position
+    public class Position : RiotDto
     {
         /// <summary>
         /// x

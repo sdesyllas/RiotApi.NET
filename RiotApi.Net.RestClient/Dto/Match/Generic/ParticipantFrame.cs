@@ -1,16 +1,11 @@
 ﻿using Newtonsoft.Json;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace RiotApi.Net.RestClient.Dto.Match.Generic
 {
     /// <summary>
     /// This object contains participant frame information
     /// </summary>
-    public class ParticipantFrame
+    public class ParticipantFrame : RiotDto
     {
         /// <summary>
         /// Participant's current gold
