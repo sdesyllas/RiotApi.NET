@@ -50,19 +50,47 @@
     <Compile Include="Dto\FeaturedGames\FeaturedGames.cs" />
     <Compile Include="Dto\Game\RecentGamesDto.cs" />
     <Compile Include="Dto\League\LeagueDto.cs" />
+    <Compile Include="Dto\LolStaticData\Champion\ChampionListDto.cs" />
+    <Compile Include="Dto\LolStaticData\Champion\ChampionDto.cs" />
     <Compile Include="Dto\LolStaticData\Generic\BasicDataDto.cs" />
+    <Compile Include="Dto\LolStaticData\Champion\ChampionSpellDto.cs" />
+    <Compile Include="Dto\LolStaticData\Generic\InfoDto.cs" />
+    <Compile Include="Dto\LolStaticData\Generic\PassiveDto.cs" />
+    <Compile Include="Dto\LolStaticData\Generic\RecommendedDto.cs" />
+    <Compile Include="Dto\LolStaticData\Generic\SkinDto.cs" />
+    <Compile Include="Dto\LolStaticData\Generic\StatsDto.cs" />
     <Compile Include="Dto\LolStaticData\Generic\BasicDataStatsDto.cs" />
+    <Compile Include="Dto\LolStaticData\Generic\LevelTipDto.cs" />
+    <Compile Include="Dto\LolStaticData\Generic\SpellVarsDto.cs" />
+    <Compile Include="Dto\LolStaticData\Generic\BlockDto.cs" />
+    <Compile Include="Dto\LolStaticData\Generic\BlockItemDto.cs" />
     <Compile Include="Dto\LolStaticData\Generic\GoldDto.cs" />
+    <Compile Include="Dto\LolStaticData\Generic\GroupDto.cs" />
     <Compile Include="Dto\LolStaticData\Generic\ImageDto.cs" />
     <Compile Include="Dto\LolStaticData\Generic\MetaDataDto.cs" />
+    <Compile Include="Dto\LolStaticData\Item\ItemDto.cs" />
+    <Compile Include="Dto\LolStaticData\Item\ItemListDto.cs" />
+    <Compile Include="Dto\LolStaticData\Item\ItemTreeDto.cs" />
+    <Compile Include="Dto\LolStaticData\LanguageStrings\LanguageStringsDto.cs" />
+    <Compile Include="Dto\LolStaticData\Map\MapDataDto.cs" />
+    <Compile Include="Dto\LolStaticData\Map\MapDetailsDto.cs" />
+    <Compile Include="Dto\LolStaticData\Mastery\MasteryListDto.cs" />
+    <Compile Include="Dto\LolStaticData\Mastery\MasteryDto.cs" />
+    <Compile Include="Dto\LolStaticData\Mastery\MasteryTreeDto.cs" />
+    <Compile Include="Dto\LolStaticData\Realm\RealmDto.cs" />
     <Compile Include="Dto\LolStaticData\Rune\RuneDto.cs" />
     <Compile Include="Dto\LolStaticData\Rune\RuneListDto.cs" />
+    <Compile Include="Dto\LolStaticData\SummonerSpell\SummonerSpellListDto.cs" />
+    <Compile Include="Dto\LolStaticData\SummonerSpell\SummonerSpellDto.cs" />
     <Compile Include="Helpers\Enums.cs" />
     <Compile Include="Dto\LolStatus\ShardDto.cs" />
+    <Compile Include="IRiotClient.cs" />
     <Compile Include="RiotHttpClient.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Dto\Match\MatchHistory\" />
+  </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>

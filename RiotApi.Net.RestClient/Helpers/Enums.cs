@@ -69,5 +69,12 @@
             SILVER,
             BRONZE
         }
+
+        public enum MasteryTree
+        {
+            Defense,
+            Offense,
+            Utility
+        }
     }
 }

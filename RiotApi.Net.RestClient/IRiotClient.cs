@@ -6,8 +6,7 @@ using System.Threading.Tasks;
 
 namespace RiotApi.Net.RestClient
 {
-    public class RiotHttpClient : IRiotClient
+    public interface IRiotClient
     {
-
     }
 }

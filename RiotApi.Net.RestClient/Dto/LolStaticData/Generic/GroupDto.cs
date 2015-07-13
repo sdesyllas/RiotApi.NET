@@ -1,23 +1,22 @@
 ﻿using Newtonsoft.Json;
-using System.Collections.Generic;
 
 namespace RiotApi.Net.RestClient.Dto.LolStaticData.Generic
 {
     /// <summary>
-    /// This object contains image data.
+    /// This object contains item group data.
     /// </summary>
-    public class ImageDto
+    public class GroupDto
     {
         /// <summary>
         /// No description available from Riot Documentation
         /// </summary>
-        [JsonProperty(PropertyName = "effect")]
-        public IEnumerable<string> Effect { get; set; }
+        [JsonProperty(PropertyName = "MaxGroupOwnable")]
+        public string MaxGroupOwnable { get; set; }
 
         /// <summary>
         /// No description available from Riot Documentation
         /// </summary>
-        [JsonProperty(PropertyName = "label")]
-        public IEnumerable<string> Label { get; set; }
+        [JsonProperty(PropertyName = "key")]
+        public string Key { get; set; }
     }
 }
