@@ -1,12 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using RiotApi.Net.RestClient.Interfaces;
 
 namespace RiotApi.Net.RestClient
 {
+    /// <summary>
+    /// Full API Reference (REST)
+    /// </summary>
     public interface IRiotClient
     {
+        IChampion Champion { get; set; }
+
+        ICurrentGame CurrentGame { get; set; }
+
+        IFeaturedGames FeaturedGames { get; set; }
+
+        ILeague League { get; set; }
     }
 }

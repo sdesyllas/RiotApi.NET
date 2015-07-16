@@ -52,11 +52,46 @@
             COUNTER_PICK
         }
 
-        public enum QueueType
+        public enum GameQueueType
         {
             RANKED_SOLO_5x5,
             RANKED_TEAM_3x3,
-            RANKED_TEAM_5x5
+            RANKED_TEAM_5x5,
+        }
+
+        public enum QueueType
+        {
+            CUSTOM,
+            NORMAL_5x5_BLIND,
+            RANKED_SOLO_5x5,
+            RANKED_PREMADE_5x5,
+            BOT_5x5,
+            NORMAL_3x3,
+            RANKED_PREMADE_3x3,
+            NORMAL_5x5_DRAFT,
+            ODIN_5x5_BLIND,
+            ODIN_5x5_DRAFT,
+            BOT_ODIN_5x5,
+            BOT_5x5_INTRO,
+            BOT_5x5_BEGINNER,
+            BOT_5x5_INTERMEDIATE,
+            RANKED_TEAM_3x3,
+            RANKED_TEAM_5x5,
+            BOT_TT_3x3,
+            GROUP_FINDER_5x5, ARAM_5x5,
+            ONEFORALL_5x5,
+            FIRSTBLOOD_1x1,
+            FIRSTBLOOD_2x2,
+            SR_6x6, URF_5x5,
+            ONEFORALL_MIRRORMODE_5x5,
+            BOT_URF_5x5,
+            NIGHTMARE_BOT_5x5_RANK1,
+            NIGHTMARE_BOT_5x5_RANK2,
+            NIGHTMARE_BOT_5x5_RANK5,
+            ASCENSION_5x5,
+            HEXAKILL,
+            KING_PORO_5x5,
+            COUNTER_PICK
         }
 
         public enum Tier
@@ -75,22 +110,6 @@
             Defense,
             Offense,
             Utility
-        }
-
-        public enum RegionalEndPoints
-        {
-            BR,
-            EUNE,
-            EUW,
-            KR,
-            LAN,
-            LAS,
-            NA,
-            OCE,
-            TR,
-            RU,
-            PBE,
-            Global
         }
 
         public enum AscendedType
@@ -191,6 +210,45 @@
             SOLO,
             DUO_CARRY,
             DUO_SUPPORT
+        }
+
+        public enum HighestAchievedSeasonTier
+        {
+            CHALLENGER,
+            MASTER,
+            DIAMOND,
+            PLATINUM,
+            GOLD,
+            SILVER,
+            BRONZE,
+            UNRANKED
+        }
+
+        public enum PlayerStatSummaryType
+        {
+            AramUnranked5x5,
+            Ascension,
+            CAP5x5,
+            CoopVsAI,
+            CoopVsAI3x3,
+            CounterPick,
+            FirstBlood1x1,
+            FirstBlood2x2,
+            Hexakill,
+            KingPoro,
+            NightmareBot,
+            OdinUnranked,
+            OneForAll5x5,
+            RankedPremade3x3,
+            RankedPremade5x5,
+            RankedSolo5x5,
+            RankedTeam3x3,
+            RankedTeam5x5,
+            SummonersRift6x6,
+            Unranked,
+            Unranked3x3,
+            URF,
+            URFBots
         }
     }
 }

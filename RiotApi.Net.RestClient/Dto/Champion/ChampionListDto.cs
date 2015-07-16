@@ -17,7 +17,7 @@ namespace RiotApi.Net.RestClient.Dto.Champion
         /// <summary>
         /// ChampionDto - This object contains champion information.
         /// </summary>
-        public class ChampionDto
+        public class ChampionDto : RiotDto
         {
             /// <summary>
             /// active	boolean	Indicates if the champion is active.

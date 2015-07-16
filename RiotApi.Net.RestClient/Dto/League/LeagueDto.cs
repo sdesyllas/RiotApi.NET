@@ -29,7 +29,7 @@ namespace RiotApi.Net.RestClient.Dto.League
         /// </summary>
         [JsonProperty(PropertyName = "queue")]
         [JsonConverter(typeof(StringEnumConverter))]
-        public Helpers.Enums.QueueType Queue { get; set; }
+        public Helpers.Enums.GameQueueType Queue { get; set; }
 
         /// <summary>
         /// The league's tier. (Legal values: CHALLENGER, MASTER, DIAMOND, PLATINUM, GOLD, SILVER, BRONZE)

@@ -34,5 +34,36 @@ namespace RiotApi.Net.RestClient.Configuration
             public string Host { get; set; }
         }
         #endregion
+
+        public enum Regions
+        {
+            BR,
+            EUNE,
+            EUW,
+            KR,
+            LAN,
+            LAS,
+            NA,
+            OCE,
+            TR,
+            RU,
+            PBE,
+            Global
+        }
+
+        public enum Platforms
+        {
+            BR1,
+            EUN1,
+            EUW1,
+            KR,
+            LA1,
+            LA2,
+            NA1,
+            OC1,
+            TR1,
+            RU,
+            PBE1
+        }
     }
 }
