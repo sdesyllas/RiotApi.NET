@@ -76,5 +76,121 @@
             Offense,
             Utility
         }
+
+        public enum RegionalEndPoints
+        {
+            BR,
+            EUNE,
+            EUW,
+            KR,
+            LAN,
+            LAS,
+            NA,
+            OCE,
+            TR,
+            RU,
+            PBE,
+            Global
+        }
+
+        public enum AscendedType
+        {
+            CHAMPION_ASCENDED,
+            CLEAR_ASCENDED,
+            MINION_ASCENDED
+        }
+
+        public enum BuildingType
+        {
+            INHIBITOR_BUILDING,
+            TOWER_BUILDING
+        }
+
+        public enum EventType
+        {
+            ASCENDED_EVENT,
+            BUILDING_KILL,
+            CAPTURE_POINT,
+            CHAMPION_KILL,
+            ELITE_MONSTER_KILL,
+            ITEM_DESTROYED,
+            ITEM_PURCHASED,
+            ITEM_SOLD,
+            ITEM_UNDO,
+            PORO_KING_SUMMON,
+            SKILL_LEVEL_UP,
+            WARD_KILL,
+            WARD_PLACED,
+        }
+
+        public enum LaneType
+        {
+            BOT_LANE,
+            MID_LANE,
+            TOP_LANE
+        }
+
+        public enum LevelUpType
+        {
+            EVOLVE,
+            NORMAL
+        }
+
+        public enum MonsterType
+        {
+            BARON_NASHOR,
+            BLUE_GOLEM,
+            DRAGON,
+            RED_LIZARD,
+            VILEMAW
+        }
+
+        public enum PointCaptured
+        {
+            POINT_A,
+            POINT_B,
+            POINT_C,
+            POINT_D,
+            POINT_E
+        }
+
+        public enum TowerType
+        {
+            BASE_TURRET,
+            FOUNTAIN_TURRET,
+            INNER_TURRET,
+            NEXUS_TURRET,
+            OUTER_TURRET,
+            UNDEFINED_TURRET
+        }
+
+        public enum WardType
+        {
+            SIGHT_WARD,
+            TEEMO_MUSHROOM,
+            UNDEFINED,
+            VISION_WARD,
+            YELLOW_TRINKET,
+            YELLOW_TRINKET_UPGRADE
+        }
+
+        public enum Lane
+        {
+            MID,
+            MIDDLE,
+            TOP,
+            JUNGLE,
+            BOT,
+            BOTTOM
+        }
+
+        public enum Role
+        {
+            DUO,
+            NONE,
+            SOLO,
+            DUO_CARRY,
+            DUO_SUPPORT
+        }
     }
 }

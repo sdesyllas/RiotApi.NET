@@ -82,7 +82,17 @@
     <Compile Include="Dto\LolStaticData\Rune\RuneListDto.cs" />
     <Compile Include="Dto\LolStaticData\SummonerSpell\SummonerSpellListDto.cs" />
     <Compile Include="Dto\LolStaticData\SummonerSpell\SummonerSpellDto.cs" />
+    <Compile Include="Dto\Match\Generic\Timeline.cs" />
+    <Compile Include="Dto\Match\Generic\ParticipantStats.cs" />
+    <Compile Include="Dto\Match\Generic\ParticipantTimeline.cs" />
+    <Compile Include="Dto\Match\Generic\Mastery.cs" />
+    <Compile Include="Dto\Match\Generic\Rune.cs" />
+    <Compile Include="Dto\Match\Generic\Player.cs" />
+    <Compile Include="Dto\Match\Generic\Event.cs" />
+    <Compile Include="Dto\Match\Generic\BannedChampion.cs" />
+    <Compile Include="Dto\Match\Generic\Frame.cs" />
     <Compile Include="Dto\Match\Generic\ParticipantFrame.cs" />
+    <Compile Include="Dto\Match\Generic\ParticipantTimelineData.cs" />
     <Compile Include="Dto\Match\Generic\Position.cs" />
     <Compile Include="Dto\RiotDto.cs" />
     <Compile Include="Helpers\Enums.cs" />
