@@ -116,6 +116,7 @@
     <Compile Include="Interfaces\IFeaturedGames.cs" />
     <Compile Include="Interfaces\IGame.cs" />
     <Compile Include="Interfaces\ILeague.cs" />
+    <Compile Include="Interfaces\ILolStaticData.cs" />
     <Compile Include="IRiotClient.cs" />
     <Compile Include="RiotHttpClient.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
