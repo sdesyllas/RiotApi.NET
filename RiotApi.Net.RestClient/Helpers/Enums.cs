@@ -250,5 +250,20 @@
             URF,
             URFBots
         }
+
+        public enum MessageSeverity
+        {
+            Info,
+            Alert,
+            Error
+        }
+
+        public enum ServiceStatus
+        {
+            Online,
+            Alert,
+            Offline,
+            Deploying
+        }
     }
 }

@@ -83,6 +83,7 @@
     <Compile Include="Dto\LolStaticData\Rune\RuneListDto.cs" />
     <Compile Include="Dto\LolStaticData\SummonerSpell\SummonerSpellListDto.cs" />
     <Compile Include="Dto\LolStaticData\SummonerSpell\SummonerSpellDto.cs" />
+    <Compile Include="Dto\LolStatus\ShardStatusDto.cs" />
     <Compile Include="Dto\Match\Generic\Participant.cs" />
     <Compile Include="Dto\Match\Generic\ParticipantIdentity.cs" />
     <Compile Include="Dto\Match\Generic\TeamDto.cs" />
@@ -117,6 +118,12 @@
     <Compile Include="Interfaces\IGame.cs" />
     <Compile Include="Interfaces\ILeague.cs" />
     <Compile Include="Interfaces\ILolStaticData.cs" />
+    <Compile Include="Interfaces\ILolStatus.cs" />
+    <Compile Include="Interfaces\IMatch.cs" />
+    <Compile Include="Interfaces\IMatchHistory.cs" />
+    <Compile Include="Interfaces\IStats.cs" />
+    <Compile Include="Interfaces\ISummoner.cs" />
+    <Compile Include="Interfaces\ITeam.cs" />
     <Compile Include="IRiotClient.cs" />
     <Compile Include="RiotHttpClient.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

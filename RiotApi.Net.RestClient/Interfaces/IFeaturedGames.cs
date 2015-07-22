@@ -1,6 +1,5 @@
 ﻿using RiotApi.Net.RestClient.Configuration;
 using RiotApi.Net.RestClient.Dto.FeaturedGames;
-using RiotApi.Net.RestClient.Helpers;
 
 namespace RiotApi.Net.RestClient.Interfaces
 {

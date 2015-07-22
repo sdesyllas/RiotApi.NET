@@ -1,10 +1,6 @@
 ﻿using RiotApi.Net.RestClient.Configuration;
 using RiotApi.Net.RestClient.Dto.League;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace RiotApi.Net.RestClient.Interfaces
 {

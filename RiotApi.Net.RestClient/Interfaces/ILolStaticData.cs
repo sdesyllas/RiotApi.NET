@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 using RiotApi.Net.RestClient.Configuration;
 using RiotApi.Net.RestClient.Dto.LolStaticData.Champion;
 using RiotApi.Net.RestClient.Dto.LolStaticData.Item;
@@ -10,6 +6,8 @@ using RiotApi.Net.RestClient.Dto.LolStaticData.LanguageStrings;
 using RiotApi.Net.RestClient.Dto.LolStaticData.Map;
 using RiotApi.Net.RestClient.Dto.LolStaticData.Mastery;
 using RiotApi.Net.RestClient.Dto.LolStaticData.Realm;
+using RiotApi.Net.RestClient.Dto.LolStaticData.Rune;
+using RiotApi.Net.RestClient.Dto.LolStaticData.SummonerSpell;
 
 namespace RiotApi.Net.RestClient.Interfaces
 {
@@ -147,5 +145,77 @@ namespace RiotApi.Net.RestClient.Interfaces
         /// <param name="region">Region corresponding to data to retrieve.</param>
         /// <returns>RealmDto - This object contains realm data.</returns>
         RealmDto GetRealData(RiotApiConfig.Regions region);
+
+        /// <summary>
+        /// Retrieves rune list.
+        /// Rate Limit Notes
+        /// Requests to this API will not be counted in your Rate Limit.
+        /// Implementation Notes
+        /// Not all data specified below is returned by default. See the runeListData parameter for more information.
+        /// </summary>
+        /// <param name="region">Region from which to retrieve data.</param>
+        /// <param name="locale">Locale code for returned data (e.g., en_US, es_ES). If not specified, the default locale for the region is used.</param>
+        /// <param name="version">Data dragon version for returned data. If not specified, the latest version for the region is used. List of valid versions can be obtained from the /versions endpoint.</param>
+        /// <param name="runeListData">Tags to return additional data. Only type, version, data, id, name, rune, and description are returned by default if this parameter isn't specified. To return all additional data, use the tag 'all'.</param>
+        /// <returns>RuneListDto - This object contains rune list data.</returns>
+        RuneListDto GetRuneList(RiotApiConfig.Regions region, string locale = "en_US", string version = "",
+            string runeListData = "all");
+
+        /// <summary>
+        /// Retrieves rune by its unique id.
+        /// Rate Limit Notes
+        /// Requests to this API will not be counted in your Rate Limit.
+        /// Implementation Notes
+        ///  Not all data specified below is returned by default. See the runeData parameter for more information.
+        /// </summary>
+        /// <param name="region">Region from which to retrieve data.</param>
+        /// <param name="id">Rune ID</param>
+        /// <param name="locale">Locale code for returned data (e.g., en_US, es_ES). If not specified, the default locale for the region is used.</param>
+        /// <param name="version">Data dragon version for returned data. If not specified, the latest version for the region is used. List of valid versions can be obtained from the /versions endpoint.</param>
+        /// <param name="runeData">Tags to return additional data. Only id, name, rune, and description are returned by default if this parameter isn't specified. To return all additional data, use the tag 'all'.</param>
+        /// <returns>RuneDto - This object contains rune data.</returns>
+        RuneDto GetRuneById(RiotApiConfig.Regions region, int id, string locale = "en_US", string version = "",
+            string runeData = "all");
+
+        /// <summary>
+        /// Retrieves summoner spell list.
+        /// Rate Limit Notes
+        /// Requests to this API will not be counted in your Rate Limit.
+        /// Implementation Notes
+        /// Not all data specified below is returned by default. See the spellData parameter for more information.
+        /// </summary>
+        /// <param name="region">Region from which to retrieve data.</param>
+        /// <param name="locale">Locale code for returned data (e.g., en_US, es_ES). If not specified, the default locale for the region is used.</param>
+        /// <param name="version">Data dragon version for returned data. If not specified, the latest version for the region is used. List of valid versions can be obtained from the /versions endpoint.</param>
+        /// <param name="dataById">If specified as true, the returned data map will use the spells' IDs as the keys. If not specified or specified as false, the returned data map will use the spells' keys instead.</param>
+        /// <param name="spellData">Tags to return additional data. Only type, version, data, id, key, name, description, and summonerLevel are returned by default if this parameter isn't specified. To return all additional data, use the tag 'all'.</param>
+        /// <returns>SummonerSpellListDto - This object contains summoner spell list data.</returns>
+        SummonerSpellListDto GetSummonerSpellList(RiotApiConfig.Regions region, string locale = "en_US",
+            string version = "", bool dataById = false, string spellData = "all");
+
+        /// <summary>
+        /// Retrieves summoner spell by its unique id.
+        /// Rate Limit Notes
+        /// Requests to this API will not be counted in your Rate Limit.
+        /// Implementation Notes
+        /// Not all data specified below is returned by default. See the spellData parameter for more information.
+        /// </summary>
+        /// <param name="region">Region from which to retrieve data.</param>
+        /// <param name="id">Summoner spell ID</param>
+        /// <param name="locale">Locale code for returned data (e.g., en_US, es_ES). If not specified, the default locale for the region is used.</param>
+        /// <param name="version">Data dragon version for returned data. If not specified, the latest version for the region is used. List of valid versions can be obtained from the /versions endpoint.</param>
+        /// <param name="spellData">Tags to return additional data. Only id, key, name, description, and summonerLevel are returned by default if this parameter isn't specified. To return all additional data, use the tag 'all'.</param>
+        /// <returns>SummonerSpellDto - This object contains summoner spell data.</returns>
+        SummonerSpellDto GetSummernerSpellById(RiotApiConfig.Regions region, int id, string locale = "en_US",
+            string version = "", string spellData = "all");
+
+        /// <summary>
+        /// Retrieve version data.
+        /// Rate Limit Notes
+        /// Requests to this API will not be counted in your Rate Limit.
+        /// </summary>
+        /// <param name="region"></param>
+        /// <returns>Return Value: List[string]</returns>
+        IEnumerable<string> GetVersionData(RiotApiConfig.Regions region);
     }
 }
