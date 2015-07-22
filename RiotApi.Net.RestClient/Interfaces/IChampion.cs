@@ -1,4 +1,5 @@
-﻿using RiotApi.Net.RestClient.Dto.Champion;
+﻿using System.Security.Cryptography.X509Certificates;
+using RiotApi.Net.RestClient.Dto.Champion;
 using RiotApi.Net.RestClient.Configuration;
 
 namespace RiotApi.Net.RestClient.Interfaces
@@ -9,12 +10,17 @@ namespace RiotApi.Net.RestClient.Interfaces
     public interface IChampion
     {
         /// <summary>
+        /// Riot Api Key
+        /// </summary>
+        string ApiKey { get; set; }
+
+        /// <summary>
         /// Retrieve all champions. (REST)
         /// </summary>
         /// <param name="region">Region where to retrieve the data.</param>
         /// <param name="freeToPlay">Optional filter param to retrieve only free to play champions.</param>
         /// <returns>ChampionListDto - This object contains a collection of champion information.</returns>
-        ChampionListDto RetrieveAllChampions(RiotApiConfig.Regions region, bool freeToPlay = false);
+        ChampionListDto RetrieveAllChampions(RiotApiConfig.Regions region, bool? freeToPlay = null);
 
         /// <summary>
         /// Retrieve champion by ID.
