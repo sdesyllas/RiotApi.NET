@@ -21,5 +21,5 @@ In other words this project is a C# wrapper client that can be used within any k
 
 
 # Third party libraries used
-* [Newtonsoft.Json 7.0.1-beta3](https://github.com/JamesNK/Newtonsoft.Json)
-* [Autofac](https://github.com/autofac/Autofac)
+* [Newtonsoft.Json](http://www.newtonsoft.com/json)
+* [Autofac](http://autofac.org/)
