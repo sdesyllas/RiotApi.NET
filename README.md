@@ -10,19 +10,32 @@ service are called via an Interface with all supported methods as documented by 
 
 In other words this project is a C# wrapper client that can be used within any kind of .net application or any other application using .net mono framework.
 
+#How to use
+To use this .net api is a piece of cake! In less than three lines of code you can retrieve
+all free to play champions and print them to screen as you can see in the following example.
 
+```cs
+//initialize Champion api with your riot api key
+IChampion championApi = new Champion("your api key here");
+//retrieve all current free to play champions
+var championList = championApi.RetrieveAllChampions(RiotApiConfig.Regions.NA, freeToPlay:true);
+//just pring the number of free to play champions
+Console.WriteLine($"There are {championList.Champions.Count()} free to play champions to play with!");
+```
+
+```
+response => There are 17 free to play champions to play with!
+```
+
+The goal of this project is to provide the .net application developers with a high level tool to use
+Riot games' API on their apps. I hope you will like it! Please feel free to contribute.
 
 # RiotApi.NET web ASP.NET MVC User Interface 
 > (WORK IN PROGRESS)
 
-# RiotApi.NET Android application 
-<img src="http://icons.iconarchive.com/icons/carlosjj/google-jfk/128/android-icon.png"/>
-> (WORK IN PROGRESS)
-
-
 # Third party libraries used
 * [Newtonsoft.Json](http://www.newtonsoft.com/json)
 * [Autofac](http://autofac.org/)
-* [Apache log4net](https://logging.apache.org/log4net/)
+* [NLog](http://nlog-project.org/)
 * [Bootstrap](http://getbootstrap.com/)
 * [NUnit](http://www.nunit.org/)
