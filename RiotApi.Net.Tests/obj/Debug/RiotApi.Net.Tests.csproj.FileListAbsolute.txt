@@ -1,0 +1,16 @@
+D:\Projects\RiotApi.NET\RiotApi.Net.Tests\bin\Debug\RiotApi.Net.Tests.dll.config
+D:\Projects\RiotApi.NET\RiotApi.Net.Tests\bin\Debug\RiotApi.Net.Tests.dll
+D:\Projects\RiotApi.NET\RiotApi.Net.Tests\bin\Debug\RiotApi.Net.Tests.pdb
+D:\Projects\RiotApi.NET\RiotApi.Net.Tests\bin\Debug\Autofac.dll
+D:\Projects\RiotApi.NET\RiotApi.Net.Tests\bin\Debug\nunit.framework.dll
+D:\Projects\RiotApi.NET\RiotApi.Net.Tests\bin\Debug\RiotApi.Net.RestClient.dll
+D:\Projects\RiotApi.NET\RiotApi.Net.Tests\bin\Debug\Newtonsoft.Json.dll
+D:\Projects\RiotApi.NET\RiotApi.Net.Tests\bin\Debug\RiotApi.Net.RestClient.pdb
+D:\Projects\RiotApi.NET\RiotApi.Net.Tests\bin\Debug\Autofac.xml
+D:\Projects\RiotApi.NET\RiotApi.Net.Tests\bin\Debug\nunit.framework.xml
+D:\Projects\RiotApi.NET\RiotApi.Net.Tests\bin\Debug\Newtonsoft.Json.xml
+D:\Projects\RiotApi.NET\RiotApi.Net.Tests\obj\Debug\RiotApi.Net.Tests.csprojResolveAssemblyReference.cache
+D:\Projects\RiotApi.NET\RiotApi.Net.Tests\obj\Debug\RiotApi.Net.Tests.dll
+D:\Projects\RiotApi.NET\RiotApi.Net.Tests\obj\Debug\RiotApi.Net.Tests.pdb
+D:\Projects\RiotApi.NET\RiotApi.Net.Tests\bin\Debug\NLog.dll
+D:\Projects\RiotApi.NET\RiotApi.Net.Tests\bin\Debug\NLog.xml

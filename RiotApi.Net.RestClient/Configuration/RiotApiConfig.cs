@@ -10,6 +10,11 @@ namespace RiotApi.Net.RestClient.Configuration
             return RegionalEndPoints.FirstOrDefault(x => x.Region == region.ToString());
         }
 
+        public static RegionalEndPoint GetRegionalEndPointByPlatform(Platforms platform)
+        {
+            return RegionalEndPoints.FirstOrDefault(x => x.PlatformId == platform.ToString());
+        }
+
         /// <summary>
         /// REGIONAL ENDPOINTS --readonly--    
         /// * Note: The static data is a global service, and thus uses the global.api.pvp.net endpoint regardless of the region selected. 

@@ -14,5 +14,11 @@ namespace RiotApi.Net.RestClient
         IFeaturedGames FeaturedGames { get; set; }
 
         ILeague League { get; set; }
+
+        ILolStaticData LolStaticData { get; set; }
+
+        ILolStatus LolStatus { get; set; }
+
+
     }
 }
