@@ -15,11 +15,6 @@ In other words this project is a C# wrapper client that can be used within any k
 # RiotApi.NET web ASP.NET MVC User Interface 
 > (WORK IN PROGRESS)
 
-# RiotApi.NET Android application 
-<img src="http://icons.iconarchive.com/icons/carlosjj/google-jfk/128/android-icon.png"/>
-> (WORK IN PROGRESS)
-
-
 # Third party libraries used
 * [Newtonsoft.Json](http://www.newtonsoft.com/json)
 * [Autofac](http://autofac.org/)
