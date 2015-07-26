@@ -20,7 +20,7 @@ namespace RiotApi.Net.RestClient.ApiCalls
 
         public CurrentGameInfo GetCurrentGameInformationForSummonerId(RiotApiConfig.Platforms platformId, long summonerId)
         {
-            https://eune.api.pvp.net/observer-mode/rest/consumer/getSpectatorGameInfo/EUN1/41488614?api_key=
+            //https://eune.api.pvp.net/observer-mode/rest/consumer/getSpectatorGameInfo/EUN1/41488614?api_key=
             //find the appropriate end point depending the region
             var endPoint = RiotApiConfig.GetRegionalEndPointByPlatform(platformId);
             //compose url

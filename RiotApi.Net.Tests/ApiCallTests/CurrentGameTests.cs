@@ -47,11 +47,13 @@ namespace RiotApi.Net.Tests.ApiCallTests
                 var dto = api.GetCurrentGameInformationForSummonerId(RiotApiConfig.Platforms.EUN1, 41488614);
                 Assert.NotNull(dto);
                 Console.WriteLine($"Summoner's current game : {dto.GameId}");
+                Console.WriteLine($"Summoner's game mode : {dto.GameMode}");
+                Console.WriteLine($"Summoner's game length in seconds : {dto.GameLength}");
                 Console.WriteLine(dto.ToString());
             }
             catch (RiotExceptionRaiser.RiotApiException riotException)
             {
-                Console.WriteLine($"Summoner is not currently playing any game! msg : {riotException.Message}");
+                Console.WriteLine($"Summoner is not currently playing any game! msg : {riotException.Message}. Error:{riotException.RiotErrorCode}");
             }
         }
     }
