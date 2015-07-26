@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using RiotApi.Net.RestClient.Configuration;
+﻿using RiotApi.Net.RestClient.Configuration;
 using RiotApi.Net.RestClient.Dto.CurrentGame;
 using RiotApi.Net.RestClient.Interfaces;
 

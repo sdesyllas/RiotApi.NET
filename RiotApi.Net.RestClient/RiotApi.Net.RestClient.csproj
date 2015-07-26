@@ -55,6 +55,7 @@
   <ItemGroup>
     <Compile Include="ApiCalls\Champion.cs" />
     <Compile Include="ApiCalls\CurrentGame.cs" />
+    <Compile Include="ApiCalls\FeaturedGames.cs" />
     <Compile Include="ApiCalls\GenericRiotCaller.cs" />
     <Compile Include="Configuration\RiotApiConfig.cs" />
     <Compile Include="Dto\Champion\ChampionListDto.cs" />

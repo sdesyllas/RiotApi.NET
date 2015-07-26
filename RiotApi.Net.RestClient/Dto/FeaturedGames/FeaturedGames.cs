@@ -21,7 +21,7 @@ namespace RiotApi.Net.RestClient.Dto.FeaturedGames
         [JsonProperty(PropertyName = "gameList")]
         public IEnumerable<FeaturedGameInfo> GameList { get; set; }
 
-        public class FeaturedGameInfo
+        public class FeaturedGameInfo : RiotDto
         {
             /// <summary>
             /// Banned champion information
