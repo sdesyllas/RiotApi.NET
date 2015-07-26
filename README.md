@@ -16,6 +16,10 @@ from Riot's services.
 For instance you can fetch all free to play champions and print them to screen as you can see in the following example.
 
 ```cs
+using RiotApi.Net.RestClient.ApiCalls;
+using RiotApi.Net.RestClient.Configuration;
+using RiotApi.Net.RestClient.Interfaces;
+
 //initialize Champion api with your riot api key
 IChampion championApi = new Champion("your api key here");
 //retrieve all current free to play champions
