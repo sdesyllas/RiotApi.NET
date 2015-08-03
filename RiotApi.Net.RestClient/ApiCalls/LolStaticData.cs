@@ -81,22 +81,89 @@ namespace RiotApi.Net.RestClient.ApiCalls
 
         public ItemListDto GetItemList(RiotApiConfig.Regions region, string locale = null, string version = null, string itemListData = null)
         {
-            throw new NotImplementedException();
+            //https://global.api.pvp.net/api/lol/static-data/eune/v1.2/item?api_key=
+            //find the appropriate end point depending the region
+            var endPoint = RiotApiConfig.GetRegionalEndPointByRegion(RiotApiConfig.Regions.Global);
+            //compose url
+            var baseUrl = $"https://{endPoint.Host}/";
+            var apiCallPath = $"api/lol/static-data/eune/v1.2/item?api_key={this.ApiKey}";
+            //add additional parameters
+            if (!string.IsNullOrEmpty(locale))
+            {
+                apiCallPath += $"&locale={locale}";
+            }
+            if (!string.IsNullOrEmpty(version))
+            {
+                apiCallPath += $"&version={locale}";
+            }
+            if (!string.IsNullOrEmpty(itemListData))
+            {
+                apiCallPath += $"&itemListData{itemListData}";
+            }
+            //make the call
+            var dto = MakeCallToRiotApi<ItemListDto>(baseUrl, apiCallPath);
+            return dto;
         }
 
         public ItemDto GetItemById(RiotApiConfig.Regions region, int id, string locale = null, string version = null, string itemData = null)
         {
-            throw new NotImplementedException();
+            //https://global.api.pvp.net/api/lol/static-data/eune/v1.2/item/1300?api_key=
+            //find the appropriate end point depending the region
+            var endPoint = RiotApiConfig.GetRegionalEndPointByRegion(RiotApiConfig.Regions.Global);
+            //compose url
+            var baseUrl = $"https://{endPoint.Host}/";
+            var apiCallPath = $"api/lol/static-data/eune/v1.2/item/{id}?api_key={this.ApiKey}";
+            //add additional parameters
+            if (!string.IsNullOrEmpty(locale))
+            {
+                apiCallPath += $"&locale={locale}";
+            }
+            if (!string.IsNullOrEmpty(version))
+            {
+                apiCallPath += $"&version={locale}";
+            }
+            if (!string.IsNullOrEmpty(itemData))
+            {
+                apiCallPath += $"&itemData={itemData}";
+            }
+            //make the call
+            var dto = MakeCallToRiotApi<ItemDto>(baseUrl, apiCallPath);
+            return dto;
         }
 
         public LanguageStringsDto GetLanguageStrings(RiotApiConfig.Regions region, string locale = null, string version = null)
         {
-            throw new NotImplementedException();
+            //https://global.api.pvp.net/api/lol/static-data/eune/v1.2/language-strings?api_key=
+            //find the appropriate end point depending the region
+            var endPoint = RiotApiConfig.GetRegionalEndPointByRegion(RiotApiConfig.Regions.Global);
+            //compose url
+            var baseUrl = $"https://{endPoint.Host}/";
+            var apiCallPath = $"api/lol/static-data/eune/v1.2/language-strings?api_key={this.ApiKey}";
+            //add additional parameters
+            if (!string.IsNullOrEmpty(locale))
+            {
+                apiCallPath += $"&locale={locale}";
+            }
+            if (!string.IsNullOrEmpty(version))
+            {
+                apiCallPath += $"&version={locale}";
+            }
+            //make the call
+            var dto = MakeCallToRiotApi<LanguageStringsDto>(baseUrl, apiCallPath);
+            return dto;
         }
 
         public IEnumerable<string> GetSupportedLanguages(RiotApiConfig.Regions region)
         {
-            throw new NotImplementedException();
+            //https://global.api.pvp.net/api/lol/static-data/eune/v1.2/languages?api_key=
+            //find the appropriate end point depending the region
+            var endPoint = RiotApiConfig.GetRegionalEndPointByRegion(RiotApiConfig.Regions.Global);
+            //compose url
+            var baseUrl = $"https://{endPoint.Host}/";
+            var apiCallPath = $"api/lol/static-data/eune/v1.2/languages?api_key={this.ApiKey}";
+            //make the call
+            var dto = MakeCallToRiotApi<IEnumerable<string>>(baseUrl, apiCallPath);
+            return dto;
         }
 
         public MapDataDto GetMapData(RiotApiConfig.Regions region, string locale = null, string version = null)
