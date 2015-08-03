@@ -19,7 +19,7 @@ namespace RiotApi.Net.RestClient.Interfaces
         /// <param name="region">The region of the leagues.</param>
         /// <param name="summonerIds">Comma-separated list of summoner IDs. Maximum allowed at once is 10.</param>
         /// <returns>Map[string, List[LeagueDto]] LeagueDto - This object contains league information.</returns>
-        Dictionary<string, IEnumerable<LeagueDto>> GetSummonerLeaguesByIds(RiotApiConfig.Regions region, params string[] summonerIds);
+        Dictionary<string, IEnumerable<LeagueDto>> GetSummonerLeaguesByIds(RiotApiConfig.Regions region, params long[] summonerIds);
 
         /// <summary>
         /// Get league entries mapped by summoner ID for a given list of summoner IDs.
@@ -29,7 +29,7 @@ namespace RiotApi.Net.RestClient.Interfaces
         /// <param name="region">The region of the leagues.</param>
         /// <param name="summonerIds">Comma-separated list of summoner IDs. Maximum allowed at once is 10.</param>
         /// <returns>Map[string, List[LeagueDto]] LeagueDto - This object contains league information.</returns>
-        Dictionary<string, IEnumerable<LeagueDto>> GetSummonerLeagueEntriesByIds(RiotApiConfig.Regions region, params string[] summonerIds);
+        Dictionary<string, IEnumerable<LeagueDto>> GetSummonerLeagueEntriesByIds(RiotApiConfig.Regions region, params long[] summonerIds);
 
         /// <summary>
         /// Get leagues mapped by team ID for a given list of team IDs.

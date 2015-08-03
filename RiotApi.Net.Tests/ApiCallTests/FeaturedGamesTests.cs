@@ -28,7 +28,6 @@ namespace RiotApi.Net.Tests.ApiCallTests
             builder.RegisterInstance(new FeaturedGames(ConfigurationManager.AppSettings["ApiKey"])).As<IFeaturedGames>();
             Container = builder.Build();
             Scope = Container.BeginLifetimeScope();
-            Scope.Resolve<IFeaturedGames>();
         }
 
         [TestFixtureTearDown]

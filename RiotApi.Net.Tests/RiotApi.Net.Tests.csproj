@@ -53,6 +53,7 @@
     <Compile Include="ApiCallTests\CurrentGameTests.cs" />
     <Compile Include="ApiCallTests\ChampionTests.cs" />
     <Compile Include="ApiCallTests\GameTests.cs" />
+    <Compile Include="ApiCallTests\LeagueTests.cs" />
     <Compile Include="Class1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

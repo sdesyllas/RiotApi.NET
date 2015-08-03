@@ -58,6 +58,7 @@
     <Compile Include="ApiCalls\FeaturedGames.cs" />
     <Compile Include="ApiCalls\Game.cs" />
     <Compile Include="ApiCalls\GenericRiotCaller.cs" />
+    <Compile Include="ApiCalls\League.cs" />
     <Compile Include="Configuration\RiotApiConfig.cs" />
     <Compile Include="Dto\Champion\ChampionListDto.cs" />
     <Compile Include="Dto\CurrentGame\CurrentGameInfo.cs" />

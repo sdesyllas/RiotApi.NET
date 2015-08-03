@@ -28,7 +28,6 @@ namespace RiotApi.Net.Tests.ApiCallTests
             builder.RegisterInstance(new Game(ConfigurationManager.AppSettings["ApiKey"])).As<IGame>();
             Container = builder.Build();
             Scope = Container.BeginLifetimeScope();
-            Scope.Resolve<IGame>();
         }
 
         [TestFixtureTearDown]
