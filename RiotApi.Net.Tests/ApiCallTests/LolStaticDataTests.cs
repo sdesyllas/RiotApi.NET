@@ -141,6 +141,10 @@ namespace RiotApi.Net.Tests.ApiCallTests
             var kr = api.GetRealmData(RestClient.Configuration.RiotApiConfig.Regions.KR);
             Assert.NotNull(kr);
             Console.WriteLine(kr);
+
+            var euw = api.GetRealmData(RestClient.Configuration.RiotApiConfig.Regions.EUW);
+            Assert.NotNull(euw);
+            Console.WriteLine(euw);
         }
     }
 }
