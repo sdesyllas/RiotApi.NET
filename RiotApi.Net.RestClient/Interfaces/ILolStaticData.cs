@@ -145,7 +145,7 @@ namespace RiotApi.Net.RestClient.Interfaces
         /// </summary>
         /// <param name="region">Region corresponding to data to retrieve.</param>
         /// <returns>RealmDto - This object contains realm data.</returns>
-        RealmDto GetRealData(RiotApiConfig.Regions region);
+        RealmDto GetRealmData(RiotApiConfig.Regions region);
 
         /// <summary>
         /// Retrieves rune list.

@@ -4,7 +4,6 @@ using System.Linq;
 using Autofac;
 using NUnit.Framework;
 using RiotApi.Net.RestClient.ApiCalls;
-using RiotApi.Net.RestClient.Helpers;
 using RiotApi.Net.RestClient.Interfaces;
 
 namespace RiotApi.Net.Tests.ApiCallTests
@@ -96,6 +95,52 @@ namespace RiotApi.Net.Tests.ApiCallTests
             var dto = api.GetSupportedLanguages(RestClient.Configuration.RiotApiConfig.Regions.EUNE);
             Assert.NotNull(dto);
             dto.ToList().ForEach(Console.WriteLine);
+        }
+
+        [Test]
+        public void GetMapData()
+        {
+            var api = Scope.Resolve<ILolStaticData>();
+            var dto = api.GetMapData(RestClient.Configuration.RiotApiConfig.Regions.EUNE);
+            Assert.NotNull(dto);
+            Console.WriteLine(dto);
+        }
+
+        [Test]
+        public void GetMasteryList()
+        {
+            var api = Scope.Resolve<ILolStaticData>();
+            var dto = api.GetMasteryList(RestClient.Configuration.RiotApiConfig.Regions.EUNE, masteryListData:"all");
+            Assert.NotNull(dto);
+            Console.WriteLine(dto);
+        }
+
+        [Test]
+        public void GetMasteryById()
+        {
+            var api = Scope.Resolve<ILolStaticData>();
+            var dto = api.GetMasteryById(RestClient.Configuration.RiotApiConfig.Regions.EUNE, 4214,  masteryData: "all");
+            Assert.NotNull(dto);
+            Console.WriteLine(dto);
+            Assert.AreEqual(4214, dto.Id);
+            Console.WriteLine($"mastery:{dto.Name}, {dto.Description.FirstOrDefault()}, {dto.Image.Full}");
+        }
+
+        [Test]
+        public void GetRealmData()
+        {
+            var api = Scope.Resolve<ILolStaticData>();
+            var eune = api.GetRealmData(RestClient.Configuration.RiotApiConfig.Regions.EUNE);
+            Assert.NotNull(eune);
+            Console.WriteLine(eune);
+
+            var na = api.GetRealmData(RestClient.Configuration.RiotApiConfig.Regions.NA);
+            Assert.NotNull(na);
+            Console.WriteLine(na);
+
+            var kr = api.GetRealmData(RestClient.Configuration.RiotApiConfig.Regions.KR);
+            Assert.NotNull(kr);
+            Console.WriteLine(kr);
         }
     }
 }

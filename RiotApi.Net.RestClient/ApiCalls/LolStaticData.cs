@@ -42,7 +42,7 @@ namespace RiotApi.Net.RestClient.ApiCalls
             }
             if (!string.IsNullOrEmpty(version))
             {
-                apiCallPath += $"&version={locale}";
+                apiCallPath += $"&version={version}";
             }
             if (!string.IsNullOrEmpty(champData))
             {
@@ -60,7 +60,7 @@ namespace RiotApi.Net.RestClient.ApiCalls
             var endPoint = RiotApiConfig.GetRegionalEndPointByRegion(RiotApiConfig.Regions.Global);
             //compose url
             var baseUrl = $"https://{endPoint.Host}/";
-            var apiCallPath = $"api/lol/static-data/eune/v1.2/champion/{id}?api_key={this.ApiKey}";
+            var apiCallPath = $"api/lol/static-data/{region.ToString().ToLower()}/v1.2/champion/{id}?api_key={this.ApiKey}";
             //add additional parameters
             if (!string.IsNullOrEmpty(locale))
             {
@@ -68,7 +68,7 @@ namespace RiotApi.Net.RestClient.ApiCalls
             }
             if (!string.IsNullOrEmpty(version))
             {
-                apiCallPath += $"&version={locale}";
+                apiCallPath += $"&version={version}";
             }
             if (!string.IsNullOrEmpty(champData))
             {
@@ -86,7 +86,7 @@ namespace RiotApi.Net.RestClient.ApiCalls
             var endPoint = RiotApiConfig.GetRegionalEndPointByRegion(RiotApiConfig.Regions.Global);
             //compose url
             var baseUrl = $"https://{endPoint.Host}/";
-            var apiCallPath = $"api/lol/static-data/eune/v1.2/item?api_key={this.ApiKey}";
+            var apiCallPath = $"api/lol/static-data/{region.ToString().ToLower()}/v1.2/item?api_key={this.ApiKey}";
             //add additional parameters
             if (!string.IsNullOrEmpty(locale))
             {
@@ -94,7 +94,7 @@ namespace RiotApi.Net.RestClient.ApiCalls
             }
             if (!string.IsNullOrEmpty(version))
             {
-                apiCallPath += $"&version={locale}";
+                apiCallPath += $"&version={version}";
             }
             if (!string.IsNullOrEmpty(itemListData))
             {
@@ -112,7 +112,7 @@ namespace RiotApi.Net.RestClient.ApiCalls
             var endPoint = RiotApiConfig.GetRegionalEndPointByRegion(RiotApiConfig.Regions.Global);
             //compose url
             var baseUrl = $"https://{endPoint.Host}/";
-            var apiCallPath = $"api/lol/static-data/eune/v1.2/item/{id}?api_key={this.ApiKey}";
+            var apiCallPath = $"api/lol/static-data/{region.ToString().ToLower()}/v1.2/item/{id}?api_key={this.ApiKey}";
             //add additional parameters
             if (!string.IsNullOrEmpty(locale))
             {
@@ -120,7 +120,7 @@ namespace RiotApi.Net.RestClient.ApiCalls
             }
             if (!string.IsNullOrEmpty(version))
             {
-                apiCallPath += $"&version={locale}";
+                apiCallPath += $"&version={version}";
             }
             if (!string.IsNullOrEmpty(itemData))
             {
@@ -138,7 +138,7 @@ namespace RiotApi.Net.RestClient.ApiCalls
             var endPoint = RiotApiConfig.GetRegionalEndPointByRegion(RiotApiConfig.Regions.Global);
             //compose url
             var baseUrl = $"https://{endPoint.Host}/";
-            var apiCallPath = $"api/lol/static-data/eune/v1.2/language-strings?api_key={this.ApiKey}";
+            var apiCallPath = $"api/lol/static-data/{region.ToString().ToLower()}/v1.2/language-strings?api_key={this.ApiKey}";
             //add additional parameters
             if (!string.IsNullOrEmpty(locale))
             {
@@ -146,7 +146,7 @@ namespace RiotApi.Net.RestClient.ApiCalls
             }
             if (!string.IsNullOrEmpty(version))
             {
-                apiCallPath += $"&version={locale}";
+                apiCallPath += $"&version={version}";
             }
             //make the call
             var dto = MakeCallToRiotApi<LanguageStringsDto>(baseUrl, apiCallPath);
@@ -160,7 +160,7 @@ namespace RiotApi.Net.RestClient.ApiCalls
             var endPoint = RiotApiConfig.GetRegionalEndPointByRegion(RiotApiConfig.Regions.Global);
             //compose url
             var baseUrl = $"https://{endPoint.Host}/";
-            var apiCallPath = $"api/lol/static-data/eune/v1.2/languages?api_key={this.ApiKey}";
+            var apiCallPath = $"api/lol/static-data/{region.ToString().ToLower()}/v1.2/languages?api_key={this.ApiKey}";
             //make the call
             var dto = MakeCallToRiotApi<IEnumerable<string>>(baseUrl, apiCallPath);
             return dto;
@@ -168,22 +168,89 @@ namespace RiotApi.Net.RestClient.ApiCalls
 
         public MapDataDto GetMapData(RiotApiConfig.Regions region, string locale = null, string version = null)
         {
-            throw new NotImplementedException();
+            //https://global.api.pvp.net/api/lol/static-data/eune/v1.2/map?api_key=
+            //find the appropriate end point depending the region
+            var endPoint = RiotApiConfig.GetRegionalEndPointByRegion(RiotApiConfig.Regions.Global);
+            //compose url
+            var baseUrl = $"https://{endPoint.Host}/";
+            var apiCallPath = $"api/lol/static-data/{region.ToString().ToLower()}/v1.2/map?api_key={this.ApiKey}";
+            //add additional parameters
+            if (!string.IsNullOrEmpty(locale))
+            {
+                apiCallPath += $"&locale={locale}";
+            }
+            if (!string.IsNullOrEmpty(version))
+            {
+                apiCallPath += $"&version={version}";
+            }
+            //make the call
+            var dto = MakeCallToRiotApi<MapDataDto>(baseUrl, apiCallPath);
+            return dto;
         }
 
         public MasteryListDto GetMasteryList(RiotApiConfig.Regions region, string locale = null, string version = null, string masteryListData = null)
         {
-            throw new NotImplementedException();
+            //https://global.api.pvp.net/api/lol/static-data/eune/v1.2/mastery?api_key=
+            //find the appropriate end point depending the region
+            var endPoint = RiotApiConfig.GetRegionalEndPointByRegion(RiotApiConfig.Regions.Global);
+            //compose url
+            var baseUrl = $"https://{endPoint.Host}/";
+            var apiCallPath = $"api/lol/static-data/{region.ToString().ToLower()}/v1.2/mastery?api_key={this.ApiKey}";
+            //add additional parameters
+            if (!string.IsNullOrEmpty(locale))
+            {
+                apiCallPath += $"&locale={locale}";
+            }
+            if (!string.IsNullOrEmpty(version))
+            {
+                apiCallPath += $"&version={version}";
+            }
+            if (!string.IsNullOrEmpty(masteryListData))
+            {
+                apiCallPath += $"&masteryListData={masteryListData}";
+            }
+            //make the call
+            var dto = MakeCallToRiotApi<MasteryListDto>(baseUrl, apiCallPath);
+            return dto;
         }
 
         public MasteryDto GetMasteryById(RiotApiConfig.Regions region, int id, string locale = null, string version = null, string masteryData = null)
         {
-            throw new NotImplementedException();
+            //https://global.api.pvp.net/api/lol/static-data/eune/v1.2/mastery/4214?api_key=
+            //find the appropriate end point depending the region
+            var endPoint = RiotApiConfig.GetRegionalEndPointByRegion(RiotApiConfig.Regions.Global);
+            //compose url
+            var baseUrl = $"https://{endPoint.Host}/";
+            var apiCallPath = $"api/lol/static-data/{region.ToString().ToLower()}/v1.2/mastery/{id}?api_key={this.ApiKey}";
+            //add additional parameters
+            if (!string.IsNullOrEmpty(locale))
+            {
+                apiCallPath += $"&locale={locale}";
+            }
+            if (!string.IsNullOrEmpty(version))
+            {
+                apiCallPath += $"&version={version}";
+            }
+            if (!string.IsNullOrEmpty(masteryData))
+            {
+                apiCallPath += $"&masteryData={masteryData}";
+            }
+            //make the call
+            var dto = MakeCallToRiotApi<MasteryDto>(baseUrl, apiCallPath);
+            return dto;
         }
 
-        public RealmDto GetRealData(RiotApiConfig.Regions region)
+        public RealmDto GetRealmData(RiotApiConfig.Regions region)
         {
-            throw new NotImplementedException();
+            //https://global.api.pvp.net/api/lol/static-data/eune/v1.2/realm?api_key=
+            //find the appropriate end point depending the region
+            var endPoint = RiotApiConfig.GetRegionalEndPointByRegion(RiotApiConfig.Regions.Global);
+            //compose url
+            var baseUrl = $"https://{endPoint.Host}/";
+            var apiCallPath = $"api/lol/static-data/{region.ToString().ToLower()}/v1.2/realm?api_key={this.ApiKey}";
+            //make the call
+            var dto = MakeCallToRiotApi<RealmDto>(baseUrl, apiCallPath);
+            return dto;
         }
 
         public RuneListDto GetRuneList(RiotApiConfig.Regions region, string locale = null, string version = null, string runeListData = null)
