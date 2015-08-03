@@ -207,7 +207,7 @@ namespace RiotApi.Net.RestClient.Interfaces
         /// <param name="version">Data dragon version for returned data. If not specified, the latest version for the region is used. List of valid versions can be obtained from the /versions endpoint.</param>
         /// <param name="spellData">Tags to return additional data. Only id, key, name, description, and summonerLevel are returned by default if this parameter isn't specified. To return all additional data, use the tag 'all'.</param>
         /// <returns>SummonerSpellDto - This object contains summoner spell data.</returns>
-        SummonerSpellDto GetSummernerSpellById(RiotApiConfig.Regions region, int id, string locale = null,
+        SummonerSpellDto GetSummonerSpellById(RiotApiConfig.Regions region, int id, string locale = null,
             string version = null, string spellData = null);
 
         /// <summary>

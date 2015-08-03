@@ -41,7 +41,7 @@ namespace RiotApi.Net.Tests.ApiCallTests
         public void GetChampionList()
         {
             var api = Scope.Resolve<ILolStaticData>();
-            var dto = api.GetChampionList(RestClient.Configuration.RiotApiConfig.Regions.EUNE, champData: "all", locale:"el_GR");
+            var dto = api.GetChampionList(RestClient.Configuration.RiotApiConfig.Regions.EUNE, champData: "all", locale: "el_GR");
             Assert.NotNull(dto);
             Console.WriteLine(dto);
             foreach (var champion in dto.Data.Values)
@@ -64,7 +64,7 @@ namespace RiotApi.Net.Tests.ApiCallTests
         public void GetItemList()
         {
             var api = Scope.Resolve<ILolStaticData>();
-            var dto = api.GetItemList(RestClient.Configuration.RiotApiConfig.Regions.EUNE, itemListData:"all");
+            var dto = api.GetItemList(RestClient.Configuration.RiotApiConfig.Regions.EUNE, itemListData: "all");
             Assert.NotNull(dto);
             Console.WriteLine(dto);
         }
@@ -73,7 +73,7 @@ namespace RiotApi.Net.Tests.ApiCallTests
         public void GetItemById()
         {
             var api = Scope.Resolve<ILolStaticData>();
-            var dto = api.GetItemById(RestClient.Configuration.RiotApiConfig.Regions.EUNE, 1300, itemData:"all");
+            var dto = api.GetItemById(RestClient.Configuration.RiotApiConfig.Regions.EUNE, 1300, itemData: "all");
             Assert.NotNull(dto);
             Console.WriteLine(dto);
             Console.WriteLine($"item: {dto.Name}, {dto.Image.Full}");
@@ -83,7 +83,7 @@ namespace RiotApi.Net.Tests.ApiCallTests
         public void GetLanguageStrings()
         {
             var api = Scope.Resolve<ILolStaticData>();
-            var dto = api.GetLanguageStrings(RestClient.Configuration.RiotApiConfig.Regions.EUNE, locale:"el_GR");
+            var dto = api.GetLanguageStrings(RestClient.Configuration.RiotApiConfig.Regions.EUNE, locale: "el_GR");
             Assert.NotNull(dto);
             Console.WriteLine(dto);
         }
@@ -110,7 +110,7 @@ namespace RiotApi.Net.Tests.ApiCallTests
         public void GetMasteryList()
         {
             var api = Scope.Resolve<ILolStaticData>();
-            var dto = api.GetMasteryList(RestClient.Configuration.RiotApiConfig.Regions.EUNE, masteryListData:"all");
+            var dto = api.GetMasteryList(RestClient.Configuration.RiotApiConfig.Regions.EUNE, masteryListData: "all");
             Assert.NotNull(dto);
             Console.WriteLine(dto);
         }
@@ -119,7 +119,7 @@ namespace RiotApi.Net.Tests.ApiCallTests
         public void GetMasteryById()
         {
             var api = Scope.Resolve<ILolStaticData>();
-            var dto = api.GetMasteryById(RestClient.Configuration.RiotApiConfig.Regions.EUNE, 4214,  masteryData: "all");
+            var dto = api.GetMasteryById(RestClient.Configuration.RiotApiConfig.Regions.EUNE, 4214, masteryData: "all");
             Assert.NotNull(dto);
             Console.WriteLine(dto);
             Assert.AreEqual(4214, dto.Id);
@@ -145,6 +145,54 @@ namespace RiotApi.Net.Tests.ApiCallTests
             var euw = api.GetRealmData(RestClient.Configuration.RiotApiConfig.Regions.EUW);
             Assert.NotNull(euw);
             Console.WriteLine(euw);
+        }
+
+        [Test]
+        public void GetRuneList()
+        {
+            var api = Scope.Resolve<ILolStaticData>();
+            var dto = api.GetRuneList(RestClient.Configuration.RiotApiConfig.Regions.EUNE, runeListData:"all");
+            Assert.NotNull(dto);
+            Console.WriteLine(dto);
+            Console.WriteLine(dto.Data.FirstOrDefault().Value.Id);
+        }
+
+        [Test]
+        public void GetRuneById()
+        {
+            var api = Scope.Resolve<ILolStaticData>();
+            var dto = api.GetRuneById(RestClient.Configuration.RiotApiConfig.Regions.EUNE, 5235, runeData: "all");
+            Assert.NotNull(dto);
+            Console.WriteLine(dto);
+            Assert.AreEqual(5235, dto.Id);
+        }
+
+        [Test]
+        public void GetSummonerSpellList()
+        {
+            var api = Scope.Resolve<ILolStaticData>();
+            var dto = api.GetSummonerSpellList(RestClient.Configuration.RiotApiConfig.Regions.EUNE, spellData:"all");
+            Assert.NotNull(dto);
+            Console.WriteLine(dto);
+        }
+
+        [Test]
+        public void GetSummonerSpellById()
+        {
+            var api = Scope.Resolve<ILolStaticData>();
+            var dto = api.GetSummonerSpellById(RestClient.Configuration.RiotApiConfig.Regions.EUNE, 1, spellData: "all");
+            Assert.NotNull(dto);
+            Console.WriteLine(dto);
+            Assert.AreEqual(1, dto.Id);
+        }
+
+        [Test]
+        public void GetVersionData()
+        {
+            var api = Scope.Resolve<ILolStaticData>();
+            var dto = api.GetVersionData(RestClient.Configuration.RiotApiConfig.Regions.EUNE);
+            Assert.NotNull(dto);
+            dto.ToList().ForEach(Console.WriteLine);
         }
     }
 }

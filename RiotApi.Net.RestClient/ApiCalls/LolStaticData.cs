@@ -255,29 +255,125 @@ namespace RiotApi.Net.RestClient.ApiCalls
 
         public RuneListDto GetRuneList(RiotApiConfig.Regions region, string locale = null, string version = null, string runeListData = null)
         {
-            throw new NotImplementedException();
+            //https://global.api.pvp.net/api/lol/static-data/eune/v1.2/rune?api_key=
+            //find the appropriate end point depending the region
+            var endPoint = RiotApiConfig.GetRegionalEndPointByRegion(RiotApiConfig.Regions.Global);
+            //compose url
+            var baseUrl = $"https://{endPoint.Host}/";
+            var apiCallPath = $"api/lol/static-data/{region.ToString().ToLower()}/v1.2/rune?api_key={this.ApiKey}";
+            //add additional parameters
+            if (!string.IsNullOrEmpty(locale))
+            {
+                apiCallPath += $"&locale={locale}";
+            }
+            if (!string.IsNullOrEmpty(version))
+            {
+                apiCallPath += $"&version={version}";
+            }
+            if (!string.IsNullOrEmpty(runeListData))
+            {
+                apiCallPath += $"&runeListData={runeListData}";
+            }
+            //make the call
+            var dto = MakeCallToRiotApi<RuneListDto>(baseUrl, apiCallPath);
+            return dto;
         }
 
         public RuneDto GetRuneById(RiotApiConfig.Regions region, int id, string locale = null, string version = null, string runeData = null)
         {
-            throw new NotImplementedException();
+            //https://global.api.pvp.net/api/lol/static-data/eune/v1.2/rune/5235?api_key=
+            //find the appropriate end point depending the region
+            var endPoint = RiotApiConfig.GetRegionalEndPointByRegion(RiotApiConfig.Regions.Global);
+            //compose url
+            var baseUrl = $"https://{endPoint.Host}/";
+            var apiCallPath = $"api/lol/static-data/{region.ToString().ToLower()}/v1.2/rune/{id}?api_key={this.ApiKey}";
+            //add additional parameters
+            if (!string.IsNullOrEmpty(locale))
+            {
+                apiCallPath += $"&locale={locale}";
+            }
+            if (!string.IsNullOrEmpty(version))
+            {
+                apiCallPath += $"&version={version}";
+            }
+            if (!string.IsNullOrEmpty(runeData))
+            {
+                apiCallPath += $"&runeListData={runeData}";
+            }
+            //make the call
+            var dto = MakeCallToRiotApi<RuneDto>(baseUrl, apiCallPath);
+            return dto;
         }
 
         public SummonerSpellListDto GetSummonerSpellList(RiotApiConfig.Regions region, string locale = null, string version = null,
             bool? dataById = null, string spellData = null)
         {
-            throw new NotImplementedException();
+            //https://global.api.pvp.net/api/lol/static-data/eune/v1.2/summoner-spell?api_key=
+            //find the appropriate end point depending the region
+            var endPoint = RiotApiConfig.GetRegionalEndPointByRegion(RiotApiConfig.Regions.Global);
+            //compose url
+            var baseUrl = $"https://{endPoint.Host}/";
+            var apiCallPath = $"api/lol/static-data/{region.ToString().ToLower()}/v1.2/summoner-spell?api_key={this.ApiKey}";
+            //add additional parameters
+            if (!string.IsNullOrEmpty(locale))
+            {
+                apiCallPath += $"&locale={locale}";
+            }
+            if (!string.IsNullOrEmpty(version))
+            {
+                apiCallPath += $"&version={version}";
+            }
+            if (dataById.HasValue)
+            {
+                apiCallPath += $"&dataById={dataById}";
+            }
+            if (!string.IsNullOrEmpty(spellData))
+            {
+                apiCallPath += $"&spellData={spellData}";
+            }
+            //make the call
+            var dto = MakeCallToRiotApi<SummonerSpellListDto>(baseUrl, apiCallPath);
+            return dto;
         }
 
-        public SummonerSpellDto GetSummernerSpellById(RiotApiConfig.Regions region, int id, string locale = null, string version = null,
+        public SummonerSpellDto GetSummonerSpellById(RiotApiConfig.Regions region, int id, string locale = null, string version = null,
             string spellData = null)
         {
-            throw new NotImplementedException();
+            //https://global.api.pvp.net/api/lol/static-data/eune/v1.2/summoner-spell/1?spellData=all&api_key=
+            //find the appropriate end point depending the region
+            var endPoint = RiotApiConfig.GetRegionalEndPointByRegion(RiotApiConfig.Regions.Global);
+            //compose url
+            var baseUrl = $"https://{endPoint.Host}/";
+            var apiCallPath = $"api/lol/static-data/{region.ToString().ToLower()}/v1.2/summoner-spell/{id}?api_key={this.ApiKey}";
+            //add additional parameters
+            if (!string.IsNullOrEmpty(locale))
+            {
+                apiCallPath += $"&locale={locale}";
+            }
+            if (!string.IsNullOrEmpty(version))
+            {
+                apiCallPath += $"&version={version}";
+            }
+            if (!string.IsNullOrEmpty(spellData))
+            {
+                apiCallPath += $"&spellData={spellData}";
+            }
+            //make the call
+            var dto = MakeCallToRiotApi<SummonerSpellDto>(baseUrl, apiCallPath);
+            return dto;
         }
 
         public IEnumerable<string> GetVersionData(RiotApiConfig.Regions region)
         {
-            throw new NotImplementedException();
+            //https://global.api.pvp.net/api/lol/static-data/eune/v1.2/versions?api_key=
+            //find the appropriate end point depending the region
+            var endPoint = RiotApiConfig.GetRegionalEndPointByRegion(RiotApiConfig.Regions.Global);
+            //compose url
+            var baseUrl = $"https://{endPoint.Host}/";
+            var apiCallPath = $"api/lol/static-data/{region.ToString().ToLower()}/v1.2/versions?api_key={this.ApiKey}";
+            //make the call
+            var dto = MakeCallToRiotApi<IEnumerable<string>>(baseUrl, apiCallPath);
+            return dto;
         }
     }
 }
