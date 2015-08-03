@@ -1,6 +1,7 @@
 ﻿using Newtonsoft.Json;
 using RiotApi.Net.RestClient.Dto.LolStaticData.Generic;
 using System.Collections.Generic;
+using RiotApi.Net.RestClient.Helpers.CustomConverters;
 
 namespace RiotApi.Net.RestClient.Dto.LolStaticData.Champion
 {
@@ -67,7 +68,7 @@ namespace RiotApi.Net.RestClient.Dto.LolStaticData.Champion
         /// No description available from Riot Documentation
         /// </summary>
         [JsonProperty(PropertyName = "partype")]
-        public List<ImageDto> Partype { get; set; }
+        public string Partype { get; set; }
 
         /// <summary>
         /// No description available from Riot Documentation
@@ -103,7 +104,7 @@ namespace RiotApi.Net.RestClient.Dto.LolStaticData.Champion
         /// No description available from Riot Documentation
         /// </summary>
         [JsonProperty(PropertyName = "tags")]
-        public string Tags { get; set; }
+        public List<string> Tags { get; set; }
 
         /// <summary>
         /// No description available from Riot Documentation

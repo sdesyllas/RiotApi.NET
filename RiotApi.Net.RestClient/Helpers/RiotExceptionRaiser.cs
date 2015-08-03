@@ -54,7 +54,8 @@ namespace RiotApi.Net.RestClient.Helpers
             RATE_LIMITED = 429,
             SERVER_ERROR = 500,
             UNAVAILABLE = 503,
-            PARSE_FAILURE = 600
+            PARSE_FAILURE = 600,
+            JSONSERIALIZATIONEXCEPTION = 0
         }
 
         private static string GetMessage(RiotErrorCode errorCode)
@@ -77,6 +78,8 @@ namespace RiotApi.Net.RestClient.Helpers
                     return "Unauthorized";
                 case RiotErrorCode.UNAVAILABLE:
                     return "Service unavailable";
+                case RiotErrorCode.JSONSERIALIZATIONEXCEPTION:
+                    return "JSON serialization error";
                 default:
                     return "An unknown API error occured";
             }

@@ -11,13 +11,43 @@ namespace RiotApi.Net.RestClient.Dto.LolStaticData.Generic
         /// <summary>
         /// No description available from Riot Documentation
         /// </summary>
-        [JsonProperty(PropertyName = "effect")]
-        public IEnumerable<string> Effect { get; set; }
+        [JsonProperty(PropertyName = "full")]
+        public string Full { get; set; }
 
         /// <summary>
         /// No description available from Riot Documentation
         /// </summary>
-        [JsonProperty(PropertyName = "label")]
-        public IEnumerable<string> Label { get; set; }
+        [JsonProperty(PropertyName = "group")]
+        public string Group { get; set; }
+
+        /// <summary>
+        /// No description available from Riot Documentation
+        /// </summary>
+        [JsonProperty(PropertyName = "h")]
+        public int H { get; set; }
+
+        /// <summary>
+        /// No description available from Riot Documentation
+        /// </summary>
+        [JsonProperty(PropertyName = "sprite")]
+        public string Sprite { get; set; }
+
+        /// <summary>
+        /// No description available from Riot Documentation
+        /// </summary>
+        [JsonProperty(PropertyName = "w")]
+        public int W { get; set; }
+
+        /// <summary>
+        /// No description available from Riot Documentation
+        /// </summary>
+        [JsonProperty(PropertyName = "x")]
+        public int X { get; set; }
+
+        /// <summary>
+        /// No description available from Riot Documentation
+        /// </summary>
+        [JsonProperty(PropertyName = "y")]
+        public int Y { get; set; }
     }
 }

@@ -59,6 +59,7 @@
     <Compile Include="ApiCalls\Game.cs" />
     <Compile Include="ApiCalls\GenericRiotCaller.cs" />
     <Compile Include="ApiCalls\League.cs" />
+    <Compile Include="ApiCalls\LolStaticData.cs" />
     <Compile Include="Configuration\RiotApiConfig.cs" />
     <Compile Include="Dto\Champion\ChampionListDto.cs" />
     <Compile Include="Dto\CurrentGame\CurrentGameInfo.cs" />
@@ -123,6 +124,7 @@
     <Compile Include="Dto\Summoner\Runes\RunePagesDto.cs" />
     <Compile Include="Dto\Summoner\SummonerDto.cs" />
     <Compile Include="Dto\Team\TeamDto.cs" />
+    <Compile Include="Helpers\CustomConverters\SingleOrArrayConverter.cs" />
     <Compile Include="Helpers\Enums.cs" />
     <Compile Include="Dto\LolStatus\ShardDto.cs" />
     <Compile Include="Helpers\RiotExceptionRaiser.cs" />

@@ -67,7 +67,7 @@ namespace RiotApi.Net.RestClient.Dto.LolStaticData.Champion
         /// No description available from Riot Documentation
         /// </summary>
         [JsonProperty(PropertyName = "image")]
-        public List<ImageDto> Image { get; set; }
+        public ImageDto Image { get; set; }
 
         /// <summary>
         /// No description available from Riot Documentation

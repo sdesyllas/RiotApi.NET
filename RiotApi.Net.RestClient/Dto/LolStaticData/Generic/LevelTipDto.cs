@@ -11,31 +11,13 @@ namespace RiotApi.Net.RestClient.Dto.LolStaticData.Generic
         /// <summary>
         /// No description available from Riot Documentation
         /// </summary>
-        [JsonProperty(PropertyName = "coeff")]
-        public IEnumerable<bool> Coeff { get; set; }
+        [JsonProperty(PropertyName = "effect")]
+        public IEnumerable<string> Effect { get; set; }
 
         /// <summary>
         /// No description available from Riot Documentation
         /// </summary>
-        [JsonProperty(PropertyName = "dyn")]
-        public string Dyn { get; set; }
-
-        /// <summary>
-        /// No description available from Riot Documentation
-        /// </summary>
-        [JsonProperty(PropertyName = "key")]
-        public string Key { get; set; }
-
-        /// <summary>
-        /// No description available from Riot Documentation
-        /// </summary>
-        [JsonProperty(PropertyName = "link")]
-        public string Link { get; set; }
-
-        /// <summary>
-        /// No description available from Riot Documentation
-        /// </summary>
-        [JsonProperty(PropertyName = "ranksWith")]
-        public string RanksWith { get; set; }
+        [JsonProperty(PropertyName = "label")]
+        public IEnumerable<string> Label { get; set; }
     }
 }
