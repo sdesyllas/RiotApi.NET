@@ -25,13 +25,13 @@ namespace RiotApi.Net.RestClient.Dto.LolStatus
         /// name	string
         /// </summary>
         [JsonProperty(PropertyName = "name")]
-        public IEnumerable<string> Name { get; set; }
+        public string Name { get; set; }
 
         /// <summary>
         /// region_tag	string
         /// </summary>
         [JsonProperty(PropertyName = "region_tag")]
-        public IEnumerable<string> RegionTag { get; set; }
+        public string RegionTag { get; set; }
 
         /// <summary>
         ///
@@ -43,7 +43,7 @@ namespace RiotApi.Net.RestClient.Dto.LolStatus
         /// slug string
         /// </summary>
         [JsonProperty(PropertyName = "slug")]
-        public IEnumerable<string> Slug { get; set; }
+        public string Slug { get; set; }
 
         
         /// <summary>

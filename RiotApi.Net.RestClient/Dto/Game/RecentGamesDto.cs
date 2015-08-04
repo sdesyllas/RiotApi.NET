@@ -19,7 +19,7 @@ namespace RiotApi.Net.RestClient.Dto.Game
         /// Summoner ID.
         /// </summary>
         [JsonProperty(PropertyName = "summonerId")]
-        public IEnumerable<GameDto> SummonerId { get; set; }
+        public long SummonerId { get; set; }
 
         /// <summary>
         /// GameDto  This object contains game information.

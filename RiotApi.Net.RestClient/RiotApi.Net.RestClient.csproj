@@ -60,6 +60,11 @@
     <Compile Include="ApiCalls\GenericRiotCaller.cs" />
     <Compile Include="ApiCalls\League.cs" />
     <Compile Include="ApiCalls\LolStaticData.cs" />
+    <Compile Include="ApiCalls\LolStatus.cs" />
+    <Compile Include="ApiCalls\Match.cs" />
+    <Compile Include="ApiCalls\MatchHistory.cs" />
+    <Compile Include="ApiCalls\MatchList.cs" />
+    <Compile Include="ApiCalls\Stats.cs" />
     <Compile Include="Configuration\RiotApiConfig.cs" />
     <Compile Include="Dto\Champion\ChampionListDto.cs" />
     <Compile Include="Dto\CurrentGame\CurrentGameInfo.cs" />
@@ -116,6 +121,7 @@
     <Compile Include="Dto\Match\Generic\Position.cs" />
     <Compile Include="Dto\Match\MatchDetail.cs" />
     <Compile Include="Dto\Match\MatchHistory\PlayerHistory.cs" />
+    <Compile Include="Dto\Match\MatchListDto.cs" />
     <Compile Include="Dto\RiotDto.cs" />
     <Compile Include="Dto\Stats\Generic\AggregatedStatsDto.cs" />
     <Compile Include="Dto\Stats\PlayerStatsSummaryListDto.cs" />
@@ -137,6 +143,7 @@
     <Compile Include="Interfaces\ILolStatus.cs" />
     <Compile Include="Interfaces\IMatch.cs" />
     <Compile Include="Interfaces\IMatchHistory.cs" />
+    <Compile Include="Interfaces\IMatchList.cs" />
     <Compile Include="Interfaces\IStats.cs" />
     <Compile Include="Interfaces\ISummoner.cs" />
     <Compile Include="Interfaces\ITeam.cs" />

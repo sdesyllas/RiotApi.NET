@@ -76,5 +76,7 @@ namespace RiotApi.Net.RestClient.Configuration
             RU,
             PBE1
         }
+
+        public static readonly string StatusUrl = "status.leagueoflegends.com";
     }
 }

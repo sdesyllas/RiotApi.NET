@@ -17,7 +17,7 @@ namespace RiotApi.Net.RestClient.Interfaces
         /// <param name="summonerId">ID of the summoner for which to retrieve ranked stats.</param>
         /// <param name="season">If specified, stats for the given season are returned. Otherwise, stats for the current season are returned.</param>
         /// <returns>RankedStatsDto - This object contains ranked stats information.</returns>
-        RankedStatsDto GetRankedStatsBySummonerId(RiotApiConfig.Regions region, long summonerId, string season = "");
+        RankedStatsDto GetRankedStatsBySummonerId(RiotApiConfig.Regions region, long summonerId, string season = null);
 
         /// <summary>
         /// Get player stats summaries by summoner ID.
@@ -27,6 +27,6 @@ namespace RiotApi.Net.RestClient.Interfaces
         /// <param name="season">If specified, stats for the given season are returned. Otherwise, stats for the current season are returned.</param>
         /// <returns></returns>
         PlayerStatsSummaryListDto GetPlayerStatsBySummonerId(RiotApiConfig.Regions region, long summonerId,
-            string season = "");
+            string season = null);
     }
 }

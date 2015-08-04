@@ -58,7 +58,15 @@ namespace RiotApi.Net.Tests.ApiCallTests
             }
             catch (RiotExceptionRaiser.RiotApiException riotException)
             {
-                Console.WriteLine($"Summoner has no leagues! msg : {riotException.Message}. Error:{riotException.RiotErrorCode}");
+                if (riotException.RiotErrorCode == RiotExceptionRaiser.RiotErrorCode.DATA_NOT_FOUND)
+                {
+                    Console.WriteLine(
+                        $"Summoner has no leagues! msg : {riotException.Message}. Error:{riotException.RiotErrorCode}");
+                }
+                else
+                {
+                    throw new Exception("test error", riotException);
+                }
             }
         }
 
@@ -83,7 +91,15 @@ namespace RiotApi.Net.Tests.ApiCallTests
             }
             catch (RiotExceptionRaiser.RiotApiException riotException)
             {
-                Console.WriteLine($"Team has no leagues! msg : {riotException.Message}. Error:{riotException.RiotErrorCode}");
+                if (riotException.RiotErrorCode == RiotExceptionRaiser.RiotErrorCode.DATA_NOT_FOUND)
+                {
+                    Console.WriteLine(
+                        $"Team has no leagues! msg : {riotException.Message}. Error:{riotException.RiotErrorCode}");
+                }
+                else
+                {
+                    throw new Exception("error", riotException);
+                }
             }
         }
 
@@ -108,7 +124,15 @@ namespace RiotApi.Net.Tests.ApiCallTests
             }
             catch (RiotExceptionRaiser.RiotApiException riotException)
             {
-                Console.WriteLine($"Team has no leagues! msg : {riotException.Message}. Error:{riotException.RiotErrorCode}");
+                if (riotException.RiotErrorCode == RiotExceptionRaiser.RiotErrorCode.DATA_NOT_FOUND)
+                {
+                    Console.WriteLine(
+                        $"Team has no leagues! msg : {riotException.Message}. Error:{riotException.RiotErrorCode}");
+                }
+                else
+                {
+                    throw new Exception("error", riotException);
+                }
             }
         }
 
@@ -134,7 +158,15 @@ namespace RiotApi.Net.Tests.ApiCallTests
             }
             catch (RiotExceptionRaiser.RiotApiException riotException)
             {
-                Console.WriteLine($"Team has no leagues! msg : {riotException.Message}. Error:{riotException.RiotErrorCode}");
+                if (riotException.RiotErrorCode == RiotExceptionRaiser.RiotErrorCode.DATA_NOT_FOUND)
+                {
+                    Console.WriteLine(
+                        $"Team has no leagues! msg : {riotException.Message}. Error:{riotException.RiotErrorCode}");
+                }
+                else
+                {
+                    throw new Exception("error", riotException);
+                }
             }
         }
 

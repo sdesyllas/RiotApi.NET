@@ -52,7 +52,15 @@ namespace RiotApi.Net.Tests.ApiCallTests
             }
             catch (RiotExceptionRaiser.RiotApiException riotException)
             {
-                Console.WriteLine($"Summoner is not currently playing any game! msg : {riotException.Message}. Error:{riotException.RiotErrorCode}");
+                if (riotException.RiotErrorCode == RiotExceptionRaiser.RiotErrorCode.DATA_NOT_FOUND)
+                {
+                    Console.WriteLine(
+                        $"Summoner is not currently playing any game! msg : {riotException.Message}. Error:{riotException.RiotErrorCode}");
+                }
+                else
+                {
+                    throw new Exception("test error", riotException);
+                }
             }
         }
     }

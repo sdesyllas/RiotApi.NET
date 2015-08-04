@@ -22,7 +22,7 @@ namespace RiotApi.Net.RestClient.ApiCalls
             var endPoint = RiotApiConfig.GetRegionalEndPointByRegion(region);
             //compose url
             var baseUrl = $"https://{endPoint.Host}/";
-            var apiCallPath = $"api/lol/eune/v2.5/league/by-summoner/{string.Join(",", summonerIds)}?api_key={this.ApiKey}";
+            var apiCallPath = $"api/lol/{region.ToString().ToLower()}/v2.5/league/by-summoner/{string.Join(",", summonerIds)}?api_key={this.ApiKey}";
             //make the call
             var dto = MakeCallToRiotApi<Dictionary<string, IEnumerable<LeagueDto>>>(baseUrl, apiCallPath);
             return dto;
@@ -35,7 +35,7 @@ namespace RiotApi.Net.RestClient.ApiCalls
             var endPoint = RiotApiConfig.GetRegionalEndPointByRegion(region);
             //compose url
             var baseUrl = $"https://{endPoint.Host}/";
-            var apiCallPath = $"api/lol/eune/v2.5/league/by-summoner/{string.Join(",", summonerIds)}/entry?api_key={this.ApiKey}";
+            var apiCallPath = $"api/lol/{region.ToString().ToLower()}/v2.5/league/by-summoner/{string.Join(",", summonerIds)}/entry?api_key={this.ApiKey}";
             //make the call
             var dto = MakeCallToRiotApi<Dictionary<string, IEnumerable<LeagueDto>>>(baseUrl, apiCallPath);
             return dto;
@@ -48,7 +48,7 @@ namespace RiotApi.Net.RestClient.ApiCalls
             var endPoint = RiotApiConfig.GetRegionalEndPointByRegion(region);
             //compose url
             var baseUrl = $"https://{endPoint.Host}/";
-            var apiCallPath = $"api/lol/eune/v2.5/league/by-team/{string.Join(",", teamIds)}?api_key={this.ApiKey}";
+            var apiCallPath = $"api/lol/{region.ToString().ToLower()}/v2.5/league/by-team/{string.Join(",", teamIds)}?api_key={this.ApiKey}";
             //make the call
             var dto = MakeCallToRiotApi<Dictionary<string, IEnumerable<LeagueDto>>>(baseUrl, apiCallPath);
             return dto;
@@ -61,7 +61,7 @@ namespace RiotApi.Net.RestClient.ApiCalls
             var endPoint = RiotApiConfig.GetRegionalEndPointByRegion(region);
             //compose url
             var baseUrl = $"https://{endPoint.Host}/";
-            var apiCallPath = $"api/lol/eune/v2.5/league/by-team/{string.Join(",", teamIds)}/entry?api_key={this.ApiKey}";
+            var apiCallPath = $"api/lol/{region.ToString().ToLower()}/v2.5/league/by-team/{string.Join(",", teamIds)}/entry?api_key={this.ApiKey}";
             //make the call
             var dto = MakeCallToRiotApi<Dictionary<string, IEnumerable<LeagueDto>>>(baseUrl, apiCallPath);
             return dto;
@@ -74,7 +74,7 @@ namespace RiotApi.Net.RestClient.ApiCalls
             var endPoint = RiotApiConfig.GetRegionalEndPointByRegion(region);
             //compose url
             var baseUrl = $"https://{endPoint.Host}/";
-            var apiCallPath = $"api/lol/eune/v2.5/league/challenger?type={type}&api_key={this.ApiKey}";
+            var apiCallPath = $"api/lol/{region.ToString().ToLower()}/v2.5/league/challenger?type={type}&api_key={this.ApiKey}";
             //make the call
             var dto = MakeCallToRiotApi<LeagueDto>(baseUrl, apiCallPath);
             return dto;
@@ -87,7 +87,7 @@ namespace RiotApi.Net.RestClient.ApiCalls
             var endPoint = RiotApiConfig.GetRegionalEndPointByRegion(region);
             //compose url
             var baseUrl = $"https://{endPoint.Host}/";
-            var apiCallPath = $"api/lol/eune/v2.5/league/master?type={type}&api_key={this.ApiKey}";
+            var apiCallPath = $"api/lol/{region.ToString().ToLower()}/v2.5/league/master?type={type}&api_key={this.ApiKey}";
             //make the call
             var dto = MakeCallToRiotApi<LeagueDto>(baseUrl, apiCallPath);
             return dto;

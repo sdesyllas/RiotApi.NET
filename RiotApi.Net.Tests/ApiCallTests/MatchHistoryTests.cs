@@ -1,15 +1,16 @@
-﻿using Autofac;
+﻿using System;
+using System.Configuration;
+using Autofac;
 using NUnit.Framework;
 using RiotApi.Net.RestClient.ApiCalls;
+using RiotApi.Net.RestClient.Configuration;
 using RiotApi.Net.RestClient.Helpers;
 using RiotApi.Net.RestClient.Interfaces;
-using System;
-using System.Configuration;
 
 namespace RiotApi.Net.Tests.ApiCallTests
 {
     [TestFixture]
-    public class GameTests
+    public class MatchHistoryTests
     {
         /// <summary>
         /// IOC (Inversion of Control) container
@@ -17,7 +18,6 @@ namespace RiotApi.Net.Tests.ApiCallTests
         /// </summary>
         private static IContainer Container { get; set; }
         private static ILifetimeScope Scope { get; set; }
-        public object RiotApiConfig { get; private set; }
 
         [TestFixtureSetUp]
         public void Init()
@@ -25,7 +25,7 @@ namespace RiotApi.Net.Tests.ApiCallTests
             // Create your builder.
             var builder = new ContainerBuilder();
             // Register individual components
-            builder.RegisterInstance(new Game(ConfigurationManager.AppSettings["ApiKey"])).As<IGame>();
+            builder.RegisterInstance(new MatchHistory(ConfigurationManager.AppSettings["ApiKey"])).As<IMatchHistory>();
             Container = builder.Build();
             Scope = Container.BeginLifetimeScope();
         }
@@ -36,34 +36,28 @@ namespace RiotApi.Net.Tests.ApiCallTests
             Scope.Dispose();
         }
 
-        [Test]
-        public void GetRecentGamesBySummonerId()
+        [TestCase(41488614)]
+        [TestCase(22293716)]
+        public void GetMatchHistoryBySummonerId(long summonerId)
         {
-            var api = Scope.Resolve<IGame>();
+            var api = Scope.Resolve<IMatchHistory>();
             try
             {
-                var dto = api.GetRecentGamesBySummonerId(RestClient.Configuration.RiotApiConfig.Regions.EUNE, 41488614);
+                var dto = api.GetMatchHistoryBySummonerId(RiotApiConfig.Regions.EUNE, summonerId);
                 Assert.NotNull(dto);
-                Console.WriteLine($"Summoner: {dto.SummonerId}");
-                foreach(var game in dto.Games)
-                {
-                    Assert.IsNotNull(game);
-                }
                 Console.WriteLine(dto.ToString());
             }
             catch (RiotExceptionRaiser.RiotApiException riotException)
             {
                 if (riotException.RiotErrorCode == RiotExceptionRaiser.RiotErrorCode.DATA_NOT_FOUND)
                 {
-                    Console.WriteLine(
-                        $"Summoner is not currently playing any game! msg : {riotException.Message}. Error:{riotException.RiotErrorCode}");
+                    Console.WriteLine($"Match not found : {riotException.Message}. Error:{riotException.RiotErrorCode}");
                 }
                 else
                 {
-                    throw new Exception("test error", riotException);
+                    throw new Exception("test exception", riotException);
                 }
             }
         }
-
     }
 }

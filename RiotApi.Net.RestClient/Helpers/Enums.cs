@@ -91,7 +91,9 @@
             ASCENSION_5x5,
             HEXAKILL,
             KING_PORO_5x5,
-            COUNTER_PICK
+            COUNTER_PICK,
+            BILGEWATER_ARAM_5x5,
+            BILGEWATER_5x5
         }
 
         public enum Tier
@@ -248,7 +250,8 @@
             Unranked,
             Unranked3x3,
             URF,
-            URFBots
+            URFBots,
+            Bilgewater
         }
 
         public enum MessageSeverity

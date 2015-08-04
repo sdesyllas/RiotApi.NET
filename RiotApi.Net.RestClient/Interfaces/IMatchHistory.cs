@@ -23,6 +23,6 @@ namespace RiotApi.Net.RestClient.Interfaces
         /// <param name="endIndex">The end index to use for fetching games.</param>
         /// <returns></returns>
         PlayerHistory GetMatchHistoryBySummonerId(RiotApiConfig.Regions region, long summonerId,
-            string championIds = "", string rankedQueues = "", int beginIndex = 0, int endIndex = 15);
+            string championIds = null, string rankedQueues = null, int? beginIndex = null, int? endIndex = null);
     }
 }

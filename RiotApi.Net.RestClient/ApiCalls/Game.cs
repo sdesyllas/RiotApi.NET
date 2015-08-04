@@ -20,7 +20,7 @@ namespace RiotApi.Net.RestClient.ApiCalls
             var endPoint = RiotApiConfig.GetRegionalEndPointByRegion(region);
             //compose url
             var baseUrl = $"https://{endPoint.Host}/";
-            var apiCallPath = $"api/lol/eune/v1.3/game/by-summoner/{summonerId}/recent?api_key={this.ApiKey}";
+            var apiCallPath = $"api/lol/{region.ToString().ToLower()}/v1.3/game/by-summoner/{summonerId}/recent?api_key={this.ApiKey}";
             //make the call
             var dto = MakeCallToRiotApi<RecentGamesDto>(baseUrl, apiCallPath);
             return dto;
