@@ -1,7 +1,6 @@
 ﻿using Newtonsoft.Json;
 using RiotApi.Net.RestClient.Dto.LolStaticData.Generic;
 using System.Collections.Generic;
-using RiotApi.Net.RestClient.Helpers.CustomConverters;
 
 namespace RiotApi.Net.RestClient.Dto.LolStaticData.Champion
 {

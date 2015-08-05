@@ -15,19 +15,19 @@ namespace RiotApi.Net.RestClient
         public RiotHttpClient(string apiKey)
         {
             _apiKey = apiKey;
-            Champion = new Champion(apiKey);
-            CurrentGame = new CurrentGame(apiKey);
-            FeaturedGames = new FeaturedGames(apiKey);
-            Game = new Game(apiKey);
-            League = new League(apiKey);
-            LolStaticData = new LolStaticData(apiKey);
+            Champion = new Champion(_apiKey);
+            CurrentGame = new CurrentGame(_apiKey);
+            FeaturedGames = new FeaturedGames(_apiKey);
+            Game = new Game(_apiKey);
+            League = new League(_apiKey);
+            LolStaticData = new LolStaticData(_apiKey);
             LolStatus = new LolStatus();
-            Match = new Match(apiKey);
-            MatchHistory = new MatchHistory(apiKey);
-            MatchList = new MatchList(apiKey);
-            Stats = new Stats(apiKey);
-            Summoner = new Summoner(apiKey);
-            Team = new Team(apiKey);
+            Match = new Match(_apiKey);
+            MatchHistory = new MatchHistory(_apiKey);
+            MatchList = new MatchList(_apiKey);
+            Stats = new Stats(_apiKey);
+            Summoner = new Summoner(_apiKey);
+            Team = new Team(_apiKey);
         }
 
         public IChampion Champion { get; set; }

@@ -132,7 +132,6 @@
     <Compile Include="Dto\Summoner\Runes\RunePagesDto.cs" />
     <Compile Include="Dto\Summoner\SummonerDto.cs" />
     <Compile Include="Dto\Team\TeamDto.cs" />
-    <Compile Include="Helpers\CustomConverters\SingleOrArrayConverter.cs" />
     <Compile Include="Helpers\Enums.cs" />
     <Compile Include="Dto\LolStatus\ShardDto.cs" />
     <Compile Include="Helpers\RiotExceptionRaiser.cs" />

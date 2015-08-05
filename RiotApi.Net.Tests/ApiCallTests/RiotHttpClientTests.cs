@@ -40,8 +40,8 @@ namespace RiotApi.Net.Tests.ApiCallTests
         [Test]
         public void GetAllChampions()
         {
-            var api = Scope.Resolve<IChampion>();
-            var dto = api.RetrieveAllChampions(RiotApiConfig.Regions.EUNE);
+            var api = Scope.Resolve<IRiotClient>();
+            var dto = api.Champion.RetrieveAllChampions(RiotApiConfig.Regions.EUNE);
             Assert.NotNull(dto);
             Assert.Greater(dto.Champions.Count(), 0);
             foreach (var championDto in dto.Champions)
