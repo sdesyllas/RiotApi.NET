@@ -65,6 +65,8 @@
     <Compile Include="ApiCalls\MatchHistory.cs" />
     <Compile Include="ApiCalls\MatchList.cs" />
     <Compile Include="ApiCalls\Stats.cs" />
+    <Compile Include="ApiCalls\Summoner.cs" />
+    <Compile Include="ApiCalls\Team.cs" />
     <Compile Include="Configuration\RiotApiConfig.cs" />
     <Compile Include="Dto\Champion\ChampionListDto.cs" />
     <Compile Include="Dto\CurrentGame\CurrentGameInfo.cs" />

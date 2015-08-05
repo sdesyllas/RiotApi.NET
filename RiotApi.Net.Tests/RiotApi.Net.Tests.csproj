@@ -58,6 +58,8 @@
     <Compile Include="ApiCallTests\LolStatusTests.cs" />
     <Compile Include="ApiCallTests\MatchListTests.cs" />
     <Compile Include="ApiCallTests\MatchHistoryTests.cs" />
+    <Compile Include="ApiCallTests\TeamTests.cs" />
+    <Compile Include="ApiCallTests\SummonerTests.cs" />
     <Compile Include="ApiCallTests\StatsTests.cs" />
     <Compile Include="ApiCallTests\MatchTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
