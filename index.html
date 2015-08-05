@@ -52,10 +52,10 @@ service are called via an Interface with all supported methods as documented by 
 from Riot's services. 
 For instance you can fetch all free to play champions and print them to screen as you can see in the following example.</p>
 
-<div class="highlight highlight-cs"><pre><span class="pl-c">//initialize riot http api with your riot api key</span>
-IRiotClient riotApi = <span class="pl-k">new</span> RiotHttpClient(<span class="pl-s"><span class="pl-pds">"</span>your api key here<span class="pl-pds">"</span></span>);
+<div class="highlight highlight-cs"><pre><span class="pl-c">//initialize riot http client with your riot api key</span>
+IRiotClient riotClient = <span class="pl-k">new</span> RiotHttpClient(<span class="pl-s"><span class="pl-pds">"</span>your api key here<span class="pl-pds">"</span></span>);
 <span class="pl-c">//retrieve all current free to play champions</span>
-<span class="pl-k">var</span> championList = riotApi.Champion.RetrieveAllChampions(RiotApiConfig.Regions.NA, freeToPlay: <span class="pl-c1">true</span>);
+<span class="pl-k">var</span> championList = riotClient.Champion.RetrieveAllChampions(RiotApiConfig.Regions.NA, freeToPlay: <span class="pl-c1">true</span>);
 <span class="pl-c">//print the number of free to play champions</span>
 Console.WriteLine($<span class="pl-s"><span class="pl-pds">"</span>There are {championList.Champions.Count()} free to play champions to play with!<span class="pl-pds">"</span></span>);</pre></div>
 
