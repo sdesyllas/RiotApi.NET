@@ -35,5 +35,4 @@ to use in their apps. I hope you will like it! Please feel free to contribute.
 * [Newtonsoft.Json](http://www.newtonsoft.com/json)
 * [Autofac](http://autofac.org/)
 * [NLog](http://nlog-project.org/)
-* [Bootstrap](http://getbootstrap.com/)
 * [NUnit](http://www.nunit.org/)
