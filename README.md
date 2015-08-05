@@ -1,5 +1,3 @@
-<img src="https://s3-us-west-1.amazonaws.com/riot-api/img/riot-api-landing.png" alt="riot"/>
-<img src="http://www.brandsoftheworld.com/sites/default/files/styles/logo-thumbnail/public/052011/microsoft_.net_.png?itok=yeSwxY-i" alt=".net"/>
 # RiotApi.NET
 > (WORK IN PROGRESS)
 
