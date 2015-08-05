@@ -63,10 +63,10 @@ namespace RiotApi.Net.Tests.ApiCallTests
         [Test]
         public void Example1()
         {
-            //initialize Champion api with your riot api key
-            IRiotClient riotApi = new RiotHttpClient("your api key here");
+            //initialize riot http client with your riot api key
+            IRiotClient riotClient = new RiotHttpClient("your api key here");
             //retrieve all current free to play champions
-            var championList = riotApi.Champion.RetrieveAllChampions(RiotApiConfig.Regions.NA, freeToPlay: true);
+            var championList = riotClient.Champion.RetrieveAllChampions(RiotApiConfig.Regions.NA, freeToPlay: true);
             //print the number of free to play champions
             Console.WriteLine($"There are {championList.Champions.Count()} free to play champions to play with!");
         }
