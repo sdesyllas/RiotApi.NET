@@ -49,6 +49,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ApiCallTests\RiotHttpClientTests.cs" />
     <Compile Include="ApiCallTests\FeaturedGamesTests.cs" />
     <Compile Include="ApiCallTests\CurrentGameTests.cs" />
     <Compile Include="ApiCallTests\ChampionTests.cs" />
