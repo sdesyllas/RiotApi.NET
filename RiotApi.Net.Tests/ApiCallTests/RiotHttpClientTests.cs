@@ -60,7 +60,6 @@ namespace RiotApi.Net.Tests.ApiCallTests
             Console.WriteLine(dto.ToString());
         }
 
-        [Test]
         public void Example1()
         {
             //initialize riot http client with your riot api key
