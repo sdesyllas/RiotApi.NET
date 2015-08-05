@@ -30,7 +30,7 @@ response => There are 17 free to play champions to play with!
 The goal of this project is to provide .net application developers with a high level tool for Riot games' API 
 to use in their apps. I hope you will like it! Please feel free to contribute.
 
-# RiotApi.NET web ASP.NET MVC User Interface 
+# ASP.NET MVC User Interface 
 > (WORK IN PROGRESS)
 
 # Third party libraries used
