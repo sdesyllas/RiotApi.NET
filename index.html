@@ -48,8 +48,10 @@ service are called via an Interface with all supported methods as documented by 
 from Riot's services. 
 For instance you can fetch all free to play champions and print them to screen as you can see in the following example.</p>
 
-<div class="highlight highlight-cs"><pre><span class="pl-c">//initialize riot http client with your riot api key</span>
-IRiotClient riotClient = <span class="pl-k">new</span> RiotHttpClient(<span class="pl-s"><span class="pl-pds">"</span>your api key here<span class="pl-pds">"</span></span>);
+<div class="highlight highlight-cs"><pre><span class="pl-c">//load a Riot Http module with an Api key into your kernel of your app</span>
+IKernel kernel = <span class="pl-k">new</span> StandardKernel(<span class="pl-k">new</span> RiotHttpClientModule(<span class="pl-s"><span class="pl-pds">"</span>your api key here<span class="pl-pds">"</span></span>));
+<span class="pl-c">//get back the riot client from your application kernel using ninject</span>
+<span class="pl-k">var</span> riotClient = kernel.Get&lt;RiotHttpClient&gt;();
 <span class="pl-c">//retrieve all current free to play champions</span>
 <span class="pl-k">var</span> championList = riotClient.Champion.RetrieveAllChampions(RiotApiConfig.Regions.NA, freeToPlay: <span class="pl-c1">true</span>);
 <span class="pl-c">//print the number of free to play champions</span>
@@ -73,10 +75,12 @@ to use in their apps. I hope you will like it! Please feel free to contribute.</
 
 <ul>
 <li><a href="http://www.newtonsoft.com/json">Newtonsoft.Json</a></li>
-<li><a href="http://autofac.org/">Autofac</a></li>
+<li><a href="http://www.ninject.org/index.html">Ninject</a></li>
 <li><a href="http://nlog-project.org/">NLog</a></li>
 <li><a href="http://www.nunit.org/">NUnit</a></li>
 </ul>
+
+<p><img src="http://nhibernate.info/images/posts/2009/08/29/ninject-logo.png" alt="poweredby-ninject"></p>
       </section>
       <footer>
         <p><small>Hosted on <a href="https://pages.github.com">GitHub Pages</a> using the Dinky theme</small></p>
