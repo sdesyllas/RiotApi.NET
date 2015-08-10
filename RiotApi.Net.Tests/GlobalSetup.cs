@@ -15,9 +15,8 @@ namespace RiotApi.Net.Tests
         [SetUp]
         public void GlueNinjectModules()
         {
-            
             IKernel kernel = new StandardKernel(new RiotHttpClientModule(ConfigurationManager.AppSettings["ApiKey"]));
-            RiotClient = kernel.Get<RiotHttpClient>();
+            RiotClient = kernel.Get<RiotClient>();
         }
     }
 }

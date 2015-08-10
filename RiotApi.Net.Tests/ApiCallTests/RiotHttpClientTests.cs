@@ -39,8 +39,10 @@ namespace RiotApi.Net.Tests.ApiCallTests
         [ExpectedException(typeof(RiotExceptionRaiser.RiotApiException))]
         public void TestUnauthorized()
         {
-            //initialize riot http client with your riot api key
-            IRiotClient riotClient = new RiotHttpClient("your api key here");
+            //initialize riot client using http module with a riot api key
+            IKernel kernel = new StandardKernel(new RiotHttpClientModule("your api key here"));
+            //get back your riotClient initialised with http module by ninject
+            var riotClient = kernel.Get<RiotClient>();
             //retrieve all current free to play champions
             var championList = riotClient.Champion.RetrieveAllChampions(RiotApiConfig.Regions.NA, freeToPlay: true);
             //print the number of free to play champions
@@ -50,9 +52,9 @@ namespace RiotApi.Net.Tests.ApiCallTests
         [Test]
         public void TestNinject()
         {
-            //initialize riot client injecting http module with your riot api key
+            //initialize riot client injecting http modules with your riot api key
             IKernel kernel = new StandardKernel(new RiotHttpClientModule(ConfigurationManager.AppSettings["ApiKey"]));
-            var riotClient = kernel.Get<RiotHttpClient>();
+            var riotClient = kernel.Get<RiotClient>();
             //retrieve all current free to play champions
             var championList = riotClient.Champion.RetrieveAllChampions(RiotApiConfig.Regions.NA, freeToPlay: true);
             //print the number of free to play champions

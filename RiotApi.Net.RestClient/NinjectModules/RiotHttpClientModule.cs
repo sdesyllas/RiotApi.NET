@@ -4,6 +4,13 @@ using RiotApi.Net.RestClient.Interfaces;
 
 namespace RiotApi.Net.RestClient.NinjectModules
 {
+    /// <summary>
+    /// With Ninject, your type bindings are collected into groups called modules. 
+    /// Each of these modules represents an independent segment of your application. 
+    /// They can be organized as you see fit in order to segregate your system into subsystems in a way that makes 
+    /// your overall architecture easy to grok. Modules just need to implement the INinjectModule interface, 
+    /// but most should extend the NinjectModule class for simplicity.
+    /// </summary>
     public class RiotHttpClientModule : NinjectModule
     {
         private static string _apiKey;
@@ -15,6 +22,7 @@ namespace RiotApi.Net.RestClient.NinjectModules
 
         public override void Load()
         {
+            //let ninject glue things together
             Bind<IChampion>().To<Champion>().WithConstructorArgument(_apiKey);
             Bind<ICurrentGame>().To<CurrentGame>().WithConstructorArgument(_apiKey);
             Bind<IFeaturedGames>().To<FeaturedGames>().WithConstructorArgument(_apiKey);
@@ -28,7 +36,6 @@ namespace RiotApi.Net.RestClient.NinjectModules
             Bind<IStats>().To<Stats>().WithConstructorArgument(_apiKey);
             Bind<ISummoner>().To<Summoner>().WithConstructorArgument(_apiKey);
             Bind<ITeam>().To<Team>().WithConstructorArgument(_apiKey);
-            Bind<RiotHttpClient>().ToSelf().InSingletonScope().WithConstructorArgument(_apiKey);
         }
     }
 }

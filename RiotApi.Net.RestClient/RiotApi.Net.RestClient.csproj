@@ -150,7 +150,7 @@
     <Compile Include="Interfaces\ITeam.cs" />
     <Compile Include="IRiotClient.cs" />
     <Compile Include="NinjectModules\RiotHttpClientModule.cs" />
-    <Compile Include="RiotHttpClient.cs" />
+    <Compile Include="RiotClient.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />
