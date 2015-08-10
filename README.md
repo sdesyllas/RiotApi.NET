@@ -13,8 +13,10 @@ from Riot's services.
 For instance you can fetch all free to play champions and print them to screen as you can see in the following example.
 
 ```cs
-//initialize riot http client with your riot api key
-IRiotClient riotClient = new RiotHttpClient("your api key here");
+//load a Riot Http module with an Api key into your kernel of your app
+IKernel kernel = new StandardKernel(new RiotHttpClientModule("your api key here"));
+//get back the riot client from your application kernel using ninject
+var riotClient = kernel.Get<RiotHttpClient>();
 //retrieve all current free to play champions
 var championList = riotClient.Champion.RetrieveAllChampions(RiotApiConfig.Regions.NA, freeToPlay: true);
 //print the number of free to play champions
@@ -36,3 +38,6 @@ to use in their apps. I hope you will like it! Please feel free to contribute.
 * [Ninject](http://www.ninject.org/index.html)
 * [NLog](http://nlog-project.org/)
 * [NUnit](http://www.nunit.org/)
+
+
+<img src="http://nhibernate.info/images/posts/2009/08/29/ninject-logo.png" alt="poweredby-ninject"/>
