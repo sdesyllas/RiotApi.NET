@@ -36,7 +36,3 @@ to use in their apps. I hope you will like it! Please feel free to contribute.
 * [Ninject](http://www.ninject.org/index.html)
 * [NLog](http://nlog-project.org/)
 * [NUnit](http://www.nunit.org/)
-
-
- <img src="http://rdr.zazzle.com/img/imt-prd/isz-s/pd-217376920501264828/tl-ninject_shuriken_sticker.jpg" alt="Shuriken Sticker">
-
