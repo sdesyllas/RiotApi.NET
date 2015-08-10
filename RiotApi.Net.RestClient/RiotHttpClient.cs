@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using RiotApi.Net.RestClient.ApiCalls;
+﻿using RiotApi.Net.RestClient.ApiCalls;
 using RiotApi.Net.RestClient.Interfaces;
 
 namespace RiotApi.Net.RestClient
@@ -11,9 +6,10 @@ namespace RiotApi.Net.RestClient
     public class RiotHttpClient : IRiotClient
     {
         private static string _apiKey;
-
+        
         public RiotHttpClient(string apiKey)
         {
+
             _apiKey = apiKey;
             Champion = new Champion(_apiKey);
             CurrentGame = new CurrentGame(_apiKey);

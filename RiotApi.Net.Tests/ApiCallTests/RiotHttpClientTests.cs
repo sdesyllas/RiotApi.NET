@@ -1,47 +1,23 @@
 ﻿using System;
 using System.Configuration;
 using System.Linq;
-using Autofac;
+using Ninject;
 using NUnit.Framework;
 using RiotApi.Net.RestClient;
-using RiotApi.Net.RestClient.ApiCalls;
 using RiotApi.Net.RestClient.Configuration;
-using RiotApi.Net.RestClient.Interfaces;
+using RiotApi.Net.RestClient.Helpers;
+using RiotApi.Net.RestClient.NinjectModules;
 
 namespace RiotApi.Net.Tests.ApiCallTests
 {
     [TestFixture]
     public class RiotHttpClientTests
     {
-        /// <summary>
-        /// IOC (Inversion of Control) container
-        /// https://en.wikipedia.org/wiki/Inversion_of_control
-        /// </summary>
-        private static IContainer Container { get; set; }
-        private static ILifetimeScope Scope { get; set; }
-
-        [TestFixtureSetUp]
-        public void Init()
-        {
-            // Create your builder.
-            var builder = new ContainerBuilder();
-            // Register individual components
-            builder.RegisterInstance(new RiotHttpClient(ConfigurationManager.AppSettings["ApiKey"])).As<IRiotClient>();
-            Container = builder.Build();
-            Scope = Container.BeginLifetimeScope();
-        }
-
-        [TestFixtureTearDown]
-        public void TearDown()
-        {
-            Scope.Dispose();
-        }
 
         [Test]
         public void GetAllChampions()
         {
-            var api = Scope.Resolve<IRiotClient>();
-            var dto = api.Champion.RetrieveAllChampions(RiotApiConfig.Regions.EUNE);
+            var dto = GlobalSetup.RiotClient.Champion.RetrieveAllChampions(RiotApiConfig.Regions.EUNE);
             Assert.NotNull(dto);
             Assert.Greater(dto.Champions.Count(), 0);
             foreach (var championDto in dto.Champions)
@@ -53,17 +29,30 @@ namespace RiotApi.Net.Tests.ApiCallTests
         [Test]
         public void GetChampionById()
         {
-            var api = Scope.Resolve<IRiotClient>();
-            var dto = api.Champion.RetrieveChampionById(RiotApiConfig.Regions.EUNE, 1);
+            var dto = GlobalSetup.RiotClient.Champion.RetrieveChampionById(RiotApiConfig.Regions.EUNE, 1);
             Assert.NotNull(dto);
             Assert.AreEqual(1, dto.Id);
             Console.WriteLine(dto.ToString());
         }
 
-        public void Example1()
+        [Test]
+        [ExpectedException(typeof(RiotExceptionRaiser.RiotApiException))]
+        public void TestUnauthorized()
         {
             //initialize riot http client with your riot api key
             IRiotClient riotClient = new RiotHttpClient("your api key here");
+            //retrieve all current free to play champions
+            var championList = riotClient.Champion.RetrieveAllChampions(RiotApiConfig.Regions.NA, freeToPlay: true);
+            //print the number of free to play champions
+            Console.WriteLine($"There are {championList.Champions.Count()} free to play champions to play with!");
+        }
+
+        [Test]
+        public void TestNinject()
+        {
+            //initialize riot client injecting http module with your riot api key
+            IKernel kernel = new StandardKernel(new RiotHttpClientModule(ConfigurationManager.AppSettings["ApiKey"]));
+            var riotClient = kernel.Get<RiotHttpClient>();
             //retrieve all current free to play champions
             var championList = riotClient.Champion.RetrieveAllChampions(RiotApiConfig.Regions.NA, freeToPlay: true);
             //print the number of free to play champions
