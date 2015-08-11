@@ -21,7 +21,11 @@ var championList = riotClient.Champion.RetrieveAllChampions(RiotApiConfig.Region
 Console.WriteLine($"There are {championList.Champions.Count()} free to play champions to play with!");
 ```
 
-## Example using dependency injector on your own (Ninject module)
+```
+response => There are 17 free to play champions to play with!
+```
+
+## Example using dependency injector on your own - the advanced way (Ninject module)
 ```cs
 //load a Riot Http module with an Api key into your kernel of your app
 IKernel kernel = new StandardKernel(new RiotHttpClientModule("your api key here"));
