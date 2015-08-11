@@ -17,7 +17,7 @@ namespace RiotApi.Net.Tests.ApiCallTests
         [Test]
         public void GetAllChampions()
         {
-            var dto = GlobalSetup.RiotClient.Champion.RetrieveAllChampions(RiotApiConfig.Regions.EUNE);
+            var dto = GlobalSetup.RiotHttpClient.Champion.RetrieveAllChampions(RiotApiConfig.Regions.EUNE);
             Assert.NotNull(dto);
             Assert.Greater(dto.Champions.Count(), 0);
             foreach (var championDto in dto.Champions)
@@ -29,7 +29,7 @@ namespace RiotApi.Net.Tests.ApiCallTests
         [Test]
         public void GetChampionById()
         {
-            var dto = GlobalSetup.RiotClient.Champion.RetrieveChampionById(RiotApiConfig.Regions.EUNE, 1);
+            var dto = GlobalSetup.RiotHttpClient.Champion.RetrieveChampionById(RiotApiConfig.Regions.EUNE, 1);
             Assert.NotNull(dto);
             Assert.AreEqual(1, dto.Id);
             Console.WriteLine(dto.ToString());

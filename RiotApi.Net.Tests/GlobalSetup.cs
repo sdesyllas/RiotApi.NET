@@ -10,12 +10,12 @@ namespace RiotApi.Net.Tests
     [SetUpFixture]
     public class GlobalSetup
     {
-        public static IRiotClient RiotClient { get; set; }
+        public static IRiotClient RiotHttpClient { get; set; }
 
         [SetUp]
         public void GlueNinjectModules()
         {
-            RiotClient = RiotApiLoader.CreateHttpClient(ConfigurationManager.AppSettings["ApiKey"]);
+            RiotHttpClient = RiotApiLoader.CreateHttpClient(ConfigurationManager.AppSettings["ApiKey"]);
         }
     }
 }

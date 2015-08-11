@@ -13,7 +13,7 @@ namespace RiotApi.Net.Tests.ApiCallTests
         [Test]
         public void GetChampionList()
         {
-            var dto = GlobalSetup.RiotClient.LolStaticData.GetChampionList(RestClient.Configuration.RiotApiConfig.Regions.EUNE, champData: "all", locale: "el_GR");
+            var dto = GlobalSetup.RiotHttpClient.LolStaticData.GetChampionList(RestClient.Configuration.RiotApiConfig.Regions.EUNE, champData: "all", locale: "el_GR");
             Assert.NotNull(dto);
             Console.WriteLine(dto);
             foreach (var champion in dto.Data.Values)
@@ -25,7 +25,7 @@ namespace RiotApi.Net.Tests.ApiCallTests
         [Test]
         public void GetChampionById()
         {
-            var dto = GlobalSetup.RiotClient.LolStaticData.GetChampionById(RestClient.Configuration.RiotApiConfig.Regions.EUNE, 254);
+            var dto = GlobalSetup.RiotHttpClient.LolStaticData.GetChampionById(RestClient.Configuration.RiotApiConfig.Regions.EUNE, 254);
             Assert.NotNull(dto);
             Assert.AreEqual(254, dto.Id);
             Console.WriteLine($"Champion : {dto.Title}");
@@ -34,7 +34,7 @@ namespace RiotApi.Net.Tests.ApiCallTests
         [Test]
         public void GetItemList()
         {
-            var dto = GlobalSetup.RiotClient.LolStaticData.GetItemList(RestClient.Configuration.RiotApiConfig.Regions.EUNE, itemListData: "all");
+            var dto = GlobalSetup.RiotHttpClient.LolStaticData.GetItemList(RestClient.Configuration.RiotApiConfig.Regions.EUNE, itemListData: "all");
             Assert.NotNull(dto);
             Console.WriteLine(dto);
         }
@@ -42,7 +42,7 @@ namespace RiotApi.Net.Tests.ApiCallTests
         [Test]
         public void GetItemById()
         {
-            var dto = GlobalSetup.RiotClient.LolStaticData.GetItemById(RestClient.Configuration.RiotApiConfig.Regions.EUNE, 1300, itemData: "all");
+            var dto = GlobalSetup.RiotHttpClient.LolStaticData.GetItemById(RestClient.Configuration.RiotApiConfig.Regions.EUNE, 1300, itemData: "all");
             Assert.NotNull(dto);
             Console.WriteLine(dto);
             Console.WriteLine($"item: {dto.Name}, {dto.Image.Full}");
@@ -51,7 +51,7 @@ namespace RiotApi.Net.Tests.ApiCallTests
         [Test]
         public void GetLanguageStrings()
         {
-            var dto = GlobalSetup.RiotClient.LolStaticData.GetLanguageStrings(RestClient.Configuration.RiotApiConfig.Regions.EUNE, locale: "el_GR");
+            var dto = GlobalSetup.RiotHttpClient.LolStaticData.GetLanguageStrings(RestClient.Configuration.RiotApiConfig.Regions.EUNE, locale: "el_GR");
             Assert.NotNull(dto);
             Console.WriteLine(dto);
         }
@@ -59,7 +59,7 @@ namespace RiotApi.Net.Tests.ApiCallTests
         [Test]
         public void GetSupportedLanguages()
         {
-            var dto = GlobalSetup.RiotClient.LolStaticData.GetSupportedLanguages(RestClient.Configuration.RiotApiConfig.Regions.EUNE);
+            var dto = GlobalSetup.RiotHttpClient.LolStaticData.GetSupportedLanguages(RestClient.Configuration.RiotApiConfig.Regions.EUNE);
             Assert.NotNull(dto);
             dto.ToList().ForEach(Console.WriteLine);
         }
@@ -67,7 +67,7 @@ namespace RiotApi.Net.Tests.ApiCallTests
         [Test]
         public void GetMapData()
         {
-            var dto = GlobalSetup.RiotClient.LolStaticData.GetMapData(RestClient.Configuration.RiotApiConfig.Regions.EUNE);
+            var dto = GlobalSetup.RiotHttpClient.LolStaticData.GetMapData(RestClient.Configuration.RiotApiConfig.Regions.EUNE);
             Assert.NotNull(dto);
             Console.WriteLine(dto);
         }
@@ -75,7 +75,7 @@ namespace RiotApi.Net.Tests.ApiCallTests
         [Test]
         public void GetMasteryList()
         {
-            var dto = GlobalSetup.RiotClient.LolStaticData.GetMasteryList(RestClient.Configuration.RiotApiConfig.Regions.EUNE, masteryListData: "all");
+            var dto = GlobalSetup.RiotHttpClient.LolStaticData.GetMasteryList(RestClient.Configuration.RiotApiConfig.Regions.EUNE, masteryListData: "all");
             Assert.NotNull(dto);
             Console.WriteLine(dto);
         }
@@ -83,7 +83,7 @@ namespace RiotApi.Net.Tests.ApiCallTests
         [Test]
         public void GetMasteryById()
         {
-            var dto = GlobalSetup.RiotClient.LolStaticData.GetMasteryById(RestClient.Configuration.RiotApiConfig.Regions.EUNE, 4214, masteryData: "all");
+            var dto = GlobalSetup.RiotHttpClient.LolStaticData.GetMasteryById(RestClient.Configuration.RiotApiConfig.Regions.EUNE, 4214, masteryData: "all");
             Assert.NotNull(dto);
             Console.WriteLine(dto);
             Assert.AreEqual(4214, dto.Id);
@@ -93,19 +93,19 @@ namespace RiotApi.Net.Tests.ApiCallTests
         [Test]
         public void GetRealmData()
         {
-            var eune = GlobalSetup.RiotClient.LolStaticData.GetRealmData(RestClient.Configuration.RiotApiConfig.Regions.EUNE);
+            var eune = GlobalSetup.RiotHttpClient.LolStaticData.GetRealmData(RestClient.Configuration.RiotApiConfig.Regions.EUNE);
             Assert.NotNull(eune);
             Console.WriteLine(eune);
 
-            var na = GlobalSetup.RiotClient.LolStaticData.GetRealmData(RestClient.Configuration.RiotApiConfig.Regions.NA);
+            var na = GlobalSetup.RiotHttpClient.LolStaticData.GetRealmData(RestClient.Configuration.RiotApiConfig.Regions.NA);
             Assert.NotNull(na);
             Console.WriteLine(na);
 
-            var kr = GlobalSetup.RiotClient.LolStaticData.GetRealmData(RestClient.Configuration.RiotApiConfig.Regions.KR);
+            var kr = GlobalSetup.RiotHttpClient.LolStaticData.GetRealmData(RestClient.Configuration.RiotApiConfig.Regions.KR);
             Assert.NotNull(kr);
             Console.WriteLine(kr);
 
-            var euw = GlobalSetup.RiotClient.LolStaticData.GetRealmData(RestClient.Configuration.RiotApiConfig.Regions.EUW);
+            var euw = GlobalSetup.RiotHttpClient.LolStaticData.GetRealmData(RestClient.Configuration.RiotApiConfig.Regions.EUW);
             Assert.NotNull(euw);
             Console.WriteLine(euw);
         }
@@ -113,7 +113,7 @@ namespace RiotApi.Net.Tests.ApiCallTests
         [Test]
         public void GetRuneList()
         {
-            var dto = GlobalSetup.RiotClient.LolStaticData.GetRuneList(RestClient.Configuration.RiotApiConfig.Regions.EUNE, runeListData:"all");
+            var dto = GlobalSetup.RiotHttpClient.LolStaticData.GetRuneList(RestClient.Configuration.RiotApiConfig.Regions.EUNE, runeListData:"all");
             Assert.NotNull(dto);
             Console.WriteLine(dto);
             Console.WriteLine(dto.Data.FirstOrDefault().Value.Id);
@@ -122,7 +122,7 @@ namespace RiotApi.Net.Tests.ApiCallTests
         [Test]
         public void GetRuneById()
         {
-            var dto = GlobalSetup.RiotClient.LolStaticData.GetRuneById(RestClient.Configuration.RiotApiConfig.Regions.EUNE, 5235, runeData: "all");
+            var dto = GlobalSetup.RiotHttpClient.LolStaticData.GetRuneById(RestClient.Configuration.RiotApiConfig.Regions.EUNE, 5235, runeData: "all");
             Assert.NotNull(dto);
             Console.WriteLine(dto);
             Assert.AreEqual(5235, dto.Id);
@@ -131,7 +131,7 @@ namespace RiotApi.Net.Tests.ApiCallTests
         [Test]
         public void GetSummonerSpellList()
         {
-            var dto = GlobalSetup.RiotClient.LolStaticData.GetSummonerSpellList(RestClient.Configuration.RiotApiConfig.Regions.EUNE, spellData:"all");
+            var dto = GlobalSetup.RiotHttpClient.LolStaticData.GetSummonerSpellList(RestClient.Configuration.RiotApiConfig.Regions.EUNE, spellData:"all");
             Assert.NotNull(dto);
             Console.WriteLine(dto);
         }
@@ -139,7 +139,7 @@ namespace RiotApi.Net.Tests.ApiCallTests
         [Test]
         public void GetSummonerSpellById()
         {
-            var dto = GlobalSetup.RiotClient.LolStaticData.GetSummonerSpellById(RestClient.Configuration.RiotApiConfig.Regions.EUNE, 1, spellData: "all");
+            var dto = GlobalSetup.RiotHttpClient.LolStaticData.GetSummonerSpellById(RestClient.Configuration.RiotApiConfig.Regions.EUNE, 1, spellData: "all");
             Assert.NotNull(dto);
             Console.WriteLine(dto);
             Assert.AreEqual(1, dto.Id);
@@ -148,7 +148,7 @@ namespace RiotApi.Net.Tests.ApiCallTests
         [Test]
         public void GetVersionData()
         {
-            var dto = GlobalSetup.RiotClient.LolStaticData.GetVersionData(RestClient.Configuration.RiotApiConfig.Regions.EUNE);
+            var dto = GlobalSetup.RiotHttpClient.LolStaticData.GetVersionData(RestClient.Configuration.RiotApiConfig.Regions.EUNE);
             Assert.NotNull(dto);
             dto.ToList().ForEach(Console.WriteLine);
         }

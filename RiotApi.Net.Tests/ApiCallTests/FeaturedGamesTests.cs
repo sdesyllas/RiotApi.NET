@@ -14,7 +14,7 @@ namespace RiotApi.Net.Tests.ApiCallTests
         [Test]
         public void GetAllFeaturedGames()
         {
-            var dto = GlobalSetup.RiotClient.FeaturedGames.GetListOfFeaturedGames(RiotApiConfig.Regions.EUNE);
+            var dto = GlobalSetup.RiotHttpClient.FeaturedGames.GetListOfFeaturedGames(RiotApiConfig.Regions.EUNE);
             Assert.NotNull(dto);
             Assert.Greater(dto.GameList.Count(), 0);
             foreach (var game in dto.GameList)

@@ -16,7 +16,7 @@ namespace RiotApi.Net.Tests.ApiCallTests
         [Test]
         public void GetShards()
         {
-            var dto = GlobalSetup.RiotClient.LolStatus.GetShards();
+            var dto = GlobalSetup.RiotHttpClient.LolStatus.GetShards();
             Assert.NotNull(dto);
             var shardDtos = dto as IList<ShardDto> ?? dto.ToList();
             Assert.Greater(shardDtos.Count(), 0);
@@ -37,7 +37,7 @@ namespace RiotApi.Net.Tests.ApiCallTests
         [TestCase(RestClient.Configuration.RiotApiConfig.Regions.TR)]
         public void GetShardStatusByRegion(RiotApiConfig.Regions region)
         {
-            var dto = GlobalSetup.RiotClient.LolStatus.GetShardStatusByRegion(region);
+            var dto = GlobalSetup.RiotHttpClient.LolStatus.GetShardStatusByRegion(region);
             Assert.NotNull(dto);
             Console.WriteLine(dto);
         }

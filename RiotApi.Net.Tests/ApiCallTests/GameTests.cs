@@ -15,7 +15,7 @@ namespace RiotApi.Net.Tests.ApiCallTests
         {
             try
             {
-                var dto = GlobalSetup.RiotClient.Game.GetRecentGamesBySummonerId(RestClient.Configuration.RiotApiConfig.Regions.EUNE, 41488614);
+                var dto = GlobalSetup.RiotHttpClient.Game.GetRecentGamesBySummonerId(RestClient.Configuration.RiotApiConfig.Regions.EUNE, 41488614);
                 Assert.NotNull(dto);
                 Console.WriteLine($"Summoner: {dto.SummonerId}");
                 foreach(var game in dto.Games)

@@ -17,7 +17,7 @@ namespace RiotApi.Net.Tests.ApiCallTests
         {
             try
             {
-                var dto = GlobalSetup.RiotClient.CurrentGame.GetCurrentGameInformationForSummonerId(RiotApiConfig.Platforms.EUN1, 41488614);
+                var dto = GlobalSetup.RiotHttpClient.CurrentGame.GetCurrentGameInformationForSummonerId(RiotApiConfig.Platforms.EUN1, 41488614);
                 Assert.NotNull(dto);
                 Console.WriteLine($"Summoner's current game : {dto.GameId}");
                 Console.WriteLine($"Summoner's game mode : {dto.GameMode}");

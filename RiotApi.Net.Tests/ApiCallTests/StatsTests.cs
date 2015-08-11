@@ -17,7 +17,7 @@ namespace RiotApi.Net.Tests.ApiCallTests
         {
             try
             {
-                var dto = GlobalSetup.RiotClient.Stats.GetRankedStatsBySummonerId(RiotApiConfig.Regions.EUNE, summonerId);
+                var dto = GlobalSetup.RiotHttpClient.Stats.GetRankedStatsBySummonerId(RiotApiConfig.Regions.EUNE, summonerId);
                 Assert.NotNull(dto);
                 Assert.AreEqual(summonerId, dto.SummonerId);
                 Console.WriteLine(dto.ToString());
@@ -41,7 +41,7 @@ namespace RiotApi.Net.Tests.ApiCallTests
         {
             try
             {
-                var dto = GlobalSetup.RiotClient.Stats.GetPlayerStatsBySummonerId(RiotApiConfig.Regions.EUNE, summonerId);
+                var dto = GlobalSetup.RiotHttpClient.Stats.GetPlayerStatsBySummonerId(RiotApiConfig.Regions.EUNE, summonerId);
                 Assert.NotNull(dto);
                 Assert.AreEqual(summonerId, dto.SummonerId);
                 Console.WriteLine(dto.ToString());

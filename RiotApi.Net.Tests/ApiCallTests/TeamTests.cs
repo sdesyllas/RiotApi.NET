@@ -15,7 +15,7 @@ namespace RiotApi.Net.Tests.ApiCallTests
         [Test]
         public void GetSummonersByName()
         {
-            var dto = GlobalSetup.RiotClient.Team.GetTeamsBySummonerId(RiotApiConfig.Regions.EUNE, "41488614", "41468510");
+            var dto = GlobalSetup.RiotHttpClient.Team.GetTeamsBySummonerId(RiotApiConfig.Regions.EUNE, "41488614", "41468510");
             Assert.NotNull(dto);
             foreach (var teams in dto.Values)
             {
@@ -26,7 +26,7 @@ namespace RiotApi.Net.Tests.ApiCallTests
         [Test]
         public void GetTeamsByTeamId()
         {
-            var dto = GlobalSetup.RiotClient.Team.GetTeamsByTeamId(RiotApiConfig.Regions.EUNE, "TEAM-18cc5c20-b4f9-11e4-80a9-782bcb46f3e4",
+            var dto = GlobalSetup.RiotHttpClient.Team.GetTeamsByTeamId(RiotApiConfig.Regions.EUNE, "TEAM-18cc5c20-b4f9-11e4-80a9-782bcb46f3e4",
                 "TEAM-b999b8d0-18d8-11e5-8e2b-782bcb46f3e4", "TEAM-a42274a0-0868-11e4-8646-782bcb4d190f");
             Assert.NotNull(dto);
             dto.Values.ToList().ForEach(Console.WriteLine);

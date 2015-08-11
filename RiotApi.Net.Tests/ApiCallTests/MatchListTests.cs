@@ -17,7 +17,7 @@ namespace RiotApi.Net.Tests.ApiCallTests
         {
             try
             {
-                var dto = GlobalSetup.RiotClient.MatchList.GetMatchListBySummonerId(RiotApiConfig.Regions.EUNE, summonerId);
+                var dto = GlobalSetup.RiotHttpClient.MatchList.GetMatchListBySummonerId(RiotApiConfig.Regions.EUNE, summonerId);
                 Assert.NotNull(dto);
                 Console.WriteLine(dto.ToString());
             }
