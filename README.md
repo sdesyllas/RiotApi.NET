@@ -53,6 +53,7 @@ to use in their apps. I hope you will like it! Please feel free to contribute.
 * [Ninject](http://www.ninject.org/index.html)
 * [NLog](http://nlog-project.org/)
 * [NUnit](http://www.nunit.org/)
+* [moq](https://github.com/Moq/moq4)
 
 
 <img src="http://nhibernate.info/images/posts/2009/08/29/ninject-logo.png" alt="poweredby-ninject"/>
