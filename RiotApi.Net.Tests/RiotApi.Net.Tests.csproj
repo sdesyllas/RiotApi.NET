@@ -68,6 +68,7 @@
     <Compile Include="ApiCallTests\StatsTests.cs" />
     <Compile Include="ApiCallTests\MatchTests.cs" />
     <Compile Include="BehaviourTesting\ChampionBehaviour.cs" />
+    <Compile Include="BehaviourTesting\CurrentGameBehaviour.cs" />
     <Compile Include="GlobalSetup.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
