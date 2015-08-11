@@ -31,6 +31,7 @@ namespace RiotApi.Net.Tests.BehaviourTesting
             IRiotClient client = _mockClient.Object;
             ChampionListDto dto = client.Champion.RetrieveAllChampions(RiotApiConfig.Regions.EUNE, true);
             Assert.IsInstanceOf<ChampionListDto>(dto);
+            Assert.NotNull(dto);
         }
 
         [Test]
@@ -39,8 +40,9 @@ namespace RiotApi.Net.Tests.BehaviourTesting
             _mockClient.Setup(x => x.Champion.RetrieveChampionById(It.IsAny<RiotApiConfig.Regions>(), It.IsAny<int>()))
                 .Returns(new ChampionListDto.ChampionDto());
             IRiotClient client = _mockClient.Object;
-            ChampionListDto.ChampionDto dto = client.Champion.RetrieveChampionById(RiotApiConfig.Regions.EUNE, 1);
+            ChampionListDto.ChampionDto dto = client.Champion.RetrieveChampionById(RiotApiConfig.Regions.EUNE, 8);
             Assert.IsInstanceOf<ChampionListDto.ChampionDto>(dto);
+            Assert.NotNull(dto);
         }
     }
 }
