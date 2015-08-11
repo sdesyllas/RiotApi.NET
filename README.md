@@ -12,6 +12,19 @@ The usage of the RiotApi.Net is a piece of cake! In less than three lines of cod
 from Riot's services. 
 For instance you can fetch all free to play champions and print them to screen as you can see in the following example.
 
+## Example using class construction
+```cs
+//load a Riot Http module with an Api key into your kernel of your app
+IKernel kernel = new StandardKernel(new RiotHttpClientModule("your api key here"));
+//get back the riot client from your application kernel using ninject
+var riotClient = kernel.Get<RiotHttpClient>();
+//retrieve all current free to play champions
+var championList = riotClient.Champion.RetrieveAllChampions(RiotApiConfig.Regions.NA, freeToPlay: true);
+//print the number of free to play champions
+Console.WriteLine($"There are {championList.Champions.Count()} free to play champions to play with!");
+```
+
+## Example using dependency injector (Ninject module)
 ```cs
 //load a Riot Http module with an Api key into your kernel of your app
 IKernel kernel = new StandardKernel(new RiotHttpClientModule("your api key here"));
