@@ -152,6 +152,7 @@
     <Compile Include="NinjectModules\RiotHttpClientModule.cs" />
     <Compile Include="RiotClient.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RiotApiLoader.cs" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

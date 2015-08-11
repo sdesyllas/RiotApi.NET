@@ -1,7 +1,4 @@
-﻿using System.Runtime.CompilerServices;
-using Ninject;
-using RiotApi.Net.RestClient.ApiCalls;
-using RiotApi.Net.RestClient.Interfaces;
+﻿using RiotApi.Net.RestClient.Interfaces;
 
 namespace RiotApi.Net.RestClient
 {

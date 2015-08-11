@@ -60,5 +60,15 @@ namespace RiotApi.Net.Tests.ApiCallTests
             //print the number of free to play champions
             Console.WriteLine($"There are {championList.Champions.Count()} free to play champions to play with!");
         }
+
+        [Test]
+        public void TestHttpCreator()
+        {
+            var riotClient = RiotApiLoader.CreateHttpClient("your api key here");
+            //retrieve all current free to play champions
+            var championList = riotClient.Champion.RetrieveAllChampions(RiotApiConfig.Regions.NA, freeToPlay: true);
+            //print the number of free to play champions
+            Console.WriteLine($"There are {championList.Champions.Count()} free to play champions to play with!");
+        }
     }
 }
