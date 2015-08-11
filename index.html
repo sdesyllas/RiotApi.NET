@@ -48,6 +48,23 @@ service are called via an Interface with all supported methods as documented by 
 from Riot's services. 
 For instance you can fetch all free to play champions and print them to screen as you can see in the following example.</p>
 
+<h2>
+<a id="example-using-api-loader-recommended-way" class="anchor" href="#example-using-api-loader-recommended-way" aria-hidden="true"><span class="octicon octicon-link"></span></a>Example using Api Loader (recommended way)</h2>
+
+<div class="highlight highlight-cs"><pre><span class="pl-k">var</span> riotClient = RiotApiLoader.CreateHttpClient(<span class="pl-s"><span class="pl-pds">"</span>your api key here<span class="pl-pds">"</span></span>);
+<span class="pl-c">//retrieve all current free to play champions</span>
+<span class="pl-k">var</span> championList = riotClient.Champion.RetrieveAllChampions(RiotApiConfig.Regions.NA, freeToPlay: <span class="pl-c1">true</span>);
+<span class="pl-c">//print the number of free to play champions</span>
+Console.WriteLine($<span class="pl-s"><span class="pl-pds">"</span>There are {championList.Champions.Count()} free to play champions to play with!<span class="pl-pds">"</span></span>);</pre></div>
+
+<pre><code>response =&gt; There are 17 free to play champions to play with!
+</code></pre>
+
+<h2>
+<a id="example-using-dependency-injector-on-your-own" class="anchor" href="#example-using-dependency-injector-on-your-own" aria-hidden="true"><span class="octicon octicon-link"></span></a>Example using dependency injector on your own</h2>
+
+<p>This is the advanced way using your own ninject modules (RiotHttpClientModule in our example)</p>
+
 <div class="highlight highlight-cs"><pre><span class="pl-c">//load a Riot Http module with an Api key into your kernel of your app</span>
 IKernel kernel = <span class="pl-k">new</span> StandardKernel(<span class="pl-k">new</span> RiotHttpClientModule(<span class="pl-s"><span class="pl-pds">"</span>your api key here<span class="pl-pds">"</span></span>));
 <span class="pl-c">//get back the riot client from your application kernel using ninject</span>
@@ -78,6 +95,7 @@ to use in their apps. I hope you will like it! Please feel free to contribute.</
 <li><a href="http://www.ninject.org/index.html">Ninject</a></li>
 <li><a href="http://nlog-project.org/">NLog</a></li>
 <li><a href="http://www.nunit.org/">NUnit</a></li>
+<li><a href="https://github.com/Moq/moq4">moq</a></li>
 </ul>
 
 <p><img src="http://nhibernate.info/images/posts/2009/08/29/ninject-logo.png" alt="poweredby-ninject"></p>
