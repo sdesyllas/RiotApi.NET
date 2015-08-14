@@ -1,11 +1,20 @@
 <img src="http://i58.tinypic.com/qplz85.jpg" border="0" alt="Image and video hosting by TinyPic">
-# RiotApi.NET
-
+# RiotApi.NET [![NuGet](https://img.shields.io/badge/nuget-riotapi.net-green.svg)]()
 This is a .net Api for Riot Games League of Legends written in C#. The goal of this project is to provide a higher 
 level of interaction with the Riot's API Rest service, json responses are deserialized to objects and all methods of the
 service are called via an Interface with all supported methods as documented by Riot.
 
 In other words this project is a C# wrapper client that can be used within any kind of .net application or any other application using .net mono framework.
+
+#Install
+The easiest way to install this api to your project is using NuGet\
+
+To install RiotApi.NET, run the following command in the Package Manager Console
+```
+PM> Install-Package RiotApi.NET
+```
+
+Ofcourse you can always download the source code and use it in your project as you like.
 
 #How to use
 The usage of the RiotApi.Net is a piece of cake! In less than three lines of code you can retrieve any data
