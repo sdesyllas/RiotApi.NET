@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>RiotApi.NET</id>
+    <version>1.0.0</version>
+    <title>RiotApi.NET</title>
+    <authors>Spyros Desyllas</authors>
+    <owners>Spyros Desyllas</owners>
+    <licenseUrl>https://github.com/sdesyllas/RiotApi.NET/blob/master/LICENSE</licenseUrl>
+    <projectUrl>http://sdesyllas.github.io/RiotApi.NET/</projectUrl>
+    <iconUrl>http://ICON_URL_HERE_OR_DELETE_THIS_LINE</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>This is a .net Api for Riot Games League of Legends written in C#.</description>
+    <releaseNotes>Summary of changes made in this release of the package.</releaseNotes>
+    <copyright>Copyright 2015</copyright>
+    <tags>RiotApi LeagueOfLegends lol Riot</tags>
+  </metadata>
+</package>
