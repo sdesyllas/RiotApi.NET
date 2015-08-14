@@ -8,7 +8,7 @@
     <owners>Spyros Desyllas</owners>
     <licenseUrl>https://github.com/sdesyllas/RiotApi.NET/blob/master/LICENSE</licenseUrl>
     <projectUrl>http://sdesyllas.github.io/RiotApi.NET/</projectUrl>
-    <iconUrl>http://ICON_URL_HERE_OR_DELETE_THIS_LINE</iconUrl>
+    <iconUrl>http://i57.tinypic.com/25i6y39.jpg</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>This is a .net Api for Riot Games League of Legends written in C#.</description>
     <releaseNotes>Summary of changes made in this release of the package.</releaseNotes>
