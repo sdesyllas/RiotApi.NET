@@ -7,7 +7,7 @@ service are called via an Interface with all supported methods as documented by 
 In other words this project is a C# wrapper client that can be used within any kind of .net application or any other application using .net mono framework.
 
 #Install
-The easiest way to install this api to your project is using NuGet\
+The easiest way to install this api to your project is using NuGet
 
 To install RiotApi.NET, run the following command in the Package Manager Console
 ```
