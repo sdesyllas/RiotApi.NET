@@ -25,7 +25,7 @@ Console.WriteLine($"There are {championList.Champions.Count()} free to play cham
 response => There are 17 free to play champions to play with!
 ```
 
-## Example using dependency injector on your own
+## Example using dependency injection within your application kernel
 This is the advanced way using your own ninject modules (RiotHttpClientModule in our example)
 ```cs
 //load a Riot Http module with an Api key into your kernel of your app
