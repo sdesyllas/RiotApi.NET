@@ -22,6 +22,14 @@ from Riot's services.
 For instance you can fetch all free to play champions and print them to screen as you can see in the following example.
 
 ## Example using Api Loader (recommended way)
+
+First import the appropriate libraries
+```cs
+using RiotApi.Net.RestClient;
+using RiotApi.Net.RestClient.Configuration;
+```
+
+Then create an http Riot client and make a call to champions API
 ```cs
 var riotClient = RiotApiLoader.CreateHttpClient("your api key here");
 //retrieve all current free to play champions
