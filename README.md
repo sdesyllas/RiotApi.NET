@@ -73,4 +73,4 @@ to use in their apps. I hope you will like it! Please feel free to contribute.
 * [moq](https://github.com/Moq/moq4)
 
 
-<img src="http://nhibernate.info/images/posts/2009/08/29/ninject-logo.png" alt="poweredby-ninject"/>
+<img src="http://rdr.zazzle.com/img/imt-prd/isz-s/pd-217929838958860376/tl-ninject_akimbo_sticker.jpg" alt="poweredby-ninject"/>
