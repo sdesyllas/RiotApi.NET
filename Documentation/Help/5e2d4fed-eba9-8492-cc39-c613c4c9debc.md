@@ -1,0 +1,42 @@
+# ILolStaticData.GetVersionData Method 
+RiotApi.NET Documentation 
+
+Retrieve version data. Rate Limit Notes Requests to this API will not be counted in your Rate Limit.
+
+**Namespace:**&nbsp;<a href="48cda41f-0d73-abf8-ab33-13ac48004c66">RiotApi.Net.RestClient.Interfaces</a><br />**Assembly:**&nbsp;RiotApi.Net.RestClient (in RiotApi.Net.RestClient.dll) Version: 1.0.1.20531
+
+## Syntax
+
+**C#**<br />
+``` C#
+IEnumerable<string> GetVersionData(
+	RiotApiConfig.Regions region
+)
+```
+
+**VB**<br />
+``` VB
+Function GetVersionData ( 
+	region As RiotApiConfig.Regions
+) As IEnumerable(Of String)
+```
+
+**C++**<br />
+``` C++
+IEnumerable<String^>^ GetVersionData(
+	RiotApiConfig.Regions region
+)
+```
+
+
+#### Parameters
+&nbsp;<dl><dt>region</dt><dd>Type: <a href="4d977124-7072-aed6-d4c3-44de17e37ee2">RiotApi.Net.RestClient.Configuration.RiotApiConfig.Regions</a><br />\[Missing <param name="region"/> documentation for "M:RiotApi.Net.RestClient.Interfaces.ILolStaticData.GetVersionData(RiotApi.Net.RestClient.Configuration.RiotApiConfig.Regions)"\]</dd></dl>
+
+#### Return Value
+Type: <a href="http://msdn2.microsoft.com/en-us/library/9eekhta0" target="_blank">IEnumerable</a>(<a href="http://msdn2.microsoft.com/en-us/library/s1wwdcbf" target="_blank">String</a>)<br />Return Value: List[string]
+
+## See Also
+
+
+#### Reference
+<a href="aa83650f-f275-e38f-8f62-14b2064f0eac">ILolStaticData Interface</a><br /><a href="48cda41f-0d73-abf8-ab33-13ac48004c66">RiotApi.Net.RestClient.Interfaces Namespace</a><br />

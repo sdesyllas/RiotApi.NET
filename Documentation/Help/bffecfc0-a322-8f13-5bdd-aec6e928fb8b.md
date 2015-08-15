@@ -1,0 +1,31 @@
+# BasicDataStatsDto Constructor 
+RiotApi.NET Documentation 
+
+Initializes a new instance of the <a href="d77feec5-ef11-5685-9ed6-e7115972c5a8">BasicDataStatsDto</a> class
+
+**Namespace:**&nbsp;<a href="304beb8e-603a-7dd9-9522-85c438524038">RiotApi.Net.RestClient.Dto.LolStaticData.Generic</a><br />**Assembly:**&nbsp;RiotApi.Net.RestClient (in RiotApi.Net.RestClient.dll) Version: 1.0.1.20531
+
+## Syntax
+
+**C#**<br />
+``` C#
+public BasicDataStatsDto()
+```
+
+**VB**<br />
+``` VB
+Public Sub New
+```
+
+**C++**<br />
+``` C++
+public:
+BasicDataStatsDto()
+```
+
+
+## See Also
+
+
+#### Reference
+<a href="d77feec5-ef11-5685-9ed6-e7115972c5a8">BasicDataStatsDto Class</a><br /><a href="304beb8e-603a-7dd9-9522-85c438524038">RiotApi.Net.RestClient.Dto.LolStaticData.Generic Namespace</a><br />
