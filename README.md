@@ -75,5 +75,6 @@ to use in their apps. I hope you will like it! Please feel free to contribute.
 * [NUnit](http://www.nunit.org/)
 * [moq](https://github.com/Moq/moq4)
 
-
-<img src="http://rdr.zazzle.com/img/imt-prd/isz-s/pd-217929838958860376/tl-ninject_akimbo_sticker.jpg" alt="poweredby-ninject"/>
+## Also using
+* [Appveyor](http://www.appveyor.com/) for continuous integration and build server.
+* [Redis](http://redis.io/) for key-value cache and store NoSQL solution used in Web application
