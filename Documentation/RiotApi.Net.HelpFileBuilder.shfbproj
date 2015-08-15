@@ -18,7 +18,7 @@
     <HtmlHelpName>Documentation</HtmlHelpName>
     <Language>en-US</Language>
     <BuildAssemblerVerbosity>OnlyWarningsAndErrors</BuildAssemblerVerbosity>
-    <HelpFileFormat>Markdown</HelpFileFormat>
+    <HelpFileFormat>HtmlHelp1</HelpFileFormat>
     <IndentHtml>False</IndentHtml>
     <KeepLogFile>True</KeepLogFile>
     <DisableCodeBlockComponent>False</DisableCodeBlockComponent>
@@ -29,7 +29,7 @@
     <SyntaxFilters>C#, Visual Basic, Managed C++</SyntaxFilters>
     <SdkLinkTarget>Blank</SdkLinkTarget>
     <RootNamespaceContainer>False</RootNamespaceContainer>
-    <PresentationStyle>Markdown</PresentationStyle>
+    <PresentationStyle>VS2013</PresentationStyle>
     <Preliminary>False</Preliminary>
     <NamingMethod>Guid</NamingMethod>
     <HelpTitle>RiotApi.NET Documented Class Library</HelpTitle>
@@ -73,15 +73,4 @@ In other words this project is a C# wrapper client that can be used within any k
     </PostBuildEvent>
     <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
   </PropertyGroup>
-  <ItemGroup>
-    <Reference Include="RiotApi.Net.RestClient">
-      <HintPath>..\RiotApi.Net.RestClient\bin\Debug\RiotApi.Net.RestClient.dll</HintPath>
-    </Reference>
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\RiotApi.Net.RestClient\RiotApi.Net.RestClient.csproj">
-      <Name>RiotApi.Net.RestClient</Name>
-      <Project>{DB2A6806-3614-45DE-81DA-D7C7240E0634}</Project>
-    </ProjectReference>
-  </ItemGroup>
 </Project>
