@@ -4,6 +4,9 @@ using RiotApi.Net.RestClient.Interfaces;
 
 namespace RiotApi.Net.RestClient.ApiCalls
 {
+    /// <summary>
+    /// champion-v1.2 [BR, EUNE, EUW, KR, LAN, LAS, NA, OCE, RU, TR]
+    /// </summary>
     public class Champion : GenericRiotCaller, IChampion
     {
         public Champion(string apiKey)
@@ -11,8 +14,17 @@ namespace RiotApi.Net.RestClient.ApiCalls
             this.ApiKey = apiKey;
         }
 
+        /// <summary>
+        /// Riot Api Key
+        /// </summary>
         public string ApiKey { get; set; }
 
+        /// <summary>
+        /// Retrieve all champions. (REST)
+        /// </summary>
+        /// <param name="region">Region where to retrieve the data.</param>
+        /// <param name="freeToPlay">Optional filter param to retrieve only free to play champions.</param>
+        /// <returns>ChampionListDto - This object contains a collection of champion information.</returns>
         public ChampionListDto RetrieveAllChampions(RiotApiConfig.Regions region, bool? freeToPlay = null)
         {
             //https://eune.api.pvp.net/api/lol/eune/v1.2/champion?api_key=
@@ -31,6 +43,12 @@ namespace RiotApi.Net.RestClient.ApiCalls
             return dto;
         }
 
+        /// <summary>
+        /// Retrieve champion by ID.
+        /// </summary>
+        /// <param name="region">Region where to retrieve the data.</param>
+        /// <param name="id">ID of the champion to retrieve.</param>
+        /// <returns>ChampionDto - This object contains champion information.</returns>
         public ChampionListDto.ChampionDto RetrieveChampionById(RiotApiConfig.Regions region, int id)
         {
             //https://eune.api.pvp.net/api/lol/eune/v1.2/champion/1?api_key=

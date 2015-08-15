@@ -12,7 +12,7 @@ namespace RiotApi.Net.RestClient
         /// Create an HttpClient injecting Riot Http Client Module 
         /// </summary>
         /// <param name="apiKey">Riot Api key</param>
-        /// <returns>RiotClient initialized with http modules</returns>
+        /// <returns>RiotClient initialized with http module</returns>
         public static RiotClient CreateHttpClient(string apiKey)
         {
             IKernel kernel = new StandardKernel(new RiotHttpClientModule(apiKey));

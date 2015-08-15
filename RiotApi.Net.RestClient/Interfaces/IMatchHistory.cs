@@ -21,7 +21,7 @@ namespace RiotApi.Net.RestClient.Interfaces
         /// <param name="rankedQueues">Comma-separated list of ranked queue types to use for fetching games. Non-ranked queue types will be ignored.</param>
         /// <param name="beginIndex">The begin index to use for fetching games.</param>
         /// <param name="endIndex">The end index to use for fetching games.</param>
-        /// <returns></returns>
+        /// <returns>PlayerHistory - This object contains player match history information</returns>
         PlayerHistory GetMatchHistoryBySummonerId(RiotApiConfig.Regions region, long summonerId,
             string championIds = null, string rankedQueues = null, int? beginIndex = null, int? endIndex = null);
     }

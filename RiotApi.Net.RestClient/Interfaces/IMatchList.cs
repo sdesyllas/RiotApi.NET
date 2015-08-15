@@ -28,7 +28,7 @@ namespace RiotApi.Net.RestClient.Interfaces
         /// <param name="endTime">The end time to use for fetching games specified as epoch milliseconds.</param>
         /// <param name="beginIndex">The begin index to use for fetching games.</param>
         /// <param name="endIndex">The end index to use for fetching games.</param>
-        /// <returns>Return Value: MatchList</returns>
+        /// <returns>MatchList - This object contains match list information</returns>
         MatchListDto GetMatchListBySummonerId(RiotApiConfig.Regions region, long summonerId,
             string championIds = null, string rankedQueues = null, string seasons = null, long? beginTime = null,
             long? endTime = null,

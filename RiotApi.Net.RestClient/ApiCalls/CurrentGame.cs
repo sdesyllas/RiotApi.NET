@@ -4,6 +4,9 @@ using RiotApi.Net.RestClient.Interfaces;
 
 namespace RiotApi.Net.RestClient.ApiCalls
 {
+    /// <summary>
+    /// current-game-v1.0 [BR, EUNE, EUW, KR, LAN, LAS, NA, OCE, PBE, RU, TR] 
+    /// </summary>
     public class CurrentGame : GenericRiotCaller, ICurrentGame
     {
         public CurrentGame(string apiKey)
@@ -11,8 +14,17 @@ namespace RiotApi.Net.RestClient.ApiCalls
             this.ApiKey = apiKey;
         }
 
+        /// <summary>
+        /// Riot Api Key
+        /// </summary>
         public string ApiKey { get; set; }
 
+        /// <summary>
+        /// Get current game information for the given summoner ID.
+        /// </summary>
+        /// <param name="platformId">The platform ID for which to fetch data.</param>
+        /// <param name="summonerId">The ID of the summoner.</param>
+        /// <returns>CurrentGameInfo</returns>
         public CurrentGameInfo GetCurrentGameInformationForSummonerId(RiotApiConfig.Platforms platformId, long summonerId)
         {
             //https://eune.api.pvp.net/observer-mode/rest/consumer/getSpectatorGameInfo/EUN1/41488614?api_key=

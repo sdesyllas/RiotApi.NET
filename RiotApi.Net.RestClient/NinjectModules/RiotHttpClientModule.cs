@@ -20,6 +20,9 @@ namespace RiotApi.Net.RestClient.NinjectModules
             _apiKey = apiKey;
         }
 
+        /// <summary>
+        /// letting ninject glue things together
+        /// </summary>
         public override void Load()
         {
             //let ninject glue things together

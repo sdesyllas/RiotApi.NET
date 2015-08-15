@@ -16,7 +16,7 @@ namespace RiotApi.Net.RestClient.Interfaces
         /// <param name="region">The region of the summoner.</param>
         /// <param name="matchId">The ID of the match.</param>
         /// <param name="includeTimeline">Flag indicating whether or not to include match timeline data</param>
-        /// <returns></returns>
+        /// <returns>MatchDetail - This object contains match detail information</returns>
         MatchDetail GetMatchById(RiotApiConfig.Regions region, long matchId, bool? includeTimeline = null);
     }
 }

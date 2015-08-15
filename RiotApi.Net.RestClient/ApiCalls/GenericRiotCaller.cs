@@ -11,6 +11,14 @@ namespace RiotApi.Net.RestClient.ApiCalls
     {
         static readonly Logger Logger = LogManager.GetLogger("RiotCaller");
 
+        /// <summary>
+        /// This method makes the actual http call to riot REST services
+        /// </summary>
+        /// <param name="baseUrl">base url of riot services</param>
+        /// <param name="apiCallPath">call path of specific call</param>
+        /// <typeparam name="T">Generic type of the DTO</typeparam>
+        /// <returns>Deserialized object from json responded back</returns>
+        /// <exception cref="RiotExceptionRaiser.RiotApiException"></exception>
         public static T MakeCallToRiotApi<T>(string baseUrl, string apiCallPath)
         {
             using (var client = new HttpClient())

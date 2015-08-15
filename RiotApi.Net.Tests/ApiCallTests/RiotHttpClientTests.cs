@@ -61,7 +61,6 @@ namespace RiotApi.Net.Tests.ApiCallTests
             Console.WriteLine($"There are {championList.Champions.Count()} free to play champions to play with!");
         }
 
-        [Test]
         public void TestHttpCreator()
         {
             var riotClient = RiotApiLoader.CreateHttpClient("your api key here");

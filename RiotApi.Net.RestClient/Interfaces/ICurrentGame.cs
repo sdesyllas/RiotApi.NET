@@ -13,7 +13,7 @@ namespace RiotApi.Net.RestClient.Interfaces
         /// </summary>
         /// <param name="platformId">The platform ID for which to fetch data.</param>
         /// <param name="summonerId">The ID of the summoner.</param>
-        /// <returns></returns>
+        /// <returns>CurrentGameInfo</returns>
         CurrentGameInfo GetCurrentGameInformationForSummonerId(RiotApiConfig.Platforms platformId, long summonerId);
     }
 }

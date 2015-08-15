@@ -25,7 +25,7 @@ namespace RiotApi.Net.RestClient.Interfaces
         /// <param name="region">Region where to retrieve the data.</param>
         /// <param name="summonerId">ID of the summoner for which to retrieve player stats.</param>
         /// <param name="season">If specified, stats for the given season are returned. Otherwise, stats for the current season are returned.</param>
-        /// <returns></returns>
+        /// <returns>PlayerStatsSummaryListDto - This object contains a collection of player stats summary information.</returns>
         PlayerStatsSummaryListDto GetPlayerStatsBySummonerId(RiotApiConfig.Regions region, long summonerId,
             string season = null);
     }

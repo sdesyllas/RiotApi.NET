@@ -10,11 +10,6 @@ namespace RiotApi.Net.RestClient.Interfaces
     public interface IChampion
     {
         /// <summary>
-        /// Riot Api Key
-        /// </summary>
-        string ApiKey { get; set; }
-
-        /// <summary>
         /// Retrieve all champions. (REST)
         /// </summary>
         /// <param name="region">Region where to retrieve the data.</param>
@@ -26,7 +21,7 @@ namespace RiotApi.Net.RestClient.Interfaces
         /// Retrieve champion by ID.
         /// </summary>
         /// <param name="region">Region where to retrieve the data.</param>
-        /// <param name="id"></param>
+        /// <param name="id">ID of the champion to retrieve.</param>
         /// <returns>ChampionDto - This object contains champion information.</returns>
         ChampionListDto.ChampionDto RetrieveChampionById(RiotApiConfig.Regions region, int id);
     }

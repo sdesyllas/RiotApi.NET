@@ -20,13 +20,13 @@
     <BuildAssemblerVerbosity>OnlyWarningsAndErrors</BuildAssemblerVerbosity>
     <HelpFileFormat>HtmlHelp1</HelpFileFormat>
     <IndentHtml>False</IndentHtml>
-    <KeepLogFile>True</KeepLogFile>
+    <KeepLogFile>False</KeepLogFile>
     <DisableCodeBlockComponent>False</DisableCodeBlockComponent>
     <CleanIntermediates>True</CleanIntermediates>
     <HelpFileVersion>1.0.0.0</HelpFileVersion>
     <MaximumGroupParts>2</MaximumGroupParts>
     <NamespaceGrouping>False</NamespaceGrouping>
-    <SyntaxFilters>C#, Visual Basic, Managed C++</SyntaxFilters>
+    <SyntaxFilters>C#</SyntaxFilters>
     <SdkLinkTarget>Blank</SdkLinkTarget>
     <RootNamespaceContainer>False</RootNamespaceContainer>
     <PresentationStyle>VS2013</PresentationStyle>
@@ -41,8 +41,12 @@
 
 In other words this project is a C# wrapper client that can be used within any kind of .net application or any other application using .net mono framework.</ProjectSummary>
     <DocumentationSources>
-      <DocumentationSource sourceFile="..\RiotApi.Net.RestClient\bin\Debug\RiotApi.Net.RestClient.dll" />
-<DocumentationSource sourceFile="..\RiotApi.Net.RestClient\bin\Debug\RiotApi.Net.RestClient.xml" /></DocumentationSources>
+      <DocumentationSource sourceFile="..\RiotApi.Net.RestClient\RiotApi.Net.RestClient.csproj" />
+    </DocumentationSources>
+    <VisibleItems>Attributes, ExplicitInterfaceImplementations, InheritedMembers, Internals, Protected, ProtectedInternalAsProtected</VisibleItems>
+    <ApiFilter>
+      <Filter entryType="Namespace" fullName="" isExposed="False" />
+    </ApiFilter>
   </PropertyGroup>
   <!-- There are no properties for these groups.  AnyCPU needs to appear in order for Visual Studio to perform
 			 the build.  The others are optional common platform types that may appear. -->
@@ -73,4 +77,10 @@ In other words this project is a C# wrapper client that can be used within any k
     </PostBuildEvent>
     <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
   </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\RiotApi.Net.RestClient\RiotApi.Net.RestClient.csproj">
+      <Name>RiotApi.Net.RestClient</Name>
+      <Project>{DB2A6806-3614-45DE-81DA-D7C7240E0634}</Project>
+    </ProjectReference>
+  </ItemGroup>
 </Project>
