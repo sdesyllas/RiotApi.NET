@@ -55,7 +55,7 @@ namespace RiotApi.Net.RestClient.Dto.LolStaticData.Champion
         /// No description available from Riot Documentation
         /// </summary>
         [JsonProperty(PropertyName = "lore")]
-        public string Rore { get; set; }
+        public string Lore { get; set; }
 
         /// <summary>
         /// No description available from Riot Documentation
