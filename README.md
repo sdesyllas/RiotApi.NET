@@ -59,6 +59,8 @@ Console.WriteLine($"There are {championList.Champions.Count()} free to play cham
 response => There are 17 free to play champions to play with!
 ```
 
+Download the full api documentation reference [here (chm format)] (https://github.com/sdesyllas/RiotApi.NET/blob/master/Documentation/Help/Documentation.chm?raw=true)
+
 The goal of this project is to provide .net application developers with a high level tool for Riot games' API 
 to use in their apps. I hope you will like it! Please feel free to contribute.
 
