@@ -6,7 +6,7 @@
     <title>RiotApi.NET</title>
     <authors>Spyros Desyllas</authors>
     <owners>Spyros Desyllas</owners>
-    <licenseUrl>https://github.com/sdesyllas/RiotApi.NET/blob/master/LICENSE</licenseUrl>
+    <licenseUrl>https://raw.githubusercontent.com/sdesyllas/RiotApi.NET/master/LICENSE</licenseUrl>
     <projectUrl>http://sdesyllas.github.io/RiotApi.NET/</projectUrl>
     <iconUrl>http://i57.tinypic.com/25i6y39.jpg</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
