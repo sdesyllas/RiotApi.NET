@@ -12,7 +12,7 @@ namespace RiotApi.Net.RestClient.Dto.LolStaticData.Generic
         /// No description available from Riot Documentation
         /// </summary>
         [JsonProperty(PropertyName = "coeff")]
-        public IEnumerable<bool> Coeff { get; set; }
+        public IEnumerable<double> Coeff { get; set; }
 
         /// <summary>
         /// No description available from Riot Documentation
