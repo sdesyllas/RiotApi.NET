@@ -77,4 +77,4 @@ to use in their apps. I hope you will like it! Please feel free to contribute.
 
 ## Also using
 * [Appveyor](http://www.appveyor.com/) for continuous integration and build server.
-* [Redis](http://redis.io/) for key-value cache and store NoSQL solution used in Web application
+* [waffle](project management solution ) for project management
