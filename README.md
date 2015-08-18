@@ -65,8 +65,8 @@ Download the full api documentation reference [here (chm format)] (https://githu
 The goal of this project is to provide .net application developers with a high level tool for Riot games' API 
 to use in their apps. I hope you will like it! Please feel free to contribute.
 
-# ASP.NET MVC User Interface 
-> (WORK IN PROGRESS)
+# Web UI
+[LoLUniverse](https://github.com/sdesyllas/LoLUniverse) is a seperated project that utilizing this API and provides a user iterface and a prototype League of Legends web application. The project is build in ASP.NET MVC framework and you can find it [here](https://github.com/sdesyllas/LoLUniverse).
 
 # Third party libraries used
 * [Newtonsoft.Json](http://www.newtonsoft.com/json)
