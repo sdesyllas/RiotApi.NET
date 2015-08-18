@@ -6,7 +6,7 @@ using NUnit.Framework;
 using RiotApi.Net.RestClient;
 using RiotApi.Net.RestClient.Configuration;
 using RiotApi.Net.RestClient.Helpers;
-using RiotApi.Net.RestClient.NinjectModules;
+using RiotHttpClientModule = RiotApi.Net.Tests.NinjectModules.RiotHttpClientModule;
 
 namespace RiotApi.Net.Tests.ApiCallTests
 {
@@ -61,9 +61,9 @@ namespace RiotApi.Net.Tests.ApiCallTests
             Console.WriteLine($"There are {championList.Champions.Count()} free to play champions to play with!");
         }
 
-        public void TestHttpCreator()
+        public void TestCreationFromConstructor()
         {
-            var riotClient = RiotApiLoader.CreateHttpClient("your api key here");
+            IRiotClient riotClient = new RiotClient("your api key here");
             //retrieve all current free to play champions
             var championList = riotClient.Champion.RetrieveAllChampions(RiotApiConfig.Regions.NA, freeToPlay: true);
             //print the number of free to play champions

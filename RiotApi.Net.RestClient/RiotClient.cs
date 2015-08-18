@@ -1,4 +1,5 @@
-﻿using RiotApi.Net.RestClient.Interfaces;
+﻿using RiotApi.Net.RestClient.ApiCalls;
+using RiotApi.Net.RestClient.Interfaces;
 
 namespace RiotApi.Net.RestClient
 {
@@ -7,6 +8,41 @@ namespace RiotApi.Net.RestClient
     /// </summary>
     public class RiotClient : IRiotClient
     {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="RiotClient"/> class.
+        /// </summary>
+        /// <param name="apiKey">The API key.</param>
+        public RiotClient(string apiKey)
+        {
+            IChampion champion = new Champion(apiKey);
+            ICurrentGame currentGame = new CurrentGame(apiKey);
+            IFeaturedGames featuredGames = new FeaturedGames(apiKey);
+            IGame game = new Game(apiKey);
+            ILeague league = new League(apiKey);
+            ILolStaticData lolStaticData = new LolStaticData(apiKey);
+            ILolStatus lolStatus = new LolStatus();
+            IMatch match = new Match(apiKey);
+            IMatchHistory matchHistory = new MatchHistory(apiKey);
+            IMatchList matchList = new MatchList(apiKey);
+            IStats stats = new Stats(apiKey);
+            ISummoner summoner = new Summoner(apiKey);
+            ITeam team = new Team(apiKey);
+
+            this.Champion = champion;
+            this.CurrentGame = currentGame;
+            this.FeaturedGames = featuredGames;
+            this.Game = game;
+            this.League = league;
+            this.LolStaticData = lolStaticData;
+            this.LolStatus = lolStatus;
+            this.Match = match;
+            this.MatchHistory = matchHistory;
+            this.MatchList = matchList;
+            this.Stats = stats;
+            this.Summoner = summoner;
+            this.Team = team;
+        }
+
         /// <summary>
         /// Constructs a Riot Client with given implemented service for each Riot service group.
         /// </summary>
@@ -26,7 +62,6 @@ namespace RiotApi.Net.RestClient
         public RiotClient(IChampion champion, ICurrentGame currentGame, IFeaturedGames featuredGames, IGame game, ILeague league, ILolStaticData lolStaticData,
             ILolStatus lolStatus, IMatch match, IMatchHistory matchHistory, IMatchList matchList, IStats stats, ISummoner summoner, ITeam team)
         {
-            //we need to let Ninject know which concrete type to use to satisfy the interface.
             this.Champion = champion;
             this.CurrentGame = currentGame;
             this.FeaturedGames = featuredGames;
