@@ -1,138 +1,139 @@
-﻿using Newtonsoft.Json;
-using RiotApi.Net.RestClient.Dto.LolStaticData.Generic;
+﻿using RiotApi.Net.RestClient.Dto.LolStaticData.Generic;
 using System.Collections.Generic;
+using System.Runtime.Serialization;
 
 namespace RiotApi.Net.RestClient.Dto.LolStaticData.Champion
 {
     /// <summary>
     /// This object contains champion spell data.
     /// </summary>
+    [DataContract]
     public class ChampionSpellDto
     {
         /// <summary>
         /// No description available from Riot Documentation
         /// </summary>
-        [JsonProperty(PropertyName = "altimages")]
+        [DataMember(Name = "altimages")]
         public IEnumerable<ImageDto> Altimages { get; set; }
 
         /// <summary>
         /// No description available from Riot Documentation
         /// </summary>
-        [JsonProperty(PropertyName = "cooldown")]
+        [DataMember(Name = "cooldown")]
         public IEnumerable<double> Cooldown { get; set; }
 
         /// <summary>
         /// No description available from Riot Documentation
         /// </summary>
-        [JsonProperty(PropertyName = "cooldownBurn")]
+        [DataMember(Name = "cooldownBurn")]
         public string CooldownBurn { get; set; }
 
         /// <summary>
         /// No description available from Riot Documentation
         /// </summary>
-        [JsonProperty(PropertyName = "cost")]
+        [DataMember(Name = "cost")]
         public IEnumerable<int> Cost { get; set; }
 
         /// <summary>
         /// No description available from Riot Documentation
         /// </summary>
-        [JsonProperty(PropertyName = "costBurn")]
+        [DataMember(Name = "costBurn")]
         public string CostBurn { get; set; }
 
         /// <summary>
         /// No description available from Riot Documentation
         /// </summary>
-        [JsonProperty(PropertyName = "costType")]
+        [DataMember(Name = "costType")]
         public string CostType { get; set; }
 
         /// <summary>
         /// No description available from Riot Documentation
         /// </summary>
-        [JsonProperty(PropertyName = "description")]
+        [DataMember(Name = "description")]
         public string Description { get; set; }
 
         /// <summary>
         /// This field is a List of List of Double. List[object] as documented by Riot 
         /// </summary>
-        [JsonProperty(PropertyName = "effect")]
+        [DataMember(Name = "effect")]
         public List<List<double>> Effect { get; set; }
 
         /// <summary>
         /// No description available from Riot Documentation
         /// </summary>
-        [JsonProperty(PropertyName = "effectBurn")]
+        [DataMember(Name = "effectBurn")]
         public List<string> EffectBurn { get; set; }
 
         /// <summary>
         /// No description available from Riot Documentation
         /// </summary>
-        [JsonProperty(PropertyName = "image")]
+        [DataMember(Name = "image")]
         public ImageDto Image { get; set; }
 
         /// <summary>
         /// No description available from Riot Documentation
         /// </summary>
-        [JsonProperty(PropertyName = "key")]
+        [DataMember(Name = "key")]
         public string Key { get; set; }
 
         /// <summary>
         /// No description available from Riot Documentation
         /// </summary>
-        [JsonProperty(PropertyName = "leveltip")]
+        [DataMember(Name = "leveltip")]
         public LevelTipDto Leveltip { get; set; }
 
         /// <summary>
         /// No description available from Riot Documentation
         /// </summary>
-        [JsonProperty(PropertyName = "maxrank")]
+        [DataMember(Name = "maxrank")]
         public int Maxrank { get; set; }
 
         /// <summary>
         /// No description available from Riot Documentation
         /// </summary>
-        [JsonProperty(PropertyName = "name")]
+        [DataMember(Name = "name")]
         public string Name { get; set; }
 
         /// <summary>
         /// This field is either a List of Integer or the String 'self' for spells that target one's own champion.
         /// </summary>
-        [JsonProperty(PropertyName = "range")]
+        [DataMember(Name = "range")]
         public object Range { get; set; }
 
         /// <summary>
         /// No description available from Riot Documentation
         /// </summary>
-        [JsonProperty(PropertyName = "rangeBurn")]
+        [DataMember(Name = "rangeBurn")]
         public string RangeBurn { get; set; }
 
         /// <summary>
         /// No description available from Riot Documentation
         /// </summary>
-        [JsonProperty(PropertyName = "resource")]
+        [DataMember(Name = "resource")]
         public string Resource { get; set; }
 
         /// <summary>
         /// No description available from Riot Documentation
         /// </summary>
-        [JsonProperty(PropertyName = "sanitizedDescription")]
+        [DataMember(Name = "sanitizedDescription")]
         public string SanitizedDescription { get; set; }
 
         /// <summary>
         /// No description available from Riot Documentation
         /// </summary>
-        [JsonProperty(PropertyName = "sanitizedTooltip")]
+        [DataMember(Name = "sanitizedTooltip")]
         public string SanitizedTooltip { get; set; }
 
         /// <summary>
         /// No description available from Riot Documentation
         /// </summary>
-        [JsonProperty(PropertyName = "tooltip")]
+        [DataMember(Name = "tooltip")]
         public string Tooltip { get; set; }
 
         /// <summary>
         /// No description available from Riot Documentation
         /// </summary>
-        [JsonProperty(PropertyName = "vars")]
+        [DataMember(Name = "vars")]
         public IEnumerable<SpellVarsDto> Vars { get; set; }
     }
 }

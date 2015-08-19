@@ -1,22 +1,23 @@
-﻿using Newtonsoft.Json;
+﻿using System.Runtime.Serialization;
 
 namespace RiotApi.Net.RestClient.Dto.Match.Generic
 {
     /// <summary>
     /// This object contains rune information
     /// </summary>
+    [DataContract]
     public class Rune
     {
         /// <summary>
         /// Rune rank
         /// </summary>
-        [JsonProperty(PropertyName = "rank")]
+        [DataMember(Name = "rank")]
         public long Rank { get; set; }
 
         /// <summary>
         /// Rune ID
         /// </summary>
-        [JsonProperty(PropertyName = "runeId")]
+        [DataMember(Name = "runeId")]
         public long RuneId { get; set; }
     }
 }

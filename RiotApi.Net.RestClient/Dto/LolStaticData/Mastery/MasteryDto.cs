@@ -1,62 +1,61 @@
-﻿using Newtonsoft.Json;
-using Newtonsoft.Json.Converters;
-using RiotApi.Net.RestClient.Dto.LolStaticData.Generic;
+﻿using RiotApi.Net.RestClient.Dto.LolStaticData.Generic;
 using System.Collections.Generic;
+using System.Runtime.Serialization;
 
 namespace RiotApi.Net.RestClient.Dto.LolStaticData.Mastery
 {
     /// <summary>
     /// This object contains mastery data.
     /// </summary>
+    [DataContract]
     public class MasteryDto : RiotDto
     {
         /// <summary>
         /// No description available from Riot Documentation
         /// </summary>
-        [JsonProperty(PropertyName = "description")]
+        [DataMember(Name = "description")]
         public IEnumerable<string> Description { get; set; }
 
         /// <summary>
         /// No description available from Riot Documentation
         /// </summary>
-        [JsonProperty(PropertyName = "id")]
+        [DataMember(Name = "id")]
         public int Id { get; set; }
 
         /// <summary>
         /// No description available from Riot Documentation
         /// </summary>
-        [JsonProperty(PropertyName = "image")]
+        [DataMember(Name = "image")]
         public ImageDto Image { get; set; }
 
         /// <summary>
         /// Legal values: Defense, Offense, Utility
         /// </summary>
-        [JsonProperty(PropertyName = "masteryTree")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [DataMember(Name = "masteryTree")]
         public Helpers.Enums.MasteryTree MasteryTree { get; set; }
 
         /// <summary>
         /// No description available from Riot Documentation
         /// </summary>
-        [JsonProperty(PropertyName = "name")]
+        [DataMember(Name = "name")]
         public string Name { get; set; }
 
         /// <summary>
         /// No description available from Riot Documentation
         /// </summary>
-        [JsonProperty(PropertyName = "prereq")]
+        [DataMember(Name = "prereq")]
         public string Prereq { get; set; }
 
         /// <summary>
         /// No description available from Riot Documentation
         /// </summary>
-        [JsonProperty(PropertyName = "ranks")]
+        [DataMember(Name = "ranks")]
         public int Ranks { get; set; }
 
         /// <summary>
         /// No description available from Riot Documentation
         /// </summary>
-        [JsonProperty(PropertyName = "sanitizedDescription")]
+        [DataMember(Name = "sanitizedDescription")]
         public IEnumerable<string> SanitizedDescription { get; set; }
     }
 }

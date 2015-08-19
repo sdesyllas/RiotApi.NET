@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Runtime.Serialization;
-using NLog;
+using RiotApi.Net.RestClient.Helpers.Logging;
 
 namespace RiotApi.Net.RestClient.Helpers
 {
     public class RiotExceptionRaiser
     {
-        static readonly Logger Logger = LogManager.GetLogger("RiotExceptionRaiser");
+        private static readonly ILog Logger = LogProvider.GetCurrentClassLogger();
 
         #region RiotApiException
         public class RiotApiException : Exception
@@ -41,7 +41,7 @@ namespace RiotApi.Net.RestClient.Helpers
             var riotError = (RiotErrorCode)errorCode;
             var msg = GetMessage(riotError);
             var riotException = new RiotApiException(msg) {RiotErrorCode = riotError};
-            Logger.Error(riotException, $"RiotErrorCode:{riotException.RiotErrorCode}");
+            Logger.ErrorException($"RiotErrorCode:{riotException.RiotErrorCode}", riotException);
             return riotException;
         }
 

@@ -1,48 +1,49 @@
-﻿using Newtonsoft.Json;
-using RiotApi.Net.RestClient.Dto.LolStaticData.Generic;
+﻿using RiotApi.Net.RestClient.Dto.LolStaticData.Generic;
 using System.Collections.Generic;
+using System.Runtime.Serialization;
 
 namespace RiotApi.Net.RestClient.Dto.LolStaticData.Item
 {
     /// <summary>
     /// This object contains item list data.
     /// </summary>
+    [DataContract]
     public class ItemListDto : RiotDto
     {
         /// <summary>
         /// No description available from Riot Documentation
         /// </summary>
-        [JsonProperty(PropertyName = "basic")]
+        [DataMember(Name = "basic")]
         public BasicDataDto Basic { get; set; }
 
         /// <summary>
         /// No description available from Riot Documentation
         /// </summary>
-        [JsonProperty(PropertyName = "data")]
+        [DataMember(Name = "data")]
         public Dictionary<string, ItemDto> Data { get; set; }
 
         /// <summary>
         /// No description available from Riot Documentation
         /// </summary>
-        [JsonProperty(PropertyName = "groups")]
+        [DataMember(Name = "groups")]
         public IEnumerable<GroupDto> Groups { get; set; }
 
         /// <summary>
         /// No description available from Riot Documentation
         /// </summary>
-        [JsonProperty(PropertyName = "tree")]
+        [DataMember(Name = "tree")]
         public IEnumerable<ItemTreeDto> Tree { get; set; }
 
         /// <summary>
         /// No description available from Riot Documentation
         /// </summary>
-        [JsonProperty(PropertyName = "type")]
+        [DataMember(Name = "type")]
         public string Type { get; set; }
 
         /// <summary>
         /// No description available from Riot Documentation
         /// </summary>
-        [JsonProperty(PropertyName = "version")]
+        [DataMember(Name = "version")]
         public string Version { get; set; }
     }
 }

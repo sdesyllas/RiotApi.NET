@@ -1,22 +1,23 @@
-﻿using Newtonsoft.Json;
+﻿using System.Runtime.Serialization;
 
 namespace RiotApi.Net.RestClient.Dto.Match.Generic
 {
     /// <summary>
     /// This object contains participant identity information
     /// </summary>
+    [DataContract]
     public class ParticipantIdentity
     {
         /// <summary>
         /// Participant ID
         /// </summary>
-        [JsonProperty(PropertyName = "participantId")]
+        [DataMember(Name = "participantId")]
         public int ParticipantId { get; set; }
 
         /// <summary>
         /// Player information
         /// </summary>
-        [JsonProperty(PropertyName = "player")]
+        [DataMember(Name = "player")]
         public Player Player { get; set; }
     }
 }

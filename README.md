@@ -22,7 +22,7 @@ The usage of the RiotApi.Net is a piece of cake! In less than three lines of cod
 from Riot's services. 
 For instance you can fetch all free to play champions and print them to screen as you can see in the following example.
 
-## Example using Api Loader (recommended way)
+## Example using RiotClient constructor
 
 First import the appropriate libraries
 ```cs
@@ -32,24 +32,7 @@ using RiotApi.Net.RestClient.Configuration;
 
 Then create an http Riot client and make a call to champions API
 ```cs
-var riotClient = RiotApiLoader.CreateHttpClient("your api key here");
-//retrieve all current free to play champions
-var championList = riotClient.Champion.RetrieveAllChampions(RiotApiConfig.Regions.NA, freeToPlay: true);
-//print the number of free to play champions
-Console.WriteLine($"There are {championList.Champions.Count()} free to play champions to play with!");
-```
-
-```
-response => There are 17 free to play champions to play with!
-```
-
-## Example using dependency injection within your application kernel
-This is the advanced way using your own ninject modules (RiotHttpClientModule in our example)
-```cs
-//load a Riot Http module with an Api key into your kernel of your app
-IKernel kernel = new StandardKernel(new RiotHttpClientModule("your api key here"));
-//get back the riot client from your application kernel using ninject
-var riotClient = kernel.Get<RiotHttpClient>();
+IRiotClient riotClient = new RiotClient("your api key here");
 //retrieve all current free to play champions
 var championList = riotClient.Champion.RetrieveAllChampions(RiotApiConfig.Regions.NA, freeToPlay: true);
 //print the number of free to play champions
@@ -69,9 +52,9 @@ to use in their apps. I hope you will like it! Please feel free to contribute.
 [LoLUniverse](https://github.com/sdesyllas/LoLUniverse) is a seperated project that utilizing this API and provides a user iterface and a prototype League of Legends web application. The project is build in ASP.NET MVC framework and you can find it [here](https://github.com/sdesyllas/LoLUniverse).
 
 # Third party libraries used
-* [Newtonsoft.Json](http://www.newtonsoft.com/json)
+* [SimpleJson by Prabir Shrestha](https://github.com/facebook-csharp-sdk/simple-json)
+* [LibLog by Damian Hickey](https://github.com/damianh/LibLog)
 * [Ninject](http://www.ninject.org/index.html)
-* [NLog](http://nlog-project.org/)
 * [NUnit](http://www.nunit.org/)
 * [moq](https://github.com/Moq/moq4)
 

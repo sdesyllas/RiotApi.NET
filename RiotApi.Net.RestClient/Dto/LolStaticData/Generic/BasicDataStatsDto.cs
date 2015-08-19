@@ -1,394 +1,395 @@
-﻿using Newtonsoft.Json;
+﻿using System.Runtime.Serialization;
 
 namespace RiotApi.Net.RestClient.Dto.LolStaticData.Generic
 {
     /// <summary>
     /// This object contains basic data stats.
     /// </summary>
+    [DataContract]
     public class BasicDataStatsDto
     {
         /// <summary>
         /// No description available from Riot Documentation
         /// </summary>
-        [JsonProperty(PropertyName = "FlatArmorMod")]
+        [DataMember(Name = "FlatArmorMod")]
         public double FlatArmorMod { get; set; }
 
         /// <summary>
         /// No description available from Riot Documentation
         /// </summary>
-        [JsonProperty(PropertyName = "FlatAttackSpeedMod")]
+        [DataMember(Name = "FlatAttackSpeedMod")]
         public double FlatAttackSpeedMod { get; set; }
 
         /// <summary>
         /// No description available from Riot Documentation
         /// </summary>
-        [JsonProperty(PropertyName = "FlatBlockMod")]
+        [DataMember(Name = "FlatBlockMod")]
         public double FlatBlockMod { get; set; }
 
         /// <summary>
         /// No description available from Riot Documentation
         /// </summary>
-        [JsonProperty(PropertyName = "FlatCritChanceMod")]
+        [DataMember(Name = "FlatCritChanceMod")]
         public double FlatCritChanceMod { get; set; }
 
         /// <summary>
         /// No description available from Riot Documentation
         /// </summary>
-        [JsonProperty(PropertyName = "FlatCritDamageMod")]
+        [DataMember(Name = "FlatCritDamageMod")]
         public double FlatCritDamageMod { get; set; }
 
         /// <summary>
         /// No description available from Riot Documentation
         /// </summary>
-        [JsonProperty(PropertyName = "FlatEXPBonus")]
+        [DataMember(Name = "FlatEXPBonus")]
         public double FlatEXPBonus { get; set; }
 
         /// <summary>
         /// No description available from Riot Documentation
         /// </summary>
-        [JsonProperty(PropertyName = "FlatEnergyPoolMod")]
+        [DataMember(Name = "FlatEnergyPoolMod")]
         public double FlatEnergyPoolMod { get; set; }
 
         /// <summary>
         /// No description available from Riot Documentation
         /// </summary>
-        [JsonProperty(PropertyName = "FlatEnergyRegenMod")]
+        [DataMember(Name = "FlatEnergyRegenMod")]
         public double FlatEnergyRegenMod { get; set; }
 
         /// <summary>
         /// No description available from Riot Documentation
         /// </summary>
-        [JsonProperty(PropertyName = "FlatHPPoolMod")]
+        [DataMember(Name = "FlatHPPoolMod")]
         public double FlatHPPoolMod { get; set; }
 
         /// <summary>
         /// No description available from Riot Documentation
         /// </summary>
-        [JsonProperty(PropertyName = "FlatHPRegenMod")]
+        [DataMember(Name = "FlatHPRegenMod")]
         public double FlatHPRegenMod { get; set; }
 
         /// <summary>
         /// No description available from Riot Documentation
         /// </summary>
-        [JsonProperty(PropertyName = "FlatMPPoolMod")]
+        [DataMember(Name = "FlatMPPoolMod")]
         public double FlatMPPoolMod { get; set; }
 
         /// <summary>
         /// No description available from Riot Documentation
         /// </summary>
-        [JsonProperty(PropertyName = "FlatMPRegenMod")]
+        [DataMember(Name = "FlatMPRegenMod")]
         public double FlatMPRegenMod { get; set; }
 
         /// <summary>
         /// No description available from Riot Documentation
         /// </summary>
-        [JsonProperty(PropertyName = "FlatMagicDamageMod")]
+        [DataMember(Name = "FlatMagicDamageMod")]
         public double FlatMagicDamageMod { get; set; }
 
         /// <summary>
         /// No description available from Riot Documentation
         /// </summary>
-        [JsonProperty(PropertyName = "FlatMovementSpeedMod")]
+        [DataMember(Name = "FlatMovementSpeedMod")]
         public double FlatMovementSpeedMod { get; set; }
 
         /// <summary>
         /// No description available from Riot Documentation
         /// </summary>
-        [JsonProperty(PropertyName = "FlatPhysicalDamageMod")]
+        [DataMember(Name = "FlatPhysicalDamageMod")]
         public double FlatPhysicalDamageMod { get; set; }
 
         /// <summary>
         /// No description available from Riot Documentation
         /// </summary>
-        [JsonProperty(PropertyName = "FlatSpellBlockMod")]
+        [DataMember(Name = "FlatSpellBlockMod")]
         public double FlatSpellBlockMod { get; set; }
 
         /// <summary>
         /// No description available from Riot Documentation
         /// </summary>
-        [JsonProperty(PropertyName = "PercentAttackSpeedMod")]
+        [DataMember(Name = "PercentAttackSpeedMod")]
         public double PercentAttackSpeedMod { get; set; }
 
         /// <summary>
         /// No description available from Riot Documentation
         /// </summary>
-        [JsonProperty(PropertyName = "PercentBlockMod")]
+        [DataMember(Name = "PercentBlockMod")]
         public double PercentBlockMod { get; set; }
 
         /// <summary>
         /// No description available from Riot Documentation
         /// </summary>
-        [JsonProperty(PropertyName = "PercentCritChanceMod")]
+        [DataMember(Name = "PercentCritChanceMod")]
         public double PercentCritChanceMod { get; set; }
 
         /// <summary>
         /// No description available from Riot Documentation
         /// </summary>
-        [JsonProperty(PropertyName = "PercentCritDamageMod")]
+        [DataMember(Name = "PercentCritDamageMod")]
         public double PercentCritDamageMod { get; set; }
 
         /// <summary>
         /// No description available from Riot Documentation
         /// </summary>
-        [JsonProperty(PropertyName = "PercentDodgeMod")]
+        [DataMember(Name = "PercentDodgeMod")]
         public double PercentDodgeMod { get; set; }
 
         /// <summary>
         /// No description available from Riot Documentation
         /// </summary>
-        [JsonProperty(PropertyName = "PercentEXPBonus")]
+        [DataMember(Name = "PercentEXPBonus")]
         public double PercentEXPBonus { get; set; }
 
         /// <summary>
         /// No description available from Riot Documentation
         /// </summary>
-        [JsonProperty(PropertyName = "PercentHPPoolMod")]
+        [DataMember(Name = "PercentHPPoolMod")]
         public double PercentHPPoolMod { get; set; }
 
         /// <summary>
         /// No description available from Riot Documentation
         /// </summary>
-        [JsonProperty(PropertyName = "PercentHPRegenMod")]
+        [DataMember(Name = "PercentHPRegenMod")]
         public double PercentHPRegenMod { get; set; }
 
         /// <summary>
         /// No description available from Riot Documentation
         /// </summary>
-        [JsonProperty(PropertyName = "PercentLifeStealMod")]
+        [DataMember(Name = "PercentLifeStealMod")]
         public double PercentLifeStealMod { get; set; }
 
         /// <summary>
         /// No description available from Riot Documentation
         /// </summary>
-        [JsonProperty(PropertyName = "PercentMPPoolMod")]
+        [DataMember(Name = "PercentMPPoolMod")]
         public double PercentMPPoolMod { get; set; }
 
         /// <summary>
         /// No description available from Riot Documentation
         /// </summary>
-        [JsonProperty(PropertyName = "PercentMPRegenMod")]
+        [DataMember(Name = "PercentMPRegenMod")]
         public double PercentMPRegenMod { get; set; }
 
         /// <summary>
         /// No description available from Riot Documentation
         /// </summary>
-        [JsonProperty(PropertyName = "PercentMagicDamageMod")]
+        [DataMember(Name = "PercentMagicDamageMod")]
         public double PercentMagicDamageMod { get; set; }
 
         /// <summary>
         /// No description available from Riot Documentation
         /// </summary>
-        [JsonProperty(PropertyName = "PercentMovementSpeedMod")]
+        [DataMember(Name = "PercentMovementSpeedMod")]
         public double PercentMovementSpeedMod { get; set; }
 
         /// <summary>
         /// No description available from Riot Documentation
         /// </summary>
-        [JsonProperty(PropertyName = "PercentPhysicalDamageMod")]
+        [DataMember(Name = "PercentPhysicalDamageMod")]
         public double PercentPhysicalDamageMod { get; set; }
 
         /// <summary>
         /// No description available from Riot Documentation
         /// </summary>
-        [JsonProperty(PropertyName = "PercentSpellBlockMod")]
+        [DataMember(Name = "PercentSpellBlockMod")]
         public double PercentSpellBlockMod { get; set; }
 
         /// <summary>
         /// No description available from Riot Documentation
         /// </summary>
-        [JsonProperty(PropertyName = "PercentSpellVampMod")]
+        [DataMember(Name = "PercentSpellVampMod")]
         public double PercentSpellVampMod { get; set; }
 
         /// <summary>
         /// No description available from Riot Documentation
         /// </summary>
-        [JsonProperty(PropertyName = "rFlatArmorModPerLevel")]
+        [DataMember(Name = "rFlatArmorModPerLevel")]
         public double RFlatArmorModPerLevel { get; set; }
 
         /// <summary>
         /// No description available from Riot Documentation
         /// </summary>
-        [JsonProperty(PropertyName = "rFlatArmorPenetrationMod")]
+        [DataMember(Name = "rFlatArmorPenetrationMod")]
         public double RFlatArmorPenetrationMod { get; set; }
 
         /// <summary>
         /// No description available from Riot Documentation
         /// </summary>
-        [JsonProperty(PropertyName = "rFlatArmorPenetrationModPerLevel")]
+        [DataMember(Name = "rFlatArmorPenetrationModPerLevel")]
         public double RFlatArmorPenetrationModPerLevel { get; set; }
 
         /// <summary>
         /// No description available from Riot Documentation
         /// </summary>
-        [JsonProperty(PropertyName = "rFlatCritChanceModPerLevel")]
+        [DataMember(Name = "rFlatCritChanceModPerLevel")]
         public double RFlatCritChanceModPerLevel { get; set; }
 
         /// <summary>
         /// No description available from Riot Documentation
         /// </summary>
-        [JsonProperty(PropertyName = "rFlatCritDamageModPerLevel")]
+        [DataMember(Name = "rFlatCritDamageModPerLevel")]
         public double RFlatCritDamageModPerLevel { get; set; }
 
         /// <summary>
         /// No description available from Riot Documentation
         /// </summary>
-        [JsonProperty(PropertyName = "rFlatDodgeMod")]
+        [DataMember(Name = "rFlatDodgeMod")]
         public double RFlatDodgeMod { get; set; }
 
         /// <summary>
         /// No description available from Riot Documentation
         /// </summary>
-        [JsonProperty(PropertyName = "rFlatDodgeModPerLevel")]
+        [DataMember(Name = "rFlatDodgeModPerLevel")]
         public double RFlatDodgeModPerLevel { get; set; }
 
         /// <summary>
         /// No description available from Riot Documentation
         /// </summary>
-        [JsonProperty(PropertyName = "rFlatEnergyModPerLevel")]
+        [DataMember(Name = "rFlatEnergyModPerLevel")]
         public double RFlatEnergyModPerLevel { get; set; }
 
         /// <summary>
         /// No description available from Riot Documentation
         /// </summary>
-        [JsonProperty(PropertyName = "rFlatEnergyRegenModPerLevel")]
+        [DataMember(Name = "rFlatEnergyRegenModPerLevel")]
         public double RFlatEnergyRegenModPerLevel { get; set; }
 
         /// <summary>
         /// No description available from Riot Documentation
         /// </summary>
-        [JsonProperty(PropertyName = "rFlatGoldPer10Mod")]
+        [DataMember(Name = "rFlatGoldPer10Mod")]
         public double RFlatGoldPer10Mod { get; set; }
 
         /// <summary>
         /// No description available from Riot Documentation
         /// </summary>
-        [JsonProperty(PropertyName = "rFlatHPModPerLevel")]
+        [DataMember(Name = "rFlatHPModPerLevel")]
         public double RFlatHPModPerLevel { get; set; }
 
         /// <summary>
         /// No description available from Riot Documentation
         /// </summary>
-        [JsonProperty(PropertyName = "rFlatHPRegenModPerLevel")]
+        [DataMember(Name = "rFlatHPRegenModPerLevel")]
         public double RFlatHPRegenModPerLevel { get; set; }
 
         /// <summary>
         /// No description available from Riot Documentation
         /// </summary>
-        [JsonProperty(PropertyName = "rFlatMPModPerLevel")]
+        [DataMember(Name = "rFlatMPModPerLevel")]
         public double RFlatMPModPerLevel { get; set; }
 
         /// <summary>
         /// No description available from Riot Documentation
         /// </summary>
-        [JsonProperty(PropertyName = "rFlatMPRegenModPerLevel")]
+        [DataMember(Name = "rFlatMPRegenModPerLevel")]
         public double RFlatMPRegenModPerLevel { get; set; }
 
         /// <summary>
         /// No description available from Riot Documentation
         /// </summary>
-        [JsonProperty(PropertyName = "rFlatMagicDamageModPerLevel")]
+        [DataMember(Name = "rFlatMagicDamageModPerLevel")]
         public double RFlatMagicDamageModPerLevel { get; set; }
 
         /// <summary>
         /// No description available from Riot Documentation
         /// </summary>
-        [JsonProperty(PropertyName = "rFlatMagicPenetrationMod")]
+        [DataMember(Name = "rFlatMagicPenetrationMod")]
         public double RFlatMagicPenetrationMod { get; set; }
 
         /// <summary>
         /// No description available from Riot Documentation
         /// </summary>
-        [JsonProperty(PropertyName = "rFlatMagicPenetrationModPerLevel")]
+        [DataMember(Name = "rFlatMagicPenetrationModPerLevel")]
         public double RFlatMagicPenetrationModPerLevel { get; set; }
 
         /// <summary>
         /// No description available from Riot Documentation
         /// </summary>
-        [JsonProperty(PropertyName = "rFlatMovementSpeedModPerLevel")]
+        [DataMember(Name = "rFlatMovementSpeedModPerLevel")]
         public double RFlatMovementSpeedModPerLevel { get; set; }
 
         /// <summary>
         /// No description available from Riot Documentation
         /// </summary>
-        [JsonProperty(PropertyName = "rFlatPhysicalDamageModPerLevel")]
+        [DataMember(Name = "rFlatPhysicalDamageModPerLevel")]
         public double RFlatPhysicalDamageModPerLevel { get; set; }
 
         /// <summary>
         /// No description available from Riot Documentation
         /// </summary>
-        [JsonProperty(PropertyName = "rFlatSpellBlockModPerLevel")]
+        [DataMember(Name = "rFlatSpellBlockModPerLevel")]
         public double RFlatSpellBlockModPerLevel { get; set; }
 
         /// <summary>
         /// No description available from Riot Documentation
         /// </summary>
-        [JsonProperty(PropertyName = "rFlatTimeDeadMod")]
+        [DataMember(Name = "rFlatTimeDeadMod")]
         public double RFlatTimeDeadMod { get; set; }
 
         /// <summary>
         /// No description available from Riot Documentation
         /// </summary>
-        [JsonProperty(PropertyName = "rFlatTimeDeadModPerLevel")]
+        [DataMember(Name = "rFlatTimeDeadModPerLevel")]
         public double RFlatTimeDeadModPerLevel { get; set; }
 
         /// <summary>
         /// No description available from Riot Documentation
         /// </summary>
-        [JsonProperty(PropertyName = "rPercentArmorPenetrationMod")]
+        [DataMember(Name = "rPercentArmorPenetrationMod")]
         public double RPercentArmorPenetrationMod { get; set; }
 
         /// <summary>
         /// No description available from Riot Documentation
         /// </summary>
-        [JsonProperty(PropertyName = "rPercentArmorPenetrationModPerLevel")]
+        [DataMember(Name = "rPercentArmorPenetrationModPerLevel")]
         public double RPercentArmorPenetrationModPerLevel { get; set; }
 
         /// <summary>
         /// No description available from Riot Documentation
         /// </summary>
-        [JsonProperty(PropertyName = "rPercentAttackSpeedModPerLevel")]
+        [DataMember(Name = "rPercentAttackSpeedModPerLevel")]
         public double RPercentAttackSpeedModPerLevel { get; set; }
 
         /// <summary>
         /// No description available from Riot Documentation
         /// </summary>
-        [JsonProperty(PropertyName = "rPercentCooldownMod")]
+        [DataMember(Name = "rPercentCooldownMod")]
         public double RPercentCooldownMod { get; set; }
 
         /// <summary>
         /// No description available from Riot Documentation
         /// </summary>
-        [JsonProperty(PropertyName = "rPercentCooldownModPerLevel")]
+        [DataMember(Name = "rPercentCooldownModPerLevel")]
         public double RPercentCooldownModPerLevel { get; set; }
 
         /// <summary>
         /// No description available from Riot Documentation
         /// </summary>
-        [JsonProperty(PropertyName = "rPercentMagicPenetrationMod")]
+        [DataMember(Name = "rPercentMagicPenetrationMod")]
         public double RPercentMagicPenetrationMod { get; set; }
 
         /// <summary>
         /// No description available from Riot Documentation
         /// </summary>
-        [JsonProperty(PropertyName = "rPercentMagicPenetrationModPerLevel")]
+        [DataMember(Name = "rPercentMagicPenetrationModPerLevel")]
         public double RPercentMagicPenetrationModPerLevel { get; set; }
 
         /// <summary>
         /// No description available from Riot Documentation
         /// </summary>
-        [JsonProperty(PropertyName = "rPercentMovementSpeedModPerLevel")]
+        [DataMember(Name = "rPercentMovementSpeedModPerLevel")]
         public double RPercentMovementSpeedModPerLevel { get; set; }
 
         /// <summary>
         /// No description available from Riot Documentation
         /// </summary>
-        [JsonProperty(PropertyName = "rPercentTimeDeadMod")]
+        [DataMember(Name = "rPercentTimeDeadMod")]
         public double RPercentTimeDeadMod { get; set; }
 
         /// <summary>
         /// No description available from Riot Documentation
         /// </summary>
-        [JsonProperty(PropertyName = "rPercentTimeDeadModPerLevel")]
+        [DataMember(Name = "rPercentTimeDeadModPerLevel")]
         public double RPercentTimeDeadModPerLevel { get; set; }
     }
 }

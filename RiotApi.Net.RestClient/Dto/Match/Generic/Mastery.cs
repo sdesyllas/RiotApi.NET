@@ -1,22 +1,23 @@
-﻿using Newtonsoft.Json;
+﻿using System.Runtime.Serialization;
 
 namespace RiotApi.Net.RestClient.Dto.Match.Generic
 {
     /// <summary>
     /// This object contains mastery information
     /// </summary>
+    [DataContract]
     public class Mastery
     {
         /// <summary>
         /// Mastery ID
         /// </summary>
-        [JsonProperty(PropertyName = "masteryId")]
+        [DataMember(Name = "masteryId")]
         public long MasteryId { get; set; }
 
         /// <summary>
         /// Mastery rank
         /// </summary>
-        [JsonProperty(PropertyName = "rank")]
+        [DataMember(Name = "rank")]
         public long Rank { get; set; }
     }
 }

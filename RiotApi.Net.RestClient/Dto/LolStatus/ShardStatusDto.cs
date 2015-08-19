@@ -1,182 +1,184 @@
-﻿using Newtonsoft.Json;
-using System.Collections.Generic;
-using Newtonsoft.Json.Converters;
+﻿using System.Collections.Generic;
+using System.Runtime.Serialization;
 
 namespace RiotApi.Net.RestClient.Dto.LolStatus
 {
     /// <summary>
     /// LOL Status for each shard
     /// </summary>
+    [DataContract]
     public class ShardStatusDto : RiotDto
     {
         /// <summary>
         /// hostname	string
         /// </summary>
-        [JsonProperty(PropertyName = "hostname")]
+        [DataMember(Name = "hostname")]
         public string HostName { get; set; }
 
         /// <summary>
         /// locales	List[string]
         /// </summary>
-        [JsonProperty(PropertyName = "locales")]
+        [DataMember(Name = "locales")]
         public IEnumerable<string> Locales { get; set; }
 
         /// <summary>
         /// name	string
         /// </summary>
-        [JsonProperty(PropertyName = "name")]
+        [DataMember(Name = "name")]
         public string Name { get; set; }
 
         /// <summary>
         /// region_tag	string
         /// </summary>
-        [JsonProperty(PropertyName = "region_tag")]
+        [DataMember(Name = "region_tag")]
         public string RegionTag { get; set; }
 
         /// <summary>
         ///
         /// </summary>
-        [JsonProperty(PropertyName = "services")]
+        [DataMember(Name = "services")]
         public IEnumerable<Service> Services { get; set; }
 
         /// <summary>
         /// slug string
         /// </summary>
-        [JsonProperty(PropertyName = "slug")]
+        [DataMember(Name = "slug")]
         public string Slug { get; set; }
 
-        
+
         /// <summary>
         /// Service
         /// </summary>
+        [DataContract]
         public class Service
         {
             /// <summary>
             ///
             /// </summary>
-            [JsonProperty(PropertyName = "incidents")]
+            [DataMember(Name = "incidents")]
             public IEnumerable<Incident> Incidents { get; set; }
 
             /// <summary>
             ///
             /// </summary>
-            [JsonProperty(PropertyName = "name")]
+            [DataMember(Name = "name")]
             public string Name { get; set; }
 
             /// <summary>
             ///
             /// </summary>
-            [JsonProperty(PropertyName = "slug")]
+            [DataMember(Name = "slug")]
             public string Slug { get; set; }
 
             /// <summary>
             /// Legal values: Online, Alert, Offline, Deploying
             /// </summary>
-            [JsonProperty(PropertyName = "status")]
-            [JsonConverter(typeof(StringEnumConverter))]
+            [DataMember(Name = "status")]
             public Helpers.Enums.ServiceStatus Status { get; set; }
         }
 
         /// <summary>
         /// Incident
         /// </summary>
+        [DataContract]
         public class Incident
         {
             /// <summary>
             ///
             /// </summary>
-            [JsonProperty(PropertyName = "active")]
+            [DataMember(Name = "active")]
             public bool Active { get; set; }
 
             /// <summary>
             ///
             /// </summary>
-            [JsonProperty(PropertyName = "created_at")]
+            [DataMember(Name = "created_at")]
             public string CreatedAt { get; set; }
 
             /// <summary>
             ///
             /// </summary>
-            [JsonProperty(PropertyName = "id")]
+            [DataMember(Name = "id")]
             public long Id { get; set; }
 
             /// <summary>
             /// 
             /// </summary>
-            [JsonProperty(PropertyName = "updates")]
+            [DataMember(Name = "updates")]
             public IEnumerable<Message> Updates { get; set; }
         }
 
         /// <summary>
         /// Message
         /// </summary>
+        [DataContract]
         public class Message
         {
             /// <summary>
             ///
             /// </summary>
-            [JsonProperty(PropertyName = "author")]
+            [DataMember(Name = "author")]
             public string Author { get; set; }
 
             /// <summary>
             ///
             /// </summary>
-            [JsonProperty(PropertyName = "content")]
+            [DataMember(Name = "content")]
             public string Content { get; set; }
 
             /// <summary>
             ///
             /// </summary>
-            [JsonProperty(PropertyName = "created_at")]
+            [DataMember(Name = "created_at")]
             public string CreateAt { get; set; }
 
             /// <summary>
             ///
             /// </summary>
-            [JsonProperty(PropertyName = "id")]
+            [DataMember(Name = "id")]
             public long Id { get; set; }
 
             /// <summary>
             /// Legal values: Info, Alert, Error
             /// </summary>
-            [JsonProperty(PropertyName = "severity")]
-            [JsonConverter(typeof(StringEnumConverter))]
+            [DataMember(Name = "severity")]
             public Helpers.Enums.MessageSeverity Severity { get; set; }
 
             /// <summary>
             ///
             /// </summary>
-            [JsonProperty(PropertyName = "translations")]
+            [DataMember(Name = "translations")]
             public IEnumerable<Translation> Translations { get; set; }
 
             /// <summary>
             ///
             /// </summary>
-            [JsonProperty(PropertyName = "updated_at")]
+            [DataMember(Name = "updated_at")]
             public string UpdatedAt { get; set; }
         }
 
         /// <summary>
         /// Translation
         /// </summary>
+        [DataContract]
         public class Translation
         {
             /// <summary>
             ///
             /// </summary>
-            [JsonProperty(PropertyName = "content")]
+            [DataMember(Name = "content")]
             public string Content { get; set; }
 
             /// <summary>
             ///
             /// </summary>
-            [JsonProperty(PropertyName = "locale")]
+            [DataMember(Name = "locale")]
             public string Locale { get; set; }
             
             /// <summary>
             ///
             /// </summary>
-            [JsonProperty(PropertyName = "updated_at")]
+            [DataMember(Name = "updated_at")]
             public string UpdatedAt { get; set; }
         }
     }

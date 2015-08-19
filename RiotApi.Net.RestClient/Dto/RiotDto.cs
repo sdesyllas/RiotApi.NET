@@ -1,4 +1,4 @@
-﻿using Newtonsoft.Json;
+﻿using RiotApi.Net.RestClient.Helpers;
 
 namespace RiotApi.Net.RestClient.Dto
 {
@@ -13,7 +13,8 @@ namespace RiotApi.Net.RestClient.Dto
         /// <returns>Json</returns>
         public override string ToString()
         {
-            return JsonConvert.SerializeObject(this);
+            SimpleJson.CurrentJsonSerializerStrategy = SimpleJson.CurrentJsonSerializerStrategy;
+            return SimpleJson.SerializeObject(this);
         }
     }
 }

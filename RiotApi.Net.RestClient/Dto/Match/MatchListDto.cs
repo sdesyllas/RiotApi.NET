@@ -1,6 +1,5 @@
 ﻿using System.Collections.Generic;
-using Newtonsoft.Json;
-using Newtonsoft.Json.Converters;
+using System.Runtime.Serialization;
 using RiotApi.Net.RestClient.Dto.Match.Generic;
 
 namespace RiotApi.Net.RestClient.Dto.Match
@@ -8,80 +7,79 @@ namespace RiotApi.Net.RestClient.Dto.Match
     /// <summary>
     /// MatchList - This object contains match list information
     /// </summary>
+    [DataContract]
     public class MatchListDto : RiotDto
     {
         /// <summary>
         /// 
         /// </summary>
-        [JsonProperty(PropertyName = "endIndex")]
+        [DataMember(Name = "endIndex")]
         public int EndIndex { get; set; }
 
         /// <summary>
         /// 
         /// </summary>
-        [JsonProperty(PropertyName = "matches")]
+        [DataMember(Name = "matches")]
         public List<MatchReference> Matches { get; set; }
 
         /// <summary>
         /// 
         /// </summary>
-        [JsonProperty(PropertyName = "startIndex")]
+        [DataMember(Name = "startIndex")]
         public int StartIndex { get; set; }
 
         /// <summary>
         /// 
         /// </summary>
-        [JsonProperty(PropertyName = "totalGames")]
+        [DataMember(Name = "totalGames")]
         public int TotalGames { get; set; }
 
         /// <summary>
         /// MatchReference - This object contains match reference information
         /// </summary>
+        [DataContract]
         public class MatchReference
         {
             /// <summary>
             /// 
             /// </summary>
-            [JsonProperty(PropertyName = "champion")]
+            [DataMember(Name = "champion")]
             public long Champion { get; set; }
 
             /// <summary>
             /// Legal values: MID, MIDDLE, TOP, JUNGLE, BOT, BOTTOM
             /// </summary>
-            [JsonProperty(PropertyName = "lane")]
-            [JsonConverter(typeof(StringEnumConverter))]
+            [DataMember(Name = "lane")]
             public Helpers.Enums.Lane Lane { get; set; }
 
             /// <summary>
             /// 
             /// </summary>
-            [JsonProperty(PropertyName = "matchId")]
+            [DataMember(Name = "matchId")]
             public long MatchId { get; set; }
 
             /// <summary>
             /// 
             /// </summary>
-            [JsonProperty(PropertyName = "platformId")]
+            [DataMember(Name = "platformId")]
             public string PlatformId { get; set; }
 
             /// <summary>
             /// Legal values: RANKED_SOLO_5x5, RANKED_TEAM_3x3, RANKED_TEAM_5x5
             /// </summary>
-            [JsonProperty(PropertyName = "queue")]
-            [JsonConverter(typeof(StringEnumConverter))]
+            [DataMember(Name = "queue")]
             public Helpers.Enums.GameQueueType Queue { get; set; }
 
             /// <summary>
             /// Legal values: DUO, NONE, SOLO, DUO_CARRY, DUO_SUPPORT
             /// </summary>
-            [JsonProperty(PropertyName = "role")]
-            [JsonConverter(typeof(StringEnumConverter))]
+            [DataMember(Name = "role")]
             public Helpers.Enums.Role Role { get; set; }
 
             /// <summary>
             /// Legal values: PRESEASON3, SEASON3, PRESEASON2014, SEASON2014, PRESEASON2015, SEASON2015
             /// </summary>
-            [JsonProperty(PropertyName = "season")]
+            [DataMember(Name = "season")]
             public string Season { get; set; }
         }
     }

@@ -2,7 +2,7 @@
 using RiotApi.Net.RestClient.ApiCalls;
 using RiotApi.Net.RestClient.Interfaces;
 
-namespace RiotApi.Net.RestClient.NinjectModules
+namespace RiotApi.Net.Tests.NinjectModules
 {
     /// <summary>
     /// With Ninject, your type bindings are collected into groups called modules. 

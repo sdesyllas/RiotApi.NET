@@ -1,114 +1,115 @@
-﻿using Newtonsoft.Json;
-using RiotApi.Net.RestClient.Dto.LolStaticData.Generic;
+﻿using RiotApi.Net.RestClient.Dto.LolStaticData.Generic;
 using System.Collections.Generic;
+using System.Runtime.Serialization;
 
 namespace RiotApi.Net.RestClient.Dto.LolStaticData.Champion
 {
     /// <summary>
     /// This object contains champion data.
     /// </summary>
+    [DataContract]
     public class ChampionDto : RiotDto
     {
         /// <summary>
         /// No description available from Riot Documentation
         /// </summary>
-        [JsonProperty(PropertyName = "allytips")]
+        [DataMember(Name = "allytips")]
         public IEnumerable<string> Allytips { get; set; }
 
         /// <summary>
         /// No description available from Riot Documentation
         /// </summary>
-        [JsonProperty(PropertyName = "blurb")]
+        [DataMember(Name = "blurb")]
         public string Blurb { get; set; }
 
         /// <summary>
         /// No description available from Riot Documentation
         /// </summary>
-        [JsonProperty(PropertyName = "enemytips")]
+        [DataMember(Name = "enemytips")]
         public IEnumerable<string> Enemytips { get; set; }
 
         /// <summary>
         /// No description available from Riot Documentation
         /// </summary>
-        [JsonProperty(PropertyName = "id")]
+        [DataMember(Name = "id")]
         public int Id { get; set; }
 
         /// <summary>
         /// No description available from Riot Documentation
         /// </summary>
-        [JsonProperty(PropertyName = "image")]
+        [DataMember(Name = "image")]
         public ImageDto Image { get; set; }
 
         /// <summary>
         /// No description available from Riot Documentation
         /// </summary>
-        [JsonProperty(PropertyName = "info")]
+        [DataMember(Name = "info")]
         public InfoDto Info { get; set; }
 
         /// <summary>
         /// No description available from Riot Documentation
         /// </summary>
-        [JsonProperty(PropertyName = "key")]
+        [DataMember(Name = "key")]
         public string Key { get; set; }
 
         /// <summary>
         /// No description available from Riot Documentation
         /// </summary>
-        [JsonProperty(PropertyName = "lore")]
+        [DataMember(Name = "lore")]
         public string Lore { get; set; }
 
         /// <summary>
         /// No description available from Riot Documentation
         /// </summary>
-        [JsonProperty(PropertyName = "name")]
+        [DataMember(Name = "name")]
         public string Name { get; set; }
 
         /// <summary>
         /// No description available from Riot Documentation
         /// </summary>
-        [JsonProperty(PropertyName = "partype")]
+        [DataMember(Name = "partype")]
         public string Partype { get; set; }
 
         /// <summary>
         /// No description available from Riot Documentation
         /// </summary>
-        [JsonProperty(PropertyName = "passive")]
+        [DataMember(Name = "passive")]
         public PassiveDto Passive { get; set; }
 
         /// <summary>
         /// No description available from Riot Documentation
         /// </summary>
-        [JsonProperty(PropertyName = "recommended")]
+        [DataMember(Name = "recommended")]
         public IEnumerable<RecommendedDto> Recommended { get; set; }
 
         /// <summary>
         /// No description available from Riot Documentation
         /// </summary>
-        [JsonProperty(PropertyName = "skins")]
+        [DataMember(Name = "skins")]
         public IEnumerable<SkinDto> Skins { get; set; }
 
         /// <summary>
         /// No description available from Riot Documentation
         /// </summary>
-        [JsonProperty(PropertyName = "spells")]
+        [DataMember(Name = "spells")]
         public IEnumerable<ChampionSpellDto> Spells { get; set; }
 
         /// <summary>
         /// No description available from Riot Documentation
         /// </summary>
-        [JsonProperty(PropertyName = "stats")]
+        [DataMember(Name = "stats")]
         public StatsDto Stats { get; set; }
 
         /// <summary>
         /// No description available from Riot Documentation
         /// </summary>
-        [JsonProperty(PropertyName = "tags")]
+        [DataMember(Name = "tags")]
         public List<string> Tags { get; set; }
 
         /// <summary>
         /// No description available from Riot Documentation
         /// </summary>
-        [JsonProperty(PropertyName = "title")]
+        [DataMember(Name = "title")]
         public string Title { get; set; }
     }
 }

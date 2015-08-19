@@ -1,41 +1,42 @@
-﻿using Newtonsoft.Json;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using System.Runtime.Serialization;
 
 namespace RiotApi.Net.RestClient.Dto.LolStatus
 {
     /// <summary>
     /// LOL Status for each shard
     /// </summary>
+    [DataContract]
     public class ShardDto : RiotDto
     {
         /// <summary>
         /// hostname	string
         /// </summary>
-        [JsonProperty(PropertyName = "hostname")]
+        [DataMember(Name = "hostname")]
         public string HostName { get; set; }
 
         /// <summary>
         /// locales	List[string]
         /// </summary>
-        [JsonProperty(PropertyName = "locales")]
+        [DataMember(Name = "locales")]
         public IEnumerable<string> Locales { get; set; }
 
         /// <summary>
         /// name	string
         /// </summary>
-        [JsonProperty(PropertyName = "name")]
+        [DataMember(Name = "name")]
         public string Name { get; set; }
 
         /// <summary>
         /// region_tag	string
         /// </summary>
-        [JsonProperty(PropertyName = "region_tag")]
+        [DataMember(Name = "region_tag")]
         public string RegionTag { get; set; }
 
         /// <summary>
         /// slug	string
         /// </summary>
-        [JsonProperty(PropertyName = "slug")]
+        [DataMember(Name = "slug")]
         public string Slug { get; set; }
     }
 }

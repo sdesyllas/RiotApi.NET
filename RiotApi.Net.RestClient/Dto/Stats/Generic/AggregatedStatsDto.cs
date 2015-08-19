@@ -1,351 +1,347 @@
-﻿using Newtonsoft.Json;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Runtime.Serialization;
 
 namespace RiotApi.Net.RestClient.Dto.Stats.Generic
 {
     /// <summary>
     /// This object contains aggregated stat information.
     /// </summary>
+    [DataContract]
     public class AggregatedStatsDto
     {
         /// <summary>
         /// Dominion only.
         /// </summary>
-        [JsonProperty(PropertyName = "averageAssists")]
+        [DataMember(Name = "averageAssists")]
         public int AverageAssists { get; set; }
 
         /// <summary>
         /// Dominion only.
         /// </summary>
-        [JsonProperty(PropertyName = "averageChampionsKilled")]
+        [DataMember(Name = "averageChampionsKilled")]
         public int AverageChampionsKilled { get; set; }
 
         /// <summary>
         /// Dominion only.
         /// </summary>
-        [JsonProperty(PropertyName = "averageCombatPlayerScore")]
+        [DataMember(Name = "averageCombatPlayerScore")]
         public int AverageCombatPlayerScore { get; set; }
 
         /// <summary>
         /// Dominion only.
         /// </summary>
-        [JsonProperty(PropertyName = "averageNodeCapture")]
+        [DataMember(Name = "averageNodeCapture")]
         public int AverageNodeCapture { get; set; }
 
         /// <summary>
         /// Dominion only.
         /// </summary>
-        [JsonProperty(PropertyName = "averageNodeCaptureAssist")]
+        [DataMember(Name = "averageNodeCaptureAssist")]
         public int AverageNodeCaptureAssist { get; set; }
 
         /// <summary>
         /// Dominion only.
         /// </summary>
-        [JsonProperty(PropertyName = "averageNodeNeutralize")]
+        [DataMember(Name = "averageNodeNeutralize")]
         public int AverageNodeNeutralize { get; set; }
 
         /// <summary>
         /// Dominion only.
         /// </summary>
-        [JsonProperty(PropertyName = "averageNodeNeutralizeAssist")]
+        [DataMember(Name = "averageNodeNeutralizeAssist")]
         public int AverageNodeNeutralizeAssist { get; set; }
 
         /// <summary>
         /// Dominion only.
         /// </summary>
-        [JsonProperty(PropertyName = "averageNumDeaths")]
+        [DataMember(Name = "averageNumDeaths")]
         public int AverageNumDeaths { get; set; }
 
         /// <summary>
         /// Dominion only.
         /// </summary>
-        [JsonProperty(PropertyName = "averageObjectivePlayerScore")]
+        [DataMember(Name = "averageObjectivePlayerScore")]
         public int AverageObjectivePlayerScore { get; set; }
 
         /// <summary>
         /// Dominion only.
         /// </summary>
-        [JsonProperty(PropertyName = "averageTeamObjective")]
+        [DataMember(Name = "averageTeamObjective")]
         public int AverageTeamObjective { get; set; }
 
         /// <summary>
         /// Dominion only.
         /// </summary>
-        [JsonProperty(PropertyName = "averageTotalPlayerScore")]
+        [DataMember(Name = "averageTotalPlayerScore")]
         public int AverageTotalPlayerScore { get; set; }
 
         /// <summary>
         /// 
         /// </summary>
-        [JsonProperty(PropertyName = "botGamesPlayed")]
+        [DataMember(Name = "botGamesPlayed")]
         public int BotGamesPlayed { get; set; }
 
         /// <summary>
         /// 
         /// </summary>
-        [JsonProperty(PropertyName = "killingSpree")]
+        [DataMember(Name = "killingSpree")]
         public int KillingSpree { get; set; }
 
         /// <summary>
         /// Dominion only.
         /// </summary>
-        [JsonProperty(PropertyName = "maxAssists")]
+        [DataMember(Name = "maxAssists")]
         public int MaxAssists { get; set; }
 
         /// <summary>
         /// 
         /// </summary>
-        [JsonProperty(PropertyName = "maxChampionsKilled")]
+        [DataMember(Name = "maxChampionsKilled")]
         public int MaxChampionsKilled { get; set; }
 
         /// <summary>
         /// Dominion only.
         /// </summary>
-        [JsonProperty(PropertyName = "maxCombatPlayerScore")]
+        [DataMember(Name = "maxCombatPlayerScore")]
         public int MaxCombatPlayerScore { get; set; }
 
         /// <summary>
         /// 
         /// </summary>
-        [JsonProperty(PropertyName = "maxLargestCriticalStrike")]
+        [DataMember(Name = "maxLargestCriticalStrike")]
         public int MaxLargestCriticalStrike { get; set; }
 
         /// <summary>
         /// 
         /// </summary>
-        [JsonProperty(PropertyName = "maxLargestKillingSpree")]
+        [DataMember(Name = "maxLargestKillingSpree")]
         public int maxLargestKillingSpree { get; set; }
 
         /// <summary>
         /// Dominion only.
         /// </summary>
-        [JsonProperty(PropertyName = "maxNodeCapture")]
+        [DataMember(Name = "maxNodeCapture")]
         public int MaxNodeCapture { get; set; }
 
         /// <summary>
         /// Dominion only.
         /// </summary>
-        [JsonProperty(PropertyName = "maxNodeCaptureAssist")]
+        [DataMember(Name = "maxNodeCaptureAssist")]
         public int MaxNodeCaptureAssist { get; set; }
 
         /// <summary>
         /// Dominion only.
         /// </summary>
-        [JsonProperty(PropertyName = "maxNodeNeutralize")]
+        [DataMember(Name = "maxNodeNeutralize")]
         public int MaxNodeNeutralize { get; set; }
 
         /// <summary>
         /// Dominion only.
         /// </summary>
-        [JsonProperty(PropertyName = "maxNodeNeutralizeAssist")]
+        [DataMember(Name = "maxNodeNeutralizeAssist")]
         public int MaxNodeNeutralizeAssist { get; set; }
 
         /// <summary>
         /// Only returned for ranked statistics.
         /// </summary>
-        [JsonProperty(PropertyName = "maxNumDeaths")]
+        [DataMember(Name = "maxNumDeaths")]
         public int? MaxNumDeaths { get; set; }
 
         /// <summary>
         /// Dominion only.
         /// </summary>
-        [JsonProperty(PropertyName = "maxObjectivePlayerScore")]
-        public int maxObjectivePlayerScore { get; set; }
+        [DataMember(Name = "maxObjectivePlayerScore")]
+        public int MaxObjectivePlayerScore { get; set; }
 
         /// <summary>
         /// Dominion only.
         /// </summary>
-        [JsonProperty(PropertyName = "maxTeamObjective")]
+        [DataMember(Name = "maxTeamObjective")]
         public int MaxTeamObjective { get; set; }
 
         /// <summary>
         ///
         /// </summary>
-        [JsonProperty(PropertyName = "maxTimePlayed")]
+        [DataMember(Name = "maxTimePlayed")]
         public int MaxTimePlayed { get; set; }
 
         /// <summary>
         ///
         /// </summary>
-        [JsonProperty(PropertyName = "maxTimeSpentLiving")]
+        [DataMember(Name = "maxTimeSpentLiving")]
         public int MaxTimeSpentLiving { get; set; }
 
         /// <summary>
         /// Dominion only.
         /// </summary>
-        [JsonProperty(PropertyName = "maxTotalPlayerScore")]
+        [DataMember(Name = "maxTotalPlayerScore")]
         public int MaxTotalPlayerScore { get; set; }
 
         /// <summary>
         ///
         /// </summary>
-        [JsonProperty(PropertyName = "mostChampionKillsPerSession")]
+        [DataMember(Name = "mostChampionKillsPerSession")]
         public int MostChampionKillsPerSession { get; set; }
 
         /// <summary>
         ///
         /// </summary>
-        [JsonProperty(PropertyName = "mostSpellsCast")]
+        [DataMember(Name = "mostSpellsCast")]
         public int MostSpellsCast { get; set; }
 
         /// <summary>
         ///
         /// </summary>
-        [JsonProperty(PropertyName = "normalGamesPlayed")]
+        [DataMember(Name = "normalGamesPlayed")]
         public int NormalGamesPlayed { get; set; }
 
         /// <summary>
         ///
         /// </summary>
-        [JsonProperty(PropertyName = "rankedPremadeGamesPlayed")]
+        [DataMember(Name = "rankedPremadeGamesPlayed")]
         public int RankedPremadeGamesPlayed { get; set; }
 
         /// <summary>
         ///
         /// </summary>
-        [JsonProperty(PropertyName = "rankedSoloGamesPlayed")]
+        [DataMember(Name = "rankedSoloGamesPlayed")]
         public int RankedSoloGamesPlayed { get; set; }
 
         /// <summary>
         ///
         /// </summary>
-        [JsonProperty(PropertyName = "totalAssists")]
+        [DataMember(Name = "totalAssists")]
         public int TotalAssists { get; set; }
 
         /// <summary>
         ///
         /// </summary>
-        [JsonProperty(PropertyName = "totalChampionKills")]
+        [DataMember(Name = "totalChampionKills")]
         public int TotalChampionKills { get; set; }
 
         /// <summary>
         ///
         /// </summary>
-        [JsonProperty(PropertyName = "totalDamageDealt")]
+        [DataMember(Name = "totalDamageDealt")]
         public int TotalDamageDealt { get; set; }
 
         /// <summary>
         ///
         /// </summary>
-        [JsonProperty(PropertyName = "totalDamageTaken")]
+        [DataMember(Name = "totalDamageTaken")]
         public int TotalDamageTaken { get; set; }
 
         /// <summary>
         /// Only returned for ranked statistics.
         /// </summary>
-        [JsonProperty(PropertyName = "totalDeathsPerSession")]
+        [DataMember(Name = "totalDeathsPerSession")]
         public int? TotalDeathsPerSession { get; set; }
 
         /// <summary>
         ///
         /// </summary>
-        [JsonProperty(PropertyName = "totalDoubleKills")]
+        [DataMember(Name = "totalDoubleKills")]
         public int TotalDoubleKills { get; set; }
 
         /// <summary>
         ///
         /// </summary>
-        [JsonProperty(PropertyName = "totalFirstBlood")]
+        [DataMember(Name = "totalFirstBlood")]
         public int TotalFirstBlood { get; set; }
 
         /// <summary>
         ///
         /// </summary>
-        [JsonProperty(PropertyName = "totalGoldEarned")]
+        [DataMember(Name = "totalGoldEarned")]
         public int TotalGoldEarned { get; set; }
 
         /// <summary>
         ///
         /// </summary>
-        [JsonProperty(PropertyName = "totalHeal")]
+        [DataMember(Name = "totalHeal")]
         public int TotalHeal { get; set; }
 
         /// <summary>
         ///
         /// </summary>
-        [JsonProperty(PropertyName = "totalMagicDamageDealt")]
+        [DataMember(Name = "totalMagicDamageDealt")]
         public int TotalMagicDamageDealt { get; set; }
 
         /// <summary>
         ///
         /// </summary>
-        [JsonProperty(PropertyName = "totalMinionKills")]
+        [DataMember(Name = "totalMinionKills")]
         public int TotalMinionKills { get; set; }
 
         /// <summary>
         ///
         /// </summary>
-        [JsonProperty(PropertyName = "totalNeutralMinionsKilled")]
+        [DataMember(Name = "totalNeutralMinionsKilled")]
         public int TotalNeutralMinionsKilled { get; set; }
 
         /// <summary>
         /// Dominion only.
         /// </summary>
-        [JsonProperty(PropertyName = "totalNodeCapture")]
+        [DataMember(Name = "totalNodeCapture")]
         public int TotalNodeCapture { get; set; }
 
         /// <summary>
         /// Dominion only.
         /// </summary>
-        [JsonProperty(PropertyName = "totalNodeNeutralize")]
+        [DataMember(Name = "totalNodeNeutralize")]
         public int TotalNodeNeutralize { get; set; }
 
         /// <summary>
         ///
         /// </summary>
-        [JsonProperty(PropertyName = "totalPentaKills")]
+        [DataMember(Name = "totalPentaKills")]
         public int TotalPentaKills { get; set; }
 
         /// <summary>
         ///
         /// </summary>
-        [JsonProperty(PropertyName = "totalPhysicalDamageDealt")]
+        [DataMember(Name = "totalPhysicalDamageDealt")]
         public int TotalPhysicalDamageDealt { get; set; }
 
         /// <summary>
         ///
         /// </summary>
-        [JsonProperty(PropertyName = "totalQuadraKills")]
+        [DataMember(Name = "totalQuadraKills")]
         public int TotalQuadraKills { get; set; }
 
         /// <summary>
         ///
         /// </summary>
-        [JsonProperty(PropertyName = "totalSessionsLost")]
+        [DataMember(Name = "totalSessionsLost")]
         public int TotalSessionsLost { get; set; }
 
         /// <summary>
         ///
         /// </summary>
-        [JsonProperty(PropertyName = "totalSessionsPlayed")]
+        [DataMember(Name = "totalSessionsPlayed")]
         public int TotalSessionsPlayed { get; set; }
         
         /// <summary>
         ///
         /// </summary>
-        [JsonProperty(PropertyName = "totalSessionsWon")]
+        [DataMember(Name = "totalSessionsWon")]
         public int TotalSessionsWon { get; set; }
 
         /// <summary>
         ///
         /// </summary>
-        [JsonProperty(PropertyName = "totalTripleKills")]
+        [DataMember(Name = "totalTripleKills")]
         public int TotalTripleKills { get; set; }
 
         /// <summary>
         ///
         /// </summary>
-        [JsonProperty(PropertyName = "totalTurretsKilled")]
+        [DataMember(Name = "totalTurretsKilled")]
         public int TotalTurretsKilled { get; set; }
 
         /// <summary>
         ///
         /// </summary>
-        [JsonProperty(PropertyName = "totalUnrealKills")]
+        [DataMember(Name = "totalUnrealKills")]
         public int TotalUnrealKills { get; set; }
     }
 }

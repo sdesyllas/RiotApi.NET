@@ -1,70 +1,71 @@
-﻿using Newtonsoft.Json;
+﻿using System.Runtime.Serialization;
 
 namespace RiotApi.Net.RestClient.Dto.Match.Generic
 {
     /// <summary>
     /// This object contains participant frame information
     /// </summary>
+    [DataContract]
     public class ParticipantFrame : RiotDto
     {
         /// <summary>
         /// Participant's current gold
         /// </summary>
-        [JsonProperty(PropertyName = "currentGold")]
+        [DataMember(Name = "currentGold")]
         public int CurrentGold { get; set; }
 
         /// <summary>
         /// Dominion score of the participant
         /// </summary>
-        [JsonProperty(PropertyName = "dominionScore")]
+        [DataMember(Name = "dominionScore")]
         public int DominionScore { get; set; }
 
         /// <summary>
         /// Number of jungle minions killed by participant
         /// </summary>
-        [JsonProperty(PropertyName = "jungleMinionsKilled")]
+        [DataMember(Name = "jungleMinionsKilled")]
         public int JungleMinionsKilled { get; set; }
 
         /// <summary>
         /// Participant's current level
         /// </summary>
-        [JsonProperty(PropertyName = "level")]
+        [DataMember(Name = "level")]
         public int Level { get; set; }
 
         /// <summary>
         /// Number of minions killed by participant
         /// </summary>
-        [JsonProperty(PropertyName = "minionsKilled")]
+        [DataMember(Name = "minionsKilled")]
         public int MinionsKilled { get; set; }
 
         /// <summary>
         /// Participant ID
         /// </summary>
-        [JsonProperty(PropertyName = "participantId")]
+        [DataMember(Name = "participantId")]
         public int ParticipantId { get; set; }
 
         /// <summary>
         /// Participant's position
         /// </summary>
-        [JsonProperty(PropertyName = "position")]
+        [DataMember(Name = "position")]
         public Position Position { get; set; }
 
         /// <summary>
         /// Team score of the participant
         /// </summary>
-        [JsonProperty(PropertyName = "teamScore")]
+        [DataMember(Name = "teamScore")]
         public int TeamScore { get; set; }
 
         /// <summary>
         /// Participant's total gold
         /// </summary>
-        [JsonProperty(PropertyName = "totalGold")]
+        [DataMember(Name = "totalGold")]
         public int TotalGold { get; set; }
 
         /// <summary>
         /// Experience earned by participant
         /// </summary>
-        [JsonProperty(PropertyName = "xp")]
+        [DataMember(Name = "xp")]
         public int Xp { get; set; }
     }
 }

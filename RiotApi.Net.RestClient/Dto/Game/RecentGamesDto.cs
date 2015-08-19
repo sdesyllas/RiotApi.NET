@@ -1,620 +1,620 @@
-﻿using Newtonsoft.Json;
-using Newtonsoft.Json.Converters;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using System.Runtime.Serialization;
 
 namespace RiotApi.Net.RestClient.Dto.Game
 {
     /// <summary>
     /// RecentGamesDto
     /// </summary>
+    [DataContract]
     public class RecentGamesDto : RiotDto
     {
         /// <summary>
         /// Collection of recent games played (max 10).
         /// </summary>
-        [JsonProperty(PropertyName = "games")]
+        [DataMember(Name = "games")]
         public IEnumerable<GameDto> Games { get; set; }
 
         /// <summary>
         /// Summoner ID.
         /// </summary>
-        [JsonProperty(PropertyName = "summonerId")]
+        [DataMember(Name = "summonerId")]
         public long SummonerId { get; set; }
 
         /// <summary>
         /// GameDto  This object contains game information.
         /// </summary>
+        [DataContract]
         public class GameDto
         {
             /// <summary>
             /// Champion ID associated with game.
             /// </summary>
-            [JsonProperty(PropertyName = "championId")]
+            [DataMember(Name = "championId")]
             public int ChampionId { get; set; }
 
             /// <summary>
             /// Date that end game data was recorded, specified as epoch milliseconds.
             /// </summary>
-            [JsonProperty(PropertyName = "createDate")]
+            [DataMember(Name = "createDate")]
             public long CreateDate { get; set; }
 
             /// <summary>
             /// Other players associated with the game.
             /// </summary>
-            [JsonProperty(PropertyName = "fellowPlayers")]
+            [DataMember(Name = "fellowPlayers")]
             public IEnumerable<PlayerDto> FellowPlayers { get; set; }
 
             /// <summary>
             /// Game ID.
             /// </summary>
-            [JsonProperty(PropertyName = "gameId")]
+            [DataMember(Name = "gameId")]
             public long GameId { get; set; }
 
             /// <summary>
             /// Game mode. (Legal values: CLASSIC, ODIN, ARAM, TUTORIAL, ONEFORALL, ASCENSION, FIRSTBLOOD, KINGPORO)
             /// </summary>
-            [JsonProperty(PropertyName = "gameMode")]
-            [JsonConverter(typeof(StringEnumConverter))]
+            [DataMember(Name = "gameMode")]
             public Helpers.Enums.GameMode GameMode { get; set; }
 
             /// <summary>
             /// Game type. (Legal values: CUSTOM_GAME, MATCHED_GAME, TUTORIAL_GAME)
             /// </summary>
-            [JsonProperty(PropertyName = "gameType")]
-            [JsonConverter(typeof(StringEnumConverter))]
+            [DataMember(Name = "gameType")]
             public Helpers.Enums.GameType GameType { get; set; }
 
             /// <summary>
             /// Invalid flag.
             /// </summary>
-            [JsonProperty(PropertyName = "invalid")]
+            [DataMember(Name = "invalid")]
             public bool Invalid { get; set; }
 
             /// <summary>
             /// IP Earned.
             /// </summary>
-            [JsonProperty(PropertyName = "ipEarned")]
+            [DataMember(Name = "ipEarned")]
             public int IpEarned { get; set; }
 
             /// <summary>
             /// Level.
             /// </summary>
-            [JsonProperty(PropertyName = "level")]
+            [DataMember(Name = "level")]
             public int Level { get; set; }
 
             /// <summary>
             /// Map ID.
             /// </summary>
-            [JsonProperty(PropertyName = "mapId")]
+            [DataMember(Name = "mapId")]
             public int MapId { get; set; }
 
             /// <summary>
             /// ID of first summoner spell.
             /// </summary>
-            [JsonProperty(PropertyName = "spell1")]
+            [DataMember(Name = "spell1")]
             public int Spell1 { get; set; }
 
             /// <summary>
             /// ID of second summoner spell.
             /// </summary>
-            [JsonProperty(PropertyName = "spell2")]
+            [DataMember(Name = "spell2")]
             public int Spell2 { get; set; }
 
             /// <summary>
             /// Statistics associated with the game for this summoner.
             /// </summary>
-            [JsonProperty(PropertyName = "stats")]
+            [DataMember(Name = "stats")]
             public RawStatsDto Stats { get; set; }
 
             /// <summary>
             /// Game sub-type. (Legal values: NONE, NORMAL, BOT, RANKED_SOLO_5x5, RANKED_PREMADE_3x3, RANKED_PREMADE_5x5, ODIN_UNRANKED, RANKED_TEAM_3x3, RANKED_TEAM_5x5, NORMAL_3x3, BOT_3x3, CAP_5x5, ARAM_UNRANKED_5x5, ONEFORALL_5x5, FIRSTBLOOD_1x1, FIRSTBLOOD_2x2, SR_6x6, URF, URF_BOT, NIGHTMARE_BOT, ASCENSION, HEXAKILL, KING_PORO, COUNTER_PICK)
             /// </summary>
-            [JsonProperty(PropertyName = "subType")]
-            [JsonConverter(typeof(StringEnumConverter))]
+            [DataMember(Name = "subType")]
             public Helpers.Enums.GameSubType SubType { get; set; }
 
             /// <summary>
             /// Team ID associated with game. Team ID 100 is blue team. Team ID 200 is purple team.
             /// </summary>
-            [JsonProperty(PropertyName = "teamId")]
+            [DataMember(Name = "teamId")]
             public int TeamId { get; set; }
         }
 
         /// <summary>
         /// PlayerDto This object contains player information.
         /// </summary>
+        [DataContract]
         public class PlayerDto
         {
             /// <summary>
             /// Champion id associated with player.
             /// </summary>
-            [JsonProperty(PropertyName = "championId")]
+            [DataMember(Name = "championId")]
             public int ChampionId { get; set; }
 
             /// <summary>
             /// Summoner id associated with player.
             /// </summary>
-            [JsonProperty(PropertyName = "summonerId")]
+            [DataMember(Name = "summonerId")]
             public long SummonerId { get; set; }
 
             /// <summary>
             /// Team id associated with player.
             /// </summary>
-            [JsonProperty(PropertyName = "teamId")]
+            [DataMember(Name = "teamId")]
             public int TeamId { get; set; }
         }
 
         /// <summary>
         /// RawStatsDto This object contains raw stat information.
         /// </summary>
+        [DataContract]
         public class RawStatsDto
         {
             /// <summary>
             /// No description available from Riot Documentation
             /// </summary>
-            [JsonProperty(PropertyName = "assists")]
+            [DataMember(Name = "assists")]
             public int Assists { get; set; }
 
             /// <summary>
             /// Number of enemy inhibitors killed.
             /// </summary>
-            [JsonProperty(PropertyName = "barracksKilled")]
+            [DataMember(Name = "barracksKilled")]
             public int BarracksKilled { get; set; }
 
             /// <summary>
             /// No description available from Riot Documentation
             /// </summary>
-            [JsonProperty(PropertyName = "championsKilled")]
+            [DataMember(Name = "championsKilled")]
             public int ChampionsKilled { get; set; }
 
             /// <summary>
             /// No description available from Riot Documentation
             /// </summary>
-            [JsonProperty(PropertyName = "combatPlayerScore")]
+            [DataMember(Name = "combatPlayerScore")]
             public int CombatPlayerScore { get; set; }
 
             /// <summary>
             /// No description available from Riot Documentation
             /// </summary>
-            [JsonProperty(PropertyName = "consumablesPurchased")]
+            [DataMember(Name = "consumablesPurchased")]
             public int ConsumablesPurchased { get; set; }
 
             /// <summary>
             /// No description available from Riot Documentation
             /// </summary>
-            [JsonProperty(PropertyName = "damageDealtPlayer")]
+            [DataMember(Name = "damageDealtPlayer")]
             public int DamageDealtPlayer { get; set; }
 
             /// <summary>
             /// No description available from Riot Documentation
             /// </summary>
-            [JsonProperty(PropertyName = "doubleKills")]
+            [DataMember(Name = "doubleKills")]
             public int DoubleKills { get; set; }
 
             /// <summary>
             /// No description available from Riot Documentation
             /// </summary>
-            [JsonProperty(PropertyName = "firstBlood")]
+            [DataMember(Name = "firstBlood")]
             public int FirstBlood { get; set; }
 
             /// <summary>
             /// No description available from Riot Documentation
             /// </summary>
-            [JsonProperty(PropertyName = "gold")]
+            [DataMember(Name = "gold")]
             public int Gold { get; set; }
 
             /// <summary>
             /// No description available from Riot Documentation
             /// </summary>
-            [JsonProperty(PropertyName = "goldEarned")]
+            [DataMember(Name = "goldEarned")]
             public int GoldEarned { get; set; }
 
             /// <summary>
             /// No description available from Riot Documentation
             /// </summary>
-            [JsonProperty(PropertyName = "goldSpent")]
+            [DataMember(Name = "goldSpent")]
             public int GoldSpent { get; set; }
 
             /// <summary>
             /// No description available from Riot Documentation
             /// </summary>
-            [JsonProperty(PropertyName = "item0")]
+            [DataMember(Name = "item0")]
             public int Item0 { get; set; }
 
             /// <summary>
             /// No description available from Riot Documentation
             /// </summary>
-            [JsonProperty(PropertyName = "item1")]
+            [DataMember(Name = "item1")]
             public int Item1 { get; set; }
 
             /// <summary>
             /// No description available from Riot Documentation
             /// </summary>
-            [JsonProperty(PropertyName = "item2")]
+            [DataMember(Name = "item2")]
             public int Item2 { get; set; }
 
             /// <summary>
             /// No description available from Riot Documentation
             /// </summary>
-            [JsonProperty(PropertyName = "item3")]
+            [DataMember(Name = "item3")]
             public int Item3 { get; set; }
 
             /// <summary>
             /// No description available from Riot Documentation
             /// </summary>
-            [JsonProperty(PropertyName = "item4")]
+            [DataMember(Name = "item4")]
             public int Item4 { get; set; }
 
             /// <summary>
             /// No description available from Riot Documentation
             /// </summary>
-            [JsonProperty(PropertyName = "item5")]
+            [DataMember(Name = "item5")]
             public int Item5 { get; set; }
 
             /// <summary>
             /// No description available from Riot Documentation
             /// </summary>
-            [JsonProperty(PropertyName = "item6")]
+            [DataMember(Name = "item6")]
             public int Item6 { get; set; }
 
             /// <summary>
             /// No description available from Riot Documentation
             /// </summary>
-            [JsonProperty(PropertyName = "itemsPurchased")]
+            [DataMember(Name = "itemsPurchased")]
             public int ItemsPurchased { get; set; }
 
             /// <summary>
             /// No description available from Riot Documentation
             /// </summary>
-            [JsonProperty(PropertyName = "killingSprees")]
+            [DataMember(Name = "killingSprees")]
             public int KillingSprees { get; set; }
 
             /// <summary>
             /// No description available from Riot Documentation
             /// </summary>
-            [JsonProperty(PropertyName = "largestCriticalStrike")]
+            [DataMember(Name = "largestCriticalStrike")]
             public int LargestCriticalStrike { get; set; }
 
             /// <summary>
             /// No description available from Riot Documentation
             /// </summary>
-            [JsonProperty(PropertyName = "largestKillingSpree")]
+            [DataMember(Name = "largestKillingSpree")]
             public int LargestKillingSpree { get; set; }
 
             /// <summary>
             /// No description available from Riot Documentation
             /// </summary>
-            [JsonProperty(PropertyName = "largestMultiKill")]
+            [DataMember(Name = "largestMultiKill")]
             public int LargestMultiKill { get; set; }
 
             /// <summary>
             /// Number of tier 3 items built.
             /// </summary>
-            [JsonProperty(PropertyName = "legendaryItemsCreated")]
+            [DataMember(Name = "legendaryItemsCreated")]
             public int LegendaryItemsCreated { get; set; }
 
             /// <summary>
             /// No description available from Riot Documentation
             /// </summary>
-            [JsonProperty(PropertyName = "level")]
+            [DataMember(Name = "level")]
             public int Level { get; set; }
 
             /// <summary>
             /// No description available from Riot Documentation
             /// </summary>
-            [JsonProperty(PropertyName = "magicDamageDealtPlayer")]
+            [DataMember(Name = "magicDamageDealtPlayer")]
             public int MagicDamageDealtPlayer { get; set; }
 
             /// <summary>
             /// No description available from Riot Documentation
             /// </summary>
-            [JsonProperty(PropertyName = "magicDamageDealtToChampions")]
+            [DataMember(Name = "magicDamageDealtToChampions")]
             public int MagicDamageDealtToChampions { get; set; }
 
             /// <summary>
             /// No description available from Riot Documentation
             /// </summary>
-            [JsonProperty(PropertyName = "magicDamageTaken")]
+            [DataMember(Name = "magicDamageTaken")]
             public int MagicDamageTaken { get; set; }
 
             /// <summary>
             /// No description available from Riot Documentation
             /// </summary>
-            [JsonProperty(PropertyName = "minionsDenied")]
+            [DataMember(Name = "minionsDenied")]
             public int MinionsDenied { get; set; }
 
             /// <summary>
             /// No description available from Riot Documentation
             /// </summary>
-            [JsonProperty(PropertyName = "minionsKilled")]
+            [DataMember(Name = "minionsKilled")]
             public int MinionsKilled { get; set; }
 
             /// <summary>
             /// No description available from Riot Documentation
             /// </summary>
-            [JsonProperty(PropertyName = "neutralMinionsKilled")]
+            [DataMember(Name = "neutralMinionsKilled")]
             public int NeutralMinionsKilled { get; set; }
 
             /// <summary>
             /// No description available from Riot Documentation
             /// </summary>
-            [JsonProperty(PropertyName = "neutralMinionsKilledEnemyJungle")]
+            [DataMember(Name = "neutralMinionsKilledEnemyJungle")]
             public int NeutralMinionsKilledEnemyJungle { get; set; }
 
             /// <summary>
             /// No description available from Riot Documentation
             /// </summary>
-            [JsonProperty(PropertyName = "neutralMinionsKilledYourJungle")]
+            [DataMember(Name = "neutralMinionsKilledYourJungle")]
             public int NeutralMinionsKilledYourJungle { get; set; }
 
             /// <summary>
             /// Flag specifying if the summoner got the killing blow on the nexus.
             /// </summary>
-            [JsonProperty(PropertyName = "nexusKilled")]
+            [DataMember(Name = "nexusKilled")]
             public bool NexusKilled { get; set; }
 
             /// <summary>
             /// No description available from Riot Documentation
             /// </summary>
-            [JsonProperty(PropertyName = "nodeCapture")]
+            [DataMember(Name = "nodeCapture")]
             public int NodeCapture { get; set; }
 
             /// <summary>
             /// No description available from Riot Documentation
             /// </summary>
-            [JsonProperty(PropertyName = "nodeCaptureAssist")]
+            [DataMember(Name = "nodeCaptureAssist")]
             public int NodeCaptureAssist { get; set; }
 
             /// <summary>
             /// No description available from Riot Documentation
             /// </summary>
-            [JsonProperty(PropertyName = "nodeNeutralize")]
+            [DataMember(Name = "nodeNeutralize")]
             public int NodeNeutralize { get; set; }
 
             /// <summary>
             /// No description available from Riot Documentation
             /// </summary>
-            [JsonProperty(PropertyName = "nodeNeutralizeAssist")]
+            [DataMember(Name = "nodeNeutralizeAssist")]
             public int NodeNeutralizeAssist { get; set; }
 
             /// <summary>
             /// No description available from Riot Documentation
             /// </summary>
-            [JsonProperty(PropertyName = "numDeaths")]
+            [DataMember(Name = "numDeaths")]
             public int NumDeaths { get; set; }
 
             /// <summary>
             /// No description available from Riot Documentation
             /// </summary>
-            [JsonProperty(PropertyName = "numItemsBought")]
+            [DataMember(Name = "numItemsBought")]
             public int NumItemsBought { get; set; }
 
             /// <summary>
             /// No description available from Riot Documentation
             /// </summary>
-            [JsonProperty(PropertyName = "objectivePlayerScore")]
+            [DataMember(Name = "objectivePlayerScore")]
             public int ObjectivePlayerScore { get; set; }
 
             /// <summary>
             /// No description available from Riot Documentation
             /// </summary>
-            [JsonProperty(PropertyName = "pentaKills")]
+            [DataMember(Name = "pentaKills")]
             public int PentaKills { get; set; }
 
             /// <summary>
             /// No description available from Riot Documentation
             /// </summary>
-            [JsonProperty(PropertyName = "physicalDamageDealtPlayer")]
+            [DataMember(Name = "physicalDamageDealtPlayer")]
             public int PhysicalDamageDealtPlayer { get; set; }
 
             /// <summary>
             /// No description available from Riot Documentation
             /// </summary>
-            [JsonProperty(PropertyName = "physicalDamageDealtToChampions")]
+            [DataMember(Name = "physicalDamageDealtToChampions")]
             public int PhysicalDamageDealtToChampions { get; set; }
 
             /// <summary>
             /// No description available from Riot Documentation
             /// </summary>
-            [JsonProperty(PropertyName = "physicalDamageTaken")]
+            [DataMember(Name = "physicalDamageTaken")]
             public int PhysicalDamageTaken { get; set; }
 
             /// <summary>
             /// No description available from Riot Documentation
             /// </summary>
-            [JsonProperty(PropertyName = "playerPosition")]
+            [DataMember(Name = "playerPosition")]
             public int PlayerPosition { get; set; }
 
             /// <summary>
             /// No description available from Riot Documentation
             /// </summary>
-            [JsonProperty(PropertyName = "playerRole")]
+            [DataMember(Name = "playerRole")]
             public int PlayerRole { get; set; }
 
             /// <summary>
             /// No description available from Riot Documentation
             /// </summary>
-            [JsonProperty(PropertyName = "quadraKills")]
+            [DataMember(Name = "quadraKills")]
             public int QuadraKills { get; set; }
 
             /// <summary>
             /// No description available from Riot Documentation
             /// </summary>
-            [JsonProperty(PropertyName = "sightWardsBought")]
+            [DataMember(Name = "sightWardsBought")]
             public int SightWardsBought { get; set; }
 
             /// <summary>
             /// Number of times first champion spell was cast.
             /// </summary>
-            [JsonProperty(PropertyName = "spell1Cast")]
+            [DataMember(Name = "spell1Cast")]
             public int Spell1Cast { get; set; }
 
             /// <summary>
             /// Number of times second champion spell was cast.
             /// </summary>
-            [JsonProperty(PropertyName = "spell2Cast")]
+            [DataMember(Name = "spell2Cast")]
             public int Spell2Cast { get; set; }
 
             /// <summary>
             /// Number of times third champion spell was cast.
             /// </summary>
-            [JsonProperty(PropertyName = "spell3Cast")]
+            [DataMember(Name = "spell3Cast")]
             public int Spell3Cast { get; set; }
 
             /// <summary>
             /// Number of times fourth champion spell was cast.
             /// </summary>
-            [JsonProperty(PropertyName = "spell4Cast")]
+            [DataMember(Name = "spell4Cast")]
             public int Spell4Cast { get; set; }
 
             /// <summary>
             /// No description available from Riot Documentation
             /// </summary>
-            [JsonProperty(PropertyName = "summonSpell1Cast")]
+            [DataMember(Name = "summonSpell1Cast")]
             public int SummonSpell1Cast { get; set; }
 
             /// <summary>
             /// No description available from Riot Documentation
             /// </summary>
-            [JsonProperty(PropertyName = "summonSpell2Cast")]
+            [DataMember(Name = "summonSpell2Cast")]
             public int SummonSpell2Cast { get; set; }
 
             /// <summary>
             /// No description available from Riot Documentation
             /// </summary>
-            [JsonProperty(PropertyName = "superMonsterKilled")]
+            [DataMember(Name = "superMonsterKilled")]
             public int SuperMonsterKilled { get; set; }
 
             /// <summary>
             /// No description available from Riot Documentation
             /// </summary>
-            [JsonProperty(PropertyName = "team")]
+            [DataMember(Name = "team")]
             public int Team { get; set; }
 
             /// <summary>
             /// No description available from Riot Documentation
             /// </summary>
-            [JsonProperty(PropertyName = "teamObjective")]
+            [DataMember(Name = "teamObjective")]
             public int TeamObjective { get; set; }
 
             /// <summary>
             /// No description available from Riot Documentation
             /// </summary>
-            [JsonProperty(PropertyName = "timePlayed")]
+            [DataMember(Name = "timePlayed")]
             public int TimePlayed { get; set; }
 
             /// <summary>
             /// No description available from Riot Documentation
             /// </summary>
-            [JsonProperty(PropertyName = "totalDamageDealt")]
+            [DataMember(Name = "totalDamageDealt")]
             public int TotalDamageDealt { get; set; }
 
             /// <summary>
             /// No description available from Riot Documentation
             /// </summary>
-            [JsonProperty(PropertyName = "totalDamageDealtToChampions")]
+            [DataMember(Name = "totalDamageDealtToChampions")]
             public int TotalDamageDealtToChampions { get; set; }
 
             /// <summary>
             /// No description available from Riot Documentation
             /// </summary>
-            [JsonProperty(PropertyName = "totalDamageTaken")]
+            [DataMember(Name = "totalDamageTaken")]
             public int TotalDamageTaken { get; set; }
 
             /// <summary>
             /// No description available from Riot Documentation
             /// </summary>
-            [JsonProperty(PropertyName = "totalHeal")]
+            [DataMember(Name = "totalHeal")]
             public int TotalHeal { get; set; }
 
             /// <summary>
             /// No description available from Riot Documentation
             /// </summary>
-            [JsonProperty(PropertyName = "totalPlayerScore")]
+            [DataMember(Name = "totalPlayerScore")]
             public int TotalPlayerScore { get; set; }
 
             /// <summary>
             /// No description available from Riot Documentation
             /// </summary>
-            [JsonProperty(PropertyName = "totalScoreRank")]
+            [DataMember(Name = "totalScoreRank")]
             public int TotalScoreRank { get; set; }
 
             /// <summary>
             /// No description available from Riot Documentation
             /// </summary>
-            [JsonProperty(PropertyName = "totalTimeCrowdControlDealt")]
+            [DataMember(Name = "totalTimeCrowdControlDealt")]
             public int TotalTimeCrowdControlDealt { get; set; }
 
             /// <summary>
             /// No description available from Riot Documentation
             /// </summary>
-            [JsonProperty(PropertyName = "totalUnitsHealed")]
+            [DataMember(Name = "totalUnitsHealed")]
             public int TotalUnitsHealed { get; set; }
 
             /// <summary>
             /// No description available from Riot Documentation
             /// </summary>
-            [JsonProperty(PropertyName = "tripleKills")]
+            [DataMember(Name = "tripleKills")]
             public int TripleKills { get; set; }
 
             /// <summary>
             /// No description available from Riot Documentation
             /// </summary>
-            [JsonProperty(PropertyName = "trueDamageDealtPlayer")]
+            [DataMember(Name = "trueDamageDealtPlayer")]
             public int TrueDamageDealtPlayer { get; set; }
 
             /// <summary>
             /// No description available from Riot Documentation
             /// </summary>
-            [JsonProperty(PropertyName = "trueDamageDealtToChampions")]
+            [DataMember(Name = "trueDamageDealtToChampions")]
             public int TrueDamageDealtToChampions { get; set; }
 
             /// <summary>
             /// No description available from Riot Documentation
             /// </summary>
-            [JsonProperty(PropertyName = "trueDamageTaken")]
+            [DataMember(Name = "trueDamageTaken")]
             public int TrueDamageTaken { get; set; }
 
             /// <summary>
             /// No description available from Riot Documentation
             /// </summary>
-            [JsonProperty(PropertyName = "turretsKilled")]
+            [DataMember(Name = "turretsKilled")]
             public int TurretsKilled { get; set; }
 
             /// <summary>
             /// No description available from Riot Documentation
             /// </summary>
-            [JsonProperty(PropertyName = "unrealKills")]
+            [DataMember(Name = "unrealKills")]
             public int UnrealKills { get; set; }
 
             /// <summary>
             /// No description available from Riot Documentation
             /// </summary>
-            [JsonProperty(PropertyName = "victoryPointTotal")]
+            [DataMember(Name = "victoryPointTotal")]
             public int VictoryPointTotal { get; set; }
 
             /// <summary>
             /// No description available from Riot Documentation
             /// </summary>
-            [JsonProperty(PropertyName = "visionWardsBought")]
+            [DataMember(Name = "visionWardsBought")]
             public int VisionWardsBought { get; set; }
 
             /// <summary>
             /// No description available from Riot Documentation
             /// </summary>
-            [JsonProperty(PropertyName = "wardKilled")]
+            [DataMember(Name = "wardKilled")]
             public int WardKilled { get; set; }
 
             /// <summary>
             /// No description available from Riot Documentation
             /// </summary>
-            [JsonProperty(PropertyName = "wardPlaced")]
+            [DataMember(Name = "wardPlaced")]
             public int WardPlaced { get; set; }
 
             /// <summary>
             /// Flag specifying whether or not this game was won.
             /// </summary>
-            [JsonProperty(PropertyName = "win")]
+            [DataMember(Name = "win")]
             public bool Win { get; set; }
         }
     }

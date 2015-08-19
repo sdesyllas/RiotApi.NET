@@ -1,75 +1,74 @@
-﻿using Newtonsoft.Json;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
+using System.Runtime.Serialization;
 
 namespace RiotApi.Net.RestClient.Dto.Summoner.Masteries
 {
     /// <summary>
     /// This object contains rune pages information.
     /// </summary>
+    [DataContract]
     public class MasteryPagesDto : RiotDto
     {
 
         /// <summary>
         /// Collection of rune pages associated with the summoner.
         /// </summary>
-        [JsonProperty(PropertyName = "pages")]
+        [DataMember(Name = "pages")]
         public IEnumerable<MasteryPageDto> Pages { get; set; }
 
         /// <summary>
         /// Summoner ID.
         /// </summary>
-        [JsonProperty(PropertyName = "summonerId")]
-        public long summonerId { get; set; }
+        [DataMember(Name = "summonerId")]
+        public long SummonerId { get; set; }
 
         /// <summary>
         /// This object contains rune page information.
         /// </summary>
+        [DataContract]
         public class MasteryPageDto
         {
             /// <summary>
             /// Indicates if the page is the current page.
             /// </summary>
-            [JsonProperty(PropertyName = "current")]
+            [DataMember(Name = "current")]
             public bool Current { get; set; }
 
             /// <summary>
             /// Mastery page ID.
             /// </summary>
-            [JsonProperty(PropertyName = "id")]
+            [DataMember(Name = "id")]
             public long Id { get; set; }
 
             /// <summary>
             /// Collection of masteries associated with the mastery page.
             /// </summary>
-            [JsonProperty(PropertyName = "masteries")]
+            [DataMember(Name = "masteries")]
             public IEnumerable<MasteryDto> Masteries { get; set; }
 
             /// <summary>
             /// Mastery page name.
             /// </summary>
-            [JsonProperty(PropertyName = "name")]
+            [DataMember(Name = "name")]
             public string Name { get; set; }
         }
 
         /// <summary>
         /// This object contains mastery information.
         /// </summary>
+        [DataContract]
         public class MasteryDto
         {
             /// <summary>
             /// Mastery ID. For static information correlating to masteries, please refer to the LoL Static Data API.
             /// </summary>
-            [JsonProperty(PropertyName = "id")]
+            [DataMember(Name = "id")]
             public int Id { get; set; }
 
             /// <summary>
             /// Mastery rank (i.e., the number of points put into this mastery).
             /// </summary>
-            [JsonProperty(PropertyName = "rank")]
+            [DataMember(Name = "rank")]
             public int Rank { get; set; }
         }
     }

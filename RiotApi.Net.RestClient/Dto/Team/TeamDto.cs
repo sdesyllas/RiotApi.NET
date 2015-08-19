@@ -1,244 +1,249 @@
-﻿using Newtonsoft.Json;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using System.Runtime.Serialization;
 
 namespace RiotApi.Net.RestClient.Dto.Team
 {
     /// <summary>
     /// This object contains team information.
     /// </summary>
+    [DataContract]
     public class TeamDto : RiotDto
     {
         /// <summary>
         /// Date that team was created specified as epoch milliseconds.
         /// </summary>
-        [JsonProperty(PropertyName = "createDate")]
+        [DataMember(Name = "createDate")]
         public long CreateDate { get; set; }
 
         /// <summary>
         ///
         /// </summary>
-        [JsonProperty(PropertyName = "fullId")]
-        public string fullId { get; set; }
+        [DataMember(Name = "fullId")]
+        public string FullId { get; set; }
 
         /// <summary>
         ///	Date that last game played by team ended specified as epoch milliseconds.
         /// </summary>
-        [JsonProperty(PropertyName = "lastGameDate")]
+        [DataMember(Name = "lastGameDate")]
         public long LastGameDate { get; set; }
 
         /// <summary>
         ///	Date that last member joined specified as epoch milliseconds.
         /// </summary>
-        [JsonProperty(PropertyName = "lastJoinDate")]
+        [DataMember(Name = "lastJoinDate")]
         public long LastJoinDate { get; set; }
 
         /// <summary>
         ///	Date that team last joined the ranked team queue specified as epoch milliseconds.
         /// </summary>
-        [JsonProperty(PropertyName = "lastJoinedRankedTeamQueueDate")]
+        [DataMember(Name = "lastJoinedRankedTeamQueueDate")]
         public long LastJoinedRankedTeamQueueDate { get; set; }
 
         /// <summary>
         ///
         /// </summary>
-        [JsonProperty(PropertyName = "matchHistory")]
+        [DataMember(Name = "matchHistory")]
         public IEnumerable<MatchHistorySummaryDto> MatchHistory { get; set; }
 
         /// <summary>
         /// Date that team was last modified specified as epoch milliseconds.
         /// </summary>
-        [JsonProperty(PropertyName = "modifyDate")]
+        [DataMember(Name = "modifyDate")]
         public long ModifyDate { get; set; }
 
         /// <summary>
         ///
         /// </summary>
-        [JsonProperty(PropertyName = "name")]
+        [DataMember(Name = "name")]
         public string Name { get; set; }
 
         /// <summary>
         ///
         /// </summary>
-        [JsonProperty(PropertyName = "roster")]
+        [DataMember(Name = "roster")]
         public RosterDto Roster { get; set; }
 
         /// <summary>
         ///	Date that second to last member joined specified as epoch milliseconds.
         /// </summary>
-        [JsonProperty(PropertyName = "secondLastJoinDate")]
+        [DataMember(Name = "secondLastJoinDate")]
         public long SecondLastJoinDate { get; set; }
 
         /// <summary>
         ///
         /// </summary>
-        [JsonProperty(PropertyName = "status")]
+        [DataMember(Name = "status")]
         public string Status { get; set; }
 
         /// <summary>
         ///
         /// </summary>
-        [JsonProperty(PropertyName = "tag")]
+        [DataMember(Name = "tag")]
         public string Tag { get; set; }
 
         /// <summary>
         ///
         /// </summary>
-        [JsonProperty(PropertyName = "teamStatDetails")]
+        [DataMember(Name = "teamStatDetails")]
         public IEnumerable<TeamStatDetailDto> TeamStatDetails { get; set; }
 
         /// <summary>
         /// Date that third to last member joined specified as epoch milliseconds.
         /// </summary>
-        [JsonProperty(PropertyName = "thirdLastJoinDate")]
+        [DataMember(Name = "thirdLastJoinDate")]
         public long ThirdLastJoinDate { get; set; }
 
         /// <summary>
         /// This object contains match history summary information.
         /// </summary>
+        [DataContract]
         public class MatchHistorySummaryDto
         {
             /// <summary>
             ///
             /// </summary>
-            [JsonProperty(PropertyName = "assists")]
+            [DataMember(Name = "assists")]
             public int Assists { get; set; }
 
             /// <summary>
             /// Date that match was completed specified as epoch milliseconds.
             /// </summary>
-            [JsonProperty(PropertyName = "date")]
+            [DataMember(Name = "date")]
             public long Date { get; set; }
 
             /// <summary>
             /// 
             /// </summary>
-            [JsonProperty(PropertyName = "deaths")]
+            [DataMember(Name = "deaths")]
             public int Deaths { get; set; }
 
             /// <summary>
             ///
             /// </summary>
-            [JsonProperty(PropertyName = "gameId")]
+            [DataMember(Name = "gameId")]
             public long GameId { get; set; }
 
             /// <summary>
             /// 
             /// </summary>
-            [JsonProperty(PropertyName = "gameMode")]
+            [DataMember(Name = "gameMode")]
             public string GameMode { get; set; }
 
             /// <summary>
             /// 
             /// </summary>
-            [JsonProperty(PropertyName = "invalid")]
+            [DataMember(Name = "invalid")]
             public bool Invalid { get; set; }
 
             /// <summary>
             /// 
             /// </summary>
-            [JsonProperty(PropertyName = "kills")]
+            [DataMember(Name = "kills")]
             public int Kills { get; set; }
 
             /// <summary>
             /// 
             /// </summary>
-            [JsonProperty(PropertyName = "mapId")]
+            [DataMember(Name = "mapId")]
             public int MapId { get; set; }
 
             /// <summary>
             /// 
             /// </summary>
-            [JsonProperty(PropertyName = "opposingTeamKills")]
+            [DataMember(Name = "opposingTeamKills")]
             public int OpposingTeamKills { get; set; }
 
             /// <summary>
             /// 
             /// </summary>
-            [JsonProperty(PropertyName = "opposingTeamName")]
+            [DataMember(Name = "opposingTeamName")]
             public string OpposingTeamName { get; set; }
 
             /// <summary>
             /// 
             /// </summary>
-            [JsonProperty(PropertyName = "win")]
+            [DataMember(Name = "win")]
             public bool Win { get; set; }
         }
 
         /// <summary>
         /// This object contains roster information.
         /// </summary>
+        [DataContract]
         public class RosterDto
         {
             /// <summary>
             ///
             /// </summary>
-            [JsonProperty(PropertyName = "memberList")]
+            [DataMember(Name = "memberList")]
             public IEnumerable<TeamMemberInfoDto> MemberList { get; set; }
 
             /// <summary>
             ///
             /// </summary>
-            [JsonProperty(PropertyName = "ownerId")]
+            [DataMember(Name = "ownerId")]
             public long OwnerId { get; set; }
         }
 
         /// <summary>
         /// This object contains team statistics detail information.
         /// </summary>
+        [DataContract]
         public class TeamStatDetailDto
         {
             /// <summary>
             ///
             /// </summary>
-            [JsonProperty(PropertyName = "averageGamesPlayed")]
+            [DataMember(Name = "averageGamesPlayed")]
             public int AverageGamesPlayed { get; set; }
 
             /// <summary>
             ///
             /// </summary>
-            [JsonProperty(PropertyName = "losses")]
+            [DataMember(Name = "losses")]
             public int Losses { get; set; }
 
             /// <summary>
             ///
             /// </summary>
-            [JsonProperty(PropertyName = "teamStatType")]
+            [DataMember(Name = "teamStatType")]
             public string TeamStatType { get; set; }
 
             /// <summary>
             ///
             /// </summary>
-            [JsonProperty(PropertyName = "wins")]
+            [DataMember(Name = "wins")]
             public int Wins { get; set; }
         }
 
         /// <summary>
         /// This object contains team member information.
         /// </summary>
+        [DataContract]
         public class TeamMemberInfoDto
         {
             /// <summary>
             /// Date that team member was invited to team specified as epoch milliseconds.
             /// </summary>
-            [JsonProperty(PropertyName = "inviteDate")]
+            [DataMember(Name = "inviteDate")]
             public long InviteDate { get; set; }
 
             /// <summary>
             /// Date that team member joined team specified as epoch milliseconds.
             /// </summary>
-            [JsonProperty(PropertyName = "joinDate")]
+            [DataMember(Name = "joinDate")]
             public long JoinDate { get; set; }
 
             /// <summary>
             ///
             /// </summary>
-            [JsonProperty(PropertyName = "playerId")]
+            [DataMember(Name = "playerId")]
             public long PlayerId { get; set; }
 
             /// <summary>
             ///
             /// </summary>
-            [JsonProperty(PropertyName = "status")]
+            [DataMember(Name = "status")]
             public string Status { get; set; }
         }
     }

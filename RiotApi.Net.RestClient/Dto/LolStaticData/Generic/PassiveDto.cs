@@ -1,35 +1,35 @@
-﻿using Newtonsoft.Json;
-using System.Collections.Generic;
+﻿using System.Runtime.Serialization;
 
 namespace RiotApi.Net.RestClient.Dto.LolStaticData.Generic
 {
     /// <summary>
     ///  This object contains champion passive data.
     /// </summary>
+    [DataContract]
     public class PassiveDto
     {
         /// <summary>
         /// No description available from Riot Documentation
         /// </summary>
-        [JsonProperty(PropertyName = "description")]
+        [DataMember(Name = "description")]
         public string Description { get; set; }
 
         /// <summary>
         /// No description available from Riot Documentation
         /// </summary>
-        [JsonProperty(PropertyName = "image")]
+        [DataMember(Name = "image")]
         public ImageDto Image { get; set; }
 
         /// <summary>
         /// No description available from Riot Documentation
         /// </summary>
-        [JsonProperty(PropertyName = "name")]
+        [DataMember(Name = "name")]
         public string Name { get; set; }
 
         /// <summary>
         /// No description available from Riot Documentation
         /// </summary>
-        [JsonProperty(PropertyName = "sanitizedDescription")]
+        [DataMember(Name = "sanitizedDescription")]
         public string SanitizedDescription { get; set; }
     }
 }

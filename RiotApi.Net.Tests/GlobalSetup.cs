@@ -3,7 +3,7 @@ using System.Configuration;
 using Ninject;
 using NUnit.Framework;
 using RiotApi.Net.RestClient;
-using RiotApi.Net.RestClient.NinjectModules;
+using RiotApi.Net.Tests.NinjectModules;
 
 namespace RiotApi.Net.Tests
 {
@@ -15,7 +15,10 @@ namespace RiotApi.Net.Tests
         [SetUp]
         public void GlueNinjectModules()
         {
-            RiotHttpClient = RiotApiLoader.CreateHttpClient(ConfigurationManager.AppSettings["ApiKey"]);
+            //load a Riot Http module with an Api key into your kernel of your app
+            IKernel kernel = new StandardKernel(new RiotHttpClientModule(ConfigurationManager.AppSettings["ApiKey"]));
+            //get back the riot client from your application kernel using ninject
+            RiotHttpClient = kernel.Get<RiotClient>();
         }
     }
 }

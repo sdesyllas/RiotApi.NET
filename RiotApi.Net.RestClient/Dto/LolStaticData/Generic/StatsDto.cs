@@ -1,130 +1,131 @@
-﻿using Newtonsoft.Json;
+﻿using System.Runtime.Serialization;
 
 namespace RiotApi.Net.RestClient.Dto.LolStaticData.Generic
 {
     /// <summary>
     /// This object contains basic data stats.
     /// </summary>
+    [DataContract]
     public class StatsDto
     {
         /// <summary>
         /// No description available from Riot Documentation
         /// </summary>
-        [JsonProperty(PropertyName = "armor")]
+        [DataMember(Name = "armor")]
         public double Armor { get; set; }
 
         /// <summary>
         /// No description available from Riot Documentation
         /// </summary>
-        [JsonProperty(PropertyName = "armorperlevel")]
+        [DataMember(Name = "armorperlevel")]
         public double Armorperlevel { get; set; }
 
         /// <summary>
         /// No description available from Riot Documentation
         /// </summary>
-        [JsonProperty(PropertyName = "attackdamage")]
+        [DataMember(Name = "attackdamage")]
         public double Attackdamage { get; set; }
 
         /// <summary>
         /// No description available from Riot Documentation
         /// </summary>
-        [JsonProperty(PropertyName = "attackdamageperlevel")]
+        [DataMember(Name = "attackdamageperlevel")]
         public double Attackdamageperlevel { get; set; }
 
         /// <summary>
         /// No description available from Riot Documentation
         /// </summary>
-        [JsonProperty(PropertyName = "attackrange")]
+        [DataMember(Name = "attackrange")]
         public double Attackrange { get; set; }
 
         /// <summary>
         /// No description available from Riot Documentation
         /// </summary>
-        [JsonProperty(PropertyName = "attackspeedoffset")]
+        [DataMember(Name = "attackspeedoffset")]
         public double Attackspeedoffset { get; set; }
 
         /// <summary>
         /// No description available from Riot Documentation
         /// </summary>
-        [JsonProperty(PropertyName = "attackspeedperlevel")]
+        [DataMember(Name = "attackspeedperlevel")]
         public double Attackspeedperlevel { get; set; }
 
         /// <summary>
         /// No description available from Riot Documentation
         /// </summary>
-        [JsonProperty(PropertyName = "crit")]
+        [DataMember(Name = "crit")]
         public double Crit { get; set; }
 
         /// <summary>
         /// No description available from Riot Documentation
         /// </summary>
-        [JsonProperty(PropertyName = "critperlevel")]
+        [DataMember(Name = "critperlevel")]
         public double Critperlevel { get; set; }
 
         /// <summary>
         /// No description available from Riot Documentation
         /// </summary>
-        [JsonProperty(PropertyName = "hp")]
+        [DataMember(Name = "hp")]
         public double Hp { get; set; }
 
         /// <summary>
         /// No description available from Riot Documentation
         /// </summary>
-        [JsonProperty(PropertyName = "hpperlevel")]
+        [DataMember(Name = "hpperlevel")]
         public double Hpperlevel { get; set; }
 
         /// <summary>
         /// No description available from Riot Documentation
         /// </summary>
-        [JsonProperty(PropertyName = "hpregen")]
+        [DataMember(Name = "hpregen")]
         public double Hpregen { get; set; }
 
         /// <summary>
         /// No description available from Riot Documentation
         /// </summary>
-        [JsonProperty(PropertyName = "hpregenperlevel")]
+        [DataMember(Name = "hpregenperlevel")]
         public double Hpregenperlevel { get; set; }
 
         /// <summary>
         /// No description available from Riot Documentation
         /// </summary>
-        [JsonProperty(PropertyName = "movespeed")]
+        [DataMember(Name = "movespeed")]
         public double Movespeed { get; set; }
 
         /// <summary>
         /// No description available from Riot Documentation
         /// </summary>
-        [JsonProperty(PropertyName = "mp")]
+        [DataMember(Name = "mp")]
         public double Mp { get; set; }
 
         /// <summary>
         /// No description available from Riot Documentation
         /// </summary>
-        [JsonProperty(PropertyName = "mpperlevel")]
+        [DataMember(Name = "mpperlevel")]
         public double Mpperlevel { get; set; }
 
         /// <summary>
         /// No description available from Riot Documentation
         /// </summary>
-        [JsonProperty(PropertyName = "mpregen")]
+        [DataMember(Name = "mpregen")]
         public double Mpregen { get; set; }
 
         /// <summary>
         /// No description available from Riot Documentation
         /// </summary>
-        [JsonProperty(PropertyName = "mpregenperlevel")]
+        [DataMember(Name = "mpregenperlevel")]
         public double Mpregenperlevel { get; set; }
 
         /// <summary>
         /// No description available from Riot Documentation
         /// </summary>
-        [JsonProperty(PropertyName = "spellblock")]
+        [DataMember(Name = "spellblock")]
         public double Spellblock { get; set; }
 
         /// <summary>
         /// No description available from Riot Documentation
         /// </summary>
-        [JsonProperty(PropertyName = "spellblockperlevel")]
+        [DataMember(Name = "spellblockperlevel")]
         public double Spellblockperlevel { get; set; }
     }
 }
