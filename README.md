@@ -69,9 +69,9 @@ to use in their apps. I hope you will like it! Please feel free to contribute.
 [LoLUniverse](https://github.com/sdesyllas/LoLUniverse) is a seperated project that utilizing this API and provides a user iterface and a prototype League of Legends web application. The project is build in ASP.NET MVC framework and you can find it [here](https://github.com/sdesyllas/LoLUniverse).
 
 # Third party libraries used
-* [Newtonsoft.Json](http://www.newtonsoft.com/json)
+* [SimpleJson by Prabir Shrestha](https://github.com/facebook-csharp-sdk/simple-json)
+* [LibLog by Damian Hickey](https://github.com/damianh/LibLog)
 * [Ninject](http://www.ninject.org/index.html)
-* [NLog](http://nlog-project.org/)
 * [NUnit](http://www.nunit.org/)
 * [moq](https://github.com/Moq/moq4)
 
