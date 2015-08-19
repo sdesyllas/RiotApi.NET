@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>RiotApi.NET</id>
-    <version>1.2.2</version>
+    <version>1.3.0</version>
     <title>RiotApi.NET</title>
     <authors>Spyros Desyllas</authors>
     <owners>Spyros Desyllas</owners>
@@ -14,7 +14,9 @@
 	<summary>This is a .net Api for Riot Games League of Legends written in C#. The goal of this project is to provide a 
 	higher level of interaction with the Riot's API Rest service, json responses are deserialized to objects and all methods of the service are called via an Interface 
 	with all supported methods as documented by Riot.</summary>
-	<releaseNotes>Coeff changed from bool to double #6 (check project site of github for more details)</releaseNotes>
+	<releaseNotes>Removed all dependencies from the library and added internal control for all core mechanics (serialization, logging, dependency injection) as suggested by GitHub user Kristian Hellang,
+	patch details can be found here https://github.com/sdesyllas/RiotApi.NET/issues/8
+	</releaseNotes>
     <copyright>Copyright 2015</copyright>
     <tags>riotapi leagueoflegends lol riot games wrapper c# api rest league legends</tags>
   </metadata>
