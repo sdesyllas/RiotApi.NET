@@ -62,7 +62,7 @@ from Riot's services.
 For instance you can fetch all free to play champions and print them to screen as you can see in the following example.</p>
 
 <h2>
-<a id="example-using-api-loader-recommended-way" class="anchor" href="#example-using-api-loader-recommended-way" aria-hidden="true"><span class="octicon octicon-link"></span></a>Example using Api Loader (recommended way)</h2>
+<a id="example-using-riotclient-constructor" class="anchor" href="#example-using-riotclient-constructor" aria-hidden="true"><span class="octicon octicon-link"></span></a>Example using RiotClient constructor</h2>
 
 <p>First import the appropriate libraries</p>
 
@@ -71,24 +71,7 @@ For instance you can fetch all free to play champions and print them to screen a
 
 <p>Then create an http Riot client and make a call to champions API</p>
 
-<div class="highlight highlight-cs"><pre><span class="pl-k">var</span> riotClient = RiotApiLoader.CreateHttpClient(<span class="pl-s"><span class="pl-pds">"</span>your api key here<span class="pl-pds">"</span></span>);
-<span class="pl-c">//retrieve all current free to play champions</span>
-<span class="pl-k">var</span> championList = riotClient.Champion.RetrieveAllChampions(RiotApiConfig.Regions.NA, freeToPlay: <span class="pl-c1">true</span>);
-<span class="pl-c">//print the number of free to play champions</span>
-Console.WriteLine($<span class="pl-s"><span class="pl-pds">"</span>There are {championList.Champions.Count()} free to play champions to play with!<span class="pl-pds">"</span></span>);</pre></div>
-
-<pre><code>response =&gt; There are 17 free to play champions to play with!
-</code></pre>
-
-<h2>
-<a id="example-using-dependency-injection-within-your-application-kernel" class="anchor" href="#example-using-dependency-injection-within-your-application-kernel" aria-hidden="true"><span class="octicon octicon-link"></span></a>Example using dependency injection within your application kernel</h2>
-
-<p>This is the advanced way using your own ninject modules (RiotHttpClientModule in our example)</p>
-
-<div class="highlight highlight-cs"><pre><span class="pl-c">//load a Riot Http module with an Api key into your kernel of your app</span>
-IKernel kernel = <span class="pl-k">new</span> StandardKernel(<span class="pl-k">new</span> RiotHttpClientModule(<span class="pl-s"><span class="pl-pds">"</span>your api key here<span class="pl-pds">"</span></span>));
-<span class="pl-c">//get back the riot client from your application kernel using ninject</span>
-<span class="pl-k">var</span> riotClient = kernel.Get&lt;RiotHttpClient&gt;();
+<div class="highlight highlight-cs"><pre>IRiotClient riotClient = <span class="pl-k">new</span> RiotClient(<span class="pl-s"><span class="pl-pds">"</span>your api key here<span class="pl-pds">"</span></span>);
 <span class="pl-c">//retrieve all current free to play champions</span>
 <span class="pl-k">var</span> championList = riotClient.Champion.RetrieveAllChampions(RiotApiConfig.Regions.NA, freeToPlay: <span class="pl-c1">true</span>);
 <span class="pl-c">//print the number of free to play champions</span>
@@ -111,9 +94,9 @@ to use in their apps. I hope you will like it! Please feel free to contribute.</
 <a id="third-party-libraries-used" class="anchor" href="#third-party-libraries-used" aria-hidden="true"><span class="octicon octicon-link"></span></a>Third party libraries used</h1>
 
 <ul>
-<li><a href="http://www.newtonsoft.com/json">Newtonsoft.Json</a></li>
+<li><a href="https://github.com/facebook-csharp-sdk/simple-json">SimpleJson by Prabir Shrestha</a></li>
+<li><a href="https://github.com/damianh/LibLog">LibLog by Damian Hickey</a></li>
 <li><a href="http://www.ninject.org/index.html">Ninject</a></li>
-<li><a href="http://nlog-project.org/">NLog</a></li>
 <li><a href="http://www.nunit.org/">NUnit</a></li>
 <li><a href="https://github.com/Moq/moq4">moq</a></li>
 </ul>
