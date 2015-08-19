@@ -32,24 +32,7 @@ using RiotApi.Net.RestClient.Configuration;
 
 Then create an http Riot client and make a call to champions API
 ```cs
-var riotClient = RiotApiLoader.CreateHttpClient("your api key here");
-//retrieve all current free to play champions
-var championList = riotClient.Champion.RetrieveAllChampions(RiotApiConfig.Regions.NA, freeToPlay: true);
-//print the number of free to play champions
-Console.WriteLine($"There are {championList.Champions.Count()} free to play champions to play with!");
-```
-
-```
-response => There are 17 free to play champions to play with!
-```
-
-## Example using dependency injection within your application kernel
-This is the advanced way using your own ninject modules (RiotHttpClientModule in our example)
-```cs
-//load a Riot Http module with an Api key into your kernel of your app
-IKernel kernel = new StandardKernel(new RiotHttpClientModule("your api key here"));
-//get back the riot client from your application kernel using ninject
-var riotClient = kernel.Get<RiotHttpClient>();
+IRiotClient riotClient = new RiotClient("your api key here");
 //retrieve all current free to play champions
 var championList = riotClient.Champion.RetrieveAllChampions(RiotApiConfig.Regions.NA, freeToPlay: true);
 //print the number of free to play champions
