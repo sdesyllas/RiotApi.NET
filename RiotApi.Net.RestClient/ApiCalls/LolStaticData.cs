@@ -142,7 +142,7 @@ namespace RiotApi.Net.RestClient.ApiCalls
             }
             if (!string.IsNullOrEmpty(itemListData))
             {
-                apiCallPath += $"&itemListData{itemListData}";
+                apiCallPath += $"&itemListData={itemListData}";
             }
             //make the call
             var dto = MakeCallToRiotApi<ItemListDto>(baseUrl, apiCallPath);
