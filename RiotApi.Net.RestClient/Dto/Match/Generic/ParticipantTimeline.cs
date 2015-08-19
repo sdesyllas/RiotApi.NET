@@ -1,176 +1,173 @@
-﻿using Newtonsoft.Json;
-using Newtonsoft.Json.Converters;
-using System.Collections.Generic;
+﻿using System.Runtime.Serialization;
 
 namespace RiotApi.Net.RestClient.Dto.Match.Generic
 {
     /// <summary>
     /// This object contains all timeline information
     /// </summary>
+    [DataContract]
     public class ParticipantTimeline
     {
         /// <summary>
         /// Ancient golem assists per minute timeline counts
         /// </summary>
-        [JsonProperty(PropertyName = "ancientGolemAssistsPerMinCounts")]
+        [DataMember(Name = "ancientGolemAssistsPerMinCounts")]
         public ParticipantTimelineData AncientGolemAssistsPerMinCounts { get; set; }
 
         /// <summary>
         /// Ancient golem kills per minute timeline counts
         /// </summary>
-        [JsonProperty(PropertyName = "ancientGolemKillsPerMinCounts")]
+        [DataMember(Name = "ancientGolemKillsPerMinCounts")]
         public ParticipantTimelineData AncientGolemKillsPerMinCounts { get; set; }
 
         /// <summary>
         /// Assisted lane deaths per minute timeline data
         /// </summary>
-        [JsonProperty(PropertyName = "assistedLaneDeathsPerMinDeltas")]
+        [DataMember(Name = "assistedLaneDeathsPerMinDeltas")]
         public ParticipantTimelineData AssistedLaneDeathsPerMinDeltas { get; set; }
 
         /// <summary>
         /// Assisted lane kills per minute timeline data
         /// </summary>
-        [JsonProperty(PropertyName = "assistedLaneKillsPerMinDeltas")]
+        [DataMember(Name = "assistedLaneKillsPerMinDeltas")]
         public ParticipantTimelineData AssistedLaneKillsPerMinDeltas { get; set; }
 
         /// <summary>
         /// Baron assists per minute timeline counts
         /// </summary>
-        [JsonProperty(PropertyName = "baronAssistsPerMinCounts")]
+        [DataMember(Name = "baronAssistsPerMinCounts")]
         public ParticipantTimelineData BaronAssistsPerMinCounts { get; set; }
 
         /// <summary>
         /// Baron kills per minute timeline counts
         /// </summary>
-        [JsonProperty(PropertyName = "baronKillsPerMinCounts")]
+        [DataMember(Name = "baronKillsPerMinCounts")]
         public ParticipantTimelineData BaronKillsPerMinCounts { get; set; }
 
         /// <summary>
         /// Creeps per minute timeline data
         /// </summary>
-        [JsonProperty(PropertyName = "creepsPerMinDeltas")]
+        [DataMember(Name = "creepsPerMinDeltas")]
         public ParticipantTimelineData CreepsPerMinDeltas { get; set; }
 
         /// <summary>
         /// Creep score difference per minute timeline data
         /// </summary>
-        [JsonProperty(PropertyName = "csDiffPerMinDeltas")]
+        [DataMember(Name = "csDiffPerMinDeltas")]
         public ParticipantTimelineData CsDiffPerMinDeltas { get; set; }
 
         /// <summary>
         /// Damage taken difference per minute timeline data
         /// </summary>
-        [JsonProperty(PropertyName = "damageTakenDiffPerMinDeltas")]
+        [DataMember(Name = "damageTakenDiffPerMinDeltas")]
         public ParticipantTimelineData DamageTakenDiffPerMinDeltas { get; set; }
 
         /// <summary>
         /// Damage taken per minute timeline data
         /// </summary>
-        [JsonProperty(PropertyName = "damageTakenPerMinDeltas")]
+        [DataMember(Name = "damageTakenPerMinDeltas")]
         public ParticipantTimelineData DamageTakenPerMinDeltas { get; set; }
 
         /// <summary>
         /// Dragon assists per minute timeline counts
         /// </summary>
-        [JsonProperty(PropertyName = "dragonAssistsPerMinCounts")]
+        [DataMember(Name = "dragonAssistsPerMinCounts")]
         public ParticipantTimelineData dragonAssistsPerMinCounts { get; set; }
 
         /// <summary>
         /// Dragon kills per minute timeline counts
         /// </summary>
-        [JsonProperty(PropertyName = "dragonKillsPerMinCounts")]
+        [DataMember(Name = "dragonKillsPerMinCounts")]
         public ParticipantTimelineData DragonKillsPerMinCounts { get; set; }
 
         /// <summary>
         /// Elder lizard assists per minute timeline counts
         /// </summary>
-        [JsonProperty(PropertyName = "elderLizardAssistsPerMinCounts")]
+        [DataMember(Name = "elderLizardAssistsPerMinCounts")]
         public ParticipantTimelineData ElderLizardAssistsPerMinCounts { get; set; }
 
         /// <summary>
         /// Elder lizard kills per minute timeline counts
         /// </summary>
-        [JsonProperty(PropertyName = "elderLizardKillsPerMinCounts")]
+        [DataMember(Name = "elderLizardKillsPerMinCounts")]
         public ParticipantTimelineData ElderLizardKillsPerMinCounts { get; set; }
 
         /// <summary>
         /// Gold per minute timeline data
         /// </summary>
-        [JsonProperty(PropertyName = "goldPerMinDeltas")]
+        [DataMember(Name = "goldPerMinDeltas")]
         public ParticipantTimelineData GoldPerMinDeltas { get; set; }
 
         /// <summary>
         /// Inhibitor assists per minute timeline counts
         /// </summary>
-        [JsonProperty(PropertyName = "inhibitorAssistsPerMinCounts")]
+        [DataMember(Name = "inhibitorAssistsPerMinCounts")]
         public ParticipantTimelineData InhibitorAssistsPerMinCounts { get; set; }
 
         /// <summary>
         /// Inhibitor kills per minute timeline counts
         /// </summary>
-        [JsonProperty(PropertyName = "inhibitorKillsPerMinCounts")]
+        [DataMember(Name = "inhibitorKillsPerMinCounts")]
         public ParticipantTimelineData InhibitorKillsPerMinCounts { get; set; }
 
         /// <summary>
         /// Participant's lane (Legal values: MID, MIDDLE, TOP, JUNGLE, BOT, BOTTOM)
         /// </summary>
-        [JsonProperty(PropertyName = "lane")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [DataMember(Name = "lane")]
         public Helpers.Enums.Lane Lane { get; set; }
 
         /// <summary>
         /// Participant's role (Legal values: DUO, NONE, SOLO, DUO_CARRY, DUO_SUPPORT)
         /// </summary>
-        [JsonProperty(PropertyName = "role")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [DataMember(Name = "role")]
         public Helpers.Enums.Role Role { get; set; }
 
         /// <summary>
         /// Tower assists per minute timeline counts
         /// </summary>
-        [JsonProperty(PropertyName = "towerAssistsPerMinCounts")]
+        [DataMember(Name = "towerAssistsPerMinCounts")]
         public ParticipantTimelineData TowerAssistsPerMinCounts { get; set; }
 
         /// <summary>
         /// Tower kills per minute timeline counts
         /// </summary>
-        [JsonProperty(PropertyName = "towerKillsPerMinCounts")]
+        [DataMember(Name = "towerKillsPerMinCounts")]
         public ParticipantTimelineData TowerKillsPerMinCounts { get; set; }
 
         /// <summary>
         /// Tower kills per minute timeline data
         /// </summary>
-        [JsonProperty(PropertyName = "towerKillsPerMinDeltas")]
+        [DataMember(Name = "towerKillsPerMinDeltas")]
         public ParticipantTimelineData TowerKillsPerMinDeltas { get; set; }
 
         /// <summary>
         /// Vilemaw assists per minute timeline counts
         /// </summary>
-        [JsonProperty(PropertyName = "vilemawAssistsPerMinCounts")]
+        [DataMember(Name = "vilemawAssistsPerMinCounts")]
         public ParticipantTimelineData VilemawAssistsPerMinCounts { get; set; }
 
         /// <summary>
         /// Vilemaw kills per minute timeline counts
         /// </summary>
-        [JsonProperty(PropertyName = "vilemawKillsPerMinCounts")]
+        [DataMember(Name = "vilemawKillsPerMinCounts")]
         public ParticipantTimelineData VilemawKillsPerMinCounts { get; set; }
 
         /// <summary>
         /// Wards placed per minute timeline data
         /// </summary>
-        [JsonProperty(PropertyName = "wardsPerMinDeltas")]
+        [DataMember(Name = "wardsPerMinDeltas")]
         public ParticipantTimelineData WardsPerMinDeltas { get; set; }
 
         /// <summary>
         /// Experience difference per minute timeline data
         /// </summary>
-        [JsonProperty(PropertyName = "xpDiffPerMinDeltas")]
+        [DataMember(Name = "xpDiffPerMinDeltas")]
         public ParticipantTimelineData XpDiffPerMinDeltas { get; set; }
 
         /// <summary>
         /// Experience per minute timeline data
         /// </summary>
-        [JsonProperty(PropertyName = "xpPerMinDeltas")]
+        [DataMember(Name = "xpPerMinDeltas")]
         public ParticipantTimelineData XpPerMinDeltas { get; set; }
     }
 }

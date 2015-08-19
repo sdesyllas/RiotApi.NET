@@ -1,18 +1,18 @@
-﻿using Newtonsoft.Json;
-using Newtonsoft.Json.Converters;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using System.Runtime.Serialization;
 
 namespace RiotApi.Net.RestClient.Dto.Match.Generic
 {
     /// <summary>
     /// This object contains match participant information
     /// </summary>
+    [DataContract]
     public class Participant
     {
         /// <summary>
         /// Champion ID
         /// </summary>
-        [JsonProperty(PropertyName = "championId")]
+        [DataMember(Name = "championId")]
         public int ChampionId { get; set; }
 
         /// <summary>
@@ -20,50 +20,49 @@ namespace RiotApi.Net.RestClient.Dto.Match.Generic
         /// Used to display border in game loading screen. 
         /// (Legal values: CHALLENGER, MASTER, DIAMOND, PLATINUM, GOLD, SILVER, BRONZE, UNRANKED)
         /// </summary>
-        [JsonProperty(PropertyName = "highestAchievedSeasonTier")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [DataMember(Name = "highestAchievedSeasonTier")]
         public Helpers.Enums.HighestAchievedSeasonTier HighestAchievedSeasonTier { get; set; }
 
         /// <summary>
         /// List of mastery information
         /// </summary>
-        [JsonProperty(PropertyName = "masteries")]
+        [DataMember(Name = "masteries")]
         public IEnumerable<Mastery> Masteries { get; set; }
 
         /// <summary>
         /// Participant ID
         /// </summary>
-        [JsonProperty(PropertyName = "participantId")]
+        [DataMember(Name = "participantId")]
         public int ParticipantId { get; set; }
 
         /// <summary>
         /// List of rune information
         /// </summary>
-        [JsonProperty(PropertyName = "runes")]
+        [DataMember(Name = "runes")]
         public IEnumerable<Rune> Runes { get; set; }
 
         /// <summary>
         /// First summoner spell ID
         /// </summary>
-        [JsonProperty(PropertyName = "spell1Id")]
+        [DataMember(Name = "spell1Id")]
         public int Spell1Id { get; set; }
 
         /// <summary>
         /// Second summoner spell ID
         /// </summary>
-        [JsonProperty(PropertyName = "spell2Id")]
+        [DataMember(Name = "spell2Id")]
         public int Spell2Id { get; set; }
 
         /// <summary>
         /// Participant statistics
         /// </summary>
-        [JsonProperty(PropertyName = "stats")]
+        [DataMember(Name = "stats")]
         public ParticipantStats Stats { get; set; }
 
         /// <summary>
         /// Team ID
         /// </summary>
-        [JsonProperty(PropertyName = "teamId")]
+        [DataMember(Name = "teamId")]
         public int TeamId { get; set; }
 
         /// <summary>
@@ -71,7 +70,7 @@ namespace RiotApi.Net.RestClient.Dto.Match.Generic
         /// (e.g., the gold per minute over the first 10 minutes of the game versus the second 20 minutes of the game. 
         /// Diffs fields refer to the deltas versus the calculated lane opponent(s).
         /// </summary>
-        [JsonProperty(PropertyName = "timeline")]
+        [DataMember(Name = "timeline")]
         public ParticipantTimeline Timeline { get; set; }
     }
 }

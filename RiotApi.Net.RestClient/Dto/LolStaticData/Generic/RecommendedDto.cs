@@ -1,53 +1,54 @@
-﻿using Newtonsoft.Json;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using System.Runtime.Serialization;
 
 namespace RiotApi.Net.RestClient.Dto.LolStaticData.Generic
 {
     /// <summary>
     /// This object contains champion recommended data.
     /// </summary>
+    [DataContract]
     public class RecommendedDto
     {
         /// <summary>
         /// No description available from Riot Documentation
         /// </summary>
-        [JsonProperty(PropertyName = "blocks")]
+        [DataMember(Name = "blocks")]
         public IEnumerable<BlockDto> Blocks { get; set; }
 
         /// <summary>
         /// No description available from Riot Documentation
         /// </summary>
-        [JsonProperty(PropertyName = "champion")]
+        [DataMember(Name = "champion")]
         public string Champion { get; set; }
 
         /// <summary>
         /// No description available from Riot Documentation
         /// </summary>
-        [JsonProperty(PropertyName = "map")]
+        [DataMember(Name = "map")]
         public string Map { get; set; }
 
         /// <summary>
         /// No description available from Riot Documentation
         /// </summary>
-        [JsonProperty(PropertyName = "mode")]
+        [DataMember(Name = "mode")]
         public string Mode { get; set; }
 
         /// <summary>
         /// No description available from Riot Documentation
         /// </summary>
-        [JsonProperty(PropertyName = "priority")]
+        [DataMember(Name = "priority")]
         public bool Priority { get; set; }
 
         /// <summary>
         /// No description available from Riot Documentation
         /// </summary>
-        [JsonProperty(PropertyName = "title")]
+        [DataMember(Name = "title")]
         public string Title { get; set; }
 
         /// <summary>
         /// No description available from Riot Documentation
         /// </summary>
-        [JsonProperty(PropertyName = "type")]
+        [DataMember(Name = "type")]
         public string Type { get; set; }
     }
 }

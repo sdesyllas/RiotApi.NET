@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Net.Http;
 using System.Net.Http.Headers;
-using Newtonsoft.Json;
 using RiotApi.Net.RestClient.Helpers;
 using RiotApi.Net.RestClient.Helpers.Logging;
 
@@ -13,7 +12,7 @@ namespace RiotApi.Net.RestClient.ApiCalls
     public class GenericRiotCaller
     {
         private static readonly ILog Logger = LogProvider.GetCurrentClassLogger();
-
+        
         /// <summary>
         /// This method makes the actual http call to riot REST services
         /// </summary>
@@ -39,10 +38,11 @@ namespace RiotApi.Net.RestClient.ApiCalls
                     try
                     {
                         Logger.Debug($"RiotApi.Net : {completeUrl} - Success");
-                        T dto = JsonConvert.DeserializeObject<T>(json);
+                        SimpleJson.CurrentJsonSerializerStrategy = new RiotSerializerStrategy();
+                        T dto = SimpleJson.DeserializeObject<T>(json);
                         return dto;
                     }
-                    catch (JsonSerializationException exception)
+                    catch (Exception exception)
                     {
                         Logger.Debug($"RiotApi.Net : {completeUrl} - Fail");
                         Logger.ErrorException(exception.Message, exception);

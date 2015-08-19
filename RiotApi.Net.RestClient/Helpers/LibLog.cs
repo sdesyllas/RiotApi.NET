@@ -1470,18 +1470,18 @@ namespace RiotApi.Net.RestClient.Helpers.Logging.LogProviders
         {
             Type logManagerType = GetLogManagerType();
             MethodInfo method = logManagerType.GetMethodPortable("ForContext", typeof(string), typeof(object), typeof(bool));
-            ParameterExpression propertyNameParam = Expression.Parameter(typeof(string), "propertyName");
+            ParameterExpression NameParam = Expression.Parameter(typeof(string), "Name");
             ParameterExpression valueParam = Expression.Parameter(typeof(object), "value");
             ParameterExpression destructureObjectsParam = Expression.Parameter(typeof(bool), "destructureObjects");
             MethodCallExpression methodCall = Expression.Call(null, method, new Expression[]
             {
-                propertyNameParam,
+                NameParam,
                 valueParam,
                 destructureObjectsParam
             });
             var func = Expression.Lambda<Func<string, object, bool, object>>(
                 methodCall,
-                propertyNameParam,
+                NameParam,
                 valueParam,
                 destructureObjectsParam)
                 .Compile();

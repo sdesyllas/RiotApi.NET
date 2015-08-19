@@ -1,4 +1,6 @@
-﻿namespace RiotApi.Net.RestClient.Helpers
+﻿using System.Runtime.Serialization;
+
+namespace RiotApi.Net.RestClient.Helpers
 {
     /// <summary>
     /// All enumerations for the REST api needs
