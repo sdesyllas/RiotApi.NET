@@ -22,7 +22,10 @@ The usage of the RiotApi.Net is a piece of cake! In less than three lines of cod
 from Riot's services. 
 For instance you can fetch all free to play champions and print them to screen as you can see in the following example.
 
-## Example using RiotClient constructor
+## Examples
+
+### Example 1
+Get free to play champions
 
 First import the appropriate libraries
 ```cs
@@ -41,6 +44,22 @@ Console.WriteLine($"There are {championList.Champions.Count()} free to play cham
 
 ```
 response => There are 17 free to play champions to play with!
+```
+
+### Example 2
+Get two summoners and compare their levels
+```cs
+IRiotClient riotClient = new RiotClient("your api key here");
+//retrieve xeyanord and fnatictop summoners with one call
+var summoners = riotClient.Summoner.GetSummonersByName(RiotApiConfig.Regions.EUNE, "xeyanord", "fnatictop");
+var xeyanord = summoners["xeyanord"];
+var fnatictop = summoners["fnatictop"];
+//print the following statement about the two summoners
+Console.WriteLine($"{fnatictop.Name} is level {fnatictop.SummonerLevel} and {xeyanord.Name} is {xeyanord.SummonerLevel}, its because {xeyanord.Name} is a slacker!");
+```
+
+```
+response => Fnatic Top is level 30 and Xeyanord is 15, its because Xeyanord is a slacker!
 ```
 
 Download the full api documentation reference [here (chm format)] (https://github.com/sdesyllas/RiotApi.NET/blob/master/Documentation/Help/Documentation.chm?raw=true)
