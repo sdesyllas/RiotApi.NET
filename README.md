@@ -62,6 +62,31 @@ Console.WriteLine($"{fnatictop.Name} is level {fnatictop.SummonerLevel} and {xey
 response => Fnatic Top is level 30 and Xeyanord is 15, its because Xeyanord is a slacker!
 ```
 
+### Example 3
+Get top 5 Challenger Tier EUNE leaderboard for Ranked Solo 5x5
+```cs
+IRiotClient riotClient = new RiotClient("your api key here");
+//get challeger tier league for ranked solo 5x5
+var challengers = riotClient.League.GetChallengerTierLeagues(RiotApiConfig.Regions.EUNE,
+Enums.GameQueueType.RANKED_SOLO_5x5);
+//get top 5 top leaderboard using LINQ
+var top5 = challengers.Entries.OrderByDescending(x => x.LeaguePoints).Take(5).ToList();
+//Print top 5 leaderboard
+top5.ForEach(
+topEntry =>
+Console.WriteLine(
+$"{topEntry.PlayerOrTeamName} - wins:{topEntry.Wins}  loss:{topEntry.Losses} points:{topEntry.LeaguePoints}"));
+```
+
+```
+response =>
+Fnatic Top - wins:303  loss:239 points:1269
+T5 yELLOW - wins:245  loss:157 points:1261
+Konektiv - wins:185  loss:114 points:1204
+Delitto123 - wins:193  loss:125 points:1185
+ALBAN1AN god - wins:224  loss:158 points:1125
+```
+
 Download the full api documentation reference [here (chm format)] (https://github.com/sdesyllas/RiotApi.NET/blob/master/Documentation/Help/Documentation.chm?raw=true)
 
 The goal of this project is to provide .net application developers with a high level tool for Riot games' API 
