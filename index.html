@@ -62,7 +62,12 @@ from Riot's services.
 For instance you can fetch all free to play champions and print them to screen as you can see in the following example.</p>
 
 <h2>
-<a id="example-using-riotclient-constructor" class="anchor" href="#example-using-riotclient-constructor" aria-hidden="true"><span class="octicon octicon-link"></span></a>Example using RiotClient constructor</h2>
+<a id="examples" class="anchor" href="#examples" aria-hidden="true"><span class="octicon octicon-link"></span></a>Examples</h2>
+
+<h3>
+<a id="example-1" class="anchor" href="#example-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>Example 1</h3>
+
+<p>Get free to play champions</p>
 
 <p>First import the appropriate libraries</p>
 
@@ -78,6 +83,47 @@ For instance you can fetch all free to play champions and print them to screen a
 Console.WriteLine($<span class="pl-s"><span class="pl-pds">"</span>There are {championList.Champions.Count()} free to play champions to play with!<span class="pl-pds">"</span></span>);</pre></div>
 
 <pre><code>response =&gt; There are 17 free to play champions to play with!
+</code></pre>
+
+<h3>
+<a id="example-2" class="anchor" href="#example-2" aria-hidden="true"><span class="octicon octicon-link"></span></a>Example 2</h3>
+
+<p>Get two summoners and compare their levels</p>
+
+<div class="highlight highlight-cs"><pre>IRiotClient riotClient = <span class="pl-k">new</span> RiotClient(<span class="pl-s"><span class="pl-pds">"</span>your api key here<span class="pl-pds">"</span></span>);
+<span class="pl-c">//retrieve xeyanord and fnatictop summoners with one call</span>
+<span class="pl-k">var</span> summoners = riotClient.Summoner.GetSummonersByName(RiotApiConfig.Regions.EUNE, <span class="pl-s"><span class="pl-pds">"</span>xeyanord<span class="pl-pds">"</span></span>, <span class="pl-s"><span class="pl-pds">"</span>fnatictop<span class="pl-pds">"</span></span>);
+<span class="pl-k">var</span> xeyanord = summoners[<span class="pl-s"><span class="pl-pds">"</span>xeyanord<span class="pl-pds">"</span></span>];
+<span class="pl-k">var</span> fnatictop = summoners[<span class="pl-s"><span class="pl-pds">"</span>fnatictop<span class="pl-pds">"</span></span>];
+<span class="pl-c">//print the following statement about the two summoners</span>
+Console.WriteLine($<span class="pl-s"><span class="pl-pds">"</span>{fnatictop.Name} is level {fnatictop.SummonerLevel} and {xeyanord.Name} is {xeyanord.SummonerLevel}, its because {xeyanord.Name} is a slacker!<span class="pl-pds">"</span></span>);</pre></div>
+
+<pre><code>response =&gt; Fnatic Top is level 30 and Xeyanord is 15, its because Xeyanord is a slacker!
+</code></pre>
+
+<h3>
+<a id="example-3" class="anchor" href="#example-3" aria-hidden="true"><span class="octicon octicon-link"></span></a>Example 3</h3>
+
+<p>Get top 5 Challenger Tier EUNE leaderboard for Ranked Solo 5x5</p>
+
+<div class="highlight highlight-cs"><pre>IRiotClient riotClient = <span class="pl-k">new</span> RiotClient(<span class="pl-s"><span class="pl-pds">"</span>your api key here<span class="pl-pds">"</span></span>);
+<span class="pl-c">//get challeger tier league for ranked solo 5x5</span>
+<span class="pl-k">var</span> challengers = riotClient.League.GetChallengerTierLeagues(RiotApiConfig.Regions.EUNE,
+Enums.GameQueueType.RANKED_SOLO_5x5);
+<span class="pl-c">//get top 5 top leaderboard using LINQ</span>
+<span class="pl-k">var</span> top5 = challengers.Entries.OrderByDescending(x =&gt; x.LeaguePoints).Take(<span class="pl-c1">5</span>).ToList();
+<span class="pl-c">//Print top 5 leaderboard</span>
+top5.ForEach(
+topEntry =&gt;
+Console.WriteLine(
+$<span class="pl-s"><span class="pl-pds">"</span>{topEntry.PlayerOrTeamName} - wins:{topEntry.Wins}  loss:{topEntry.Losses} points:{topEntry.LeaguePoints}<span class="pl-pds">"</span></span>));</pre></div>
+
+<pre><code>response =&gt;
+Fnatic Top - wins:303  loss:239 points:1269
+T5 yELLOW - wins:245  loss:157 points:1261
+Konektiv - wins:185  loss:114 points:1204
+Delitto123 - wins:193  loss:125 points:1185
+ALBAN1AN god - wins:224  loss:158 points:1125
 </code></pre>
 
 <p>Download the full api documentation reference <a href="https://github.com/sdesyllas/RiotApi.NET/blob/master/Documentation/Help/Documentation.chm?raw=true">here (chm format)</a></p>
@@ -110,6 +156,16 @@ to use in their apps. I hope you will like it! Please feel free to contribute.</
 <li>
 <a href="project%20management%20solution">waffle</a> for project management</li>
 </ul>
+
+<h2>
+<a id="license" class="anchor" href="#license" aria-hidden="true"><span class="octicon octicon-link"></span></a>License</h2>
+
+<p>This wrapper is under the <a href="LICENSE">MIT license</a>.</p>
+
+<h2>
+<a id="disclaimer" class="anchor" href="#disclaimer" aria-hidden="true"><span class="octicon octicon-link"></span></a>Disclaimer</h2>
+
+<p>This product is not endorsed, certified or otherwise approved in any way by Riot Games, Inc. or any of its affiliates.</p>
       </section>
       <footer>
         <p><small>Hosted on <a href="https://pages.github.com">GitHub Pages</a> using the Dinky theme</small></p>
