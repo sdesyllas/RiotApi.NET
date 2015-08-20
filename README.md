@@ -61,3 +61,9 @@ to use in their apps. I hope you will like it! Please feel free to contribute.
 ## Also using
 * [Appveyor](http://www.appveyor.com/) for continuous integration and build server.
 * [waffle](project management solution ) for project management
+
+## License
+This wrapper is under the [MIT license](LICENSE).
+
+## Disclaimer
+This product is not endorsed, certified or otherwise approved in any way by Riot Games, Inc. or any of its affiliates.
