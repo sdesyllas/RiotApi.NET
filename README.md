@@ -68,7 +68,7 @@ Get top 5 Challenger Tier EUNE leaderboard for Ranked Solo 5x5
 IRiotClient riotClient = new RiotClient("your api key here");
 //get challeger tier league for ranked solo 5x5
 var challengers = riotClient.League.GetChallengerTierLeagues(RiotApiConfig.Regions.EUNE, Enums.GameQueueType.RANKED_SOLO_5x5);
-//get top 5 top leaderboard using LINQ
+//get top 5 leaderboard using LINQ
 var top5 = challengers.Entries.OrderByDescending(x => x.LeaguePoints).Take(5).ToList();
 //Print top 5 leaderboard
 top5.ForEach(
