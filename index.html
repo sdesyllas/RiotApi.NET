@@ -34,7 +34,7 @@ service are called via an Interface with all supported methods as documented by 
 <h1>
 <a id="install" class="anchor" href="#install" aria-hidden="true"><span class="octicon octicon-link"></span></a>Install</h1>
 
-<p>The easiest way to install this api to your project is using NuGet</p>
+<p>The easiest way to install this api to your project is using <a href="https://www.nuget.org/packages/RiotApi.NET/">NuGet</a></p>
 
 <p>To install RiotApi.NET, run the following command in the Package Manager Console</p>
 
@@ -98,7 +98,7 @@ Console.WriteLine($<span class="pl-s"><span class="pl-pds">"</span>{fnatictop.Na
 <div class="highlight highlight-cs"><pre>IRiotClient riotClient = <span class="pl-k">new</span> RiotClient(<span class="pl-s"><span class="pl-pds">"</span>your api key here<span class="pl-pds">"</span></span>);
 <span class="pl-c">//get challeger tier league for ranked solo 5x5</span>
 <span class="pl-k">var</span> challengers = riotClient.League.GetChallengerTierLeagues(RiotApiConfig.Regions.EUNE, Enums.GameQueueType.RANKED_SOLO_5x5);
-<span class="pl-c">//get top 5 top leaderboard using LINQ</span>
+<span class="pl-c">//get top 5 leaderboard using LINQ</span>
 <span class="pl-k">var</span> top5 = challengers.Entries.OrderByDescending(x =&gt; x.LeaguePoints).Take(<span class="pl-c1">5</span>).ToList();
 <span class="pl-c">//Print top 5 leaderboard</span>
 top5.ForEach(
@@ -122,7 +122,7 @@ to use in their apps. I hope you will like it! Please feel free to contribute.</
 <h1>
 <a id="web-ui" class="anchor" href="#web-ui" aria-hidden="true"><span class="octicon octicon-link"></span></a>Web UI</h1>
 
-<p><a href="https://github.com/sdesyllas/LoLUniverse">LoLUniverse</a> is a seperated project that utilizing this API and provides a user iterface and a prototype League of Legends web application. The project is build in ASP.NET MVC framework and you can find it <a href="https://github.com/sdesyllas/LoLUniverse">here</a>.</p>
+<p><a href="https://github.com/sdesyllas/LoLUniverse">LoLUniverse</a> is a separated project that utilizing this API and provides a user iterface and a prototype League of Legends web application. The project is build in ASP.NET MVC framework and you can find it <a href="https://github.com/sdesyllas/LoLUniverse">here</a>.</p>
 
 <h1>
 <a id="third-party-libraries-used" class="anchor" href="#third-party-libraries-used" aria-hidden="true"><span class="octicon octicon-link"></span></a>Third party libraries used</h1>
