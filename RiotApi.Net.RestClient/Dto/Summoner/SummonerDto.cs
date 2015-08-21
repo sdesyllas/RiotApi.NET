@@ -24,7 +24,7 @@ namespace RiotApi.Net.RestClient.Dto.Summoner
         /// ID of the summoner icon associated with the summoner.
         /// </summary>
         [DataMember(Name = "profileIconId")]
-        public string ProfileIconId { get; set; }
+        public int ProfileIconId { get; set; }
 
         /// <summary>
         /// Date summoner was last modified specified as epoch milliseconds. 
