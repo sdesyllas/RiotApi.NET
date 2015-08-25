@@ -38,7 +38,7 @@ namespace RiotApi.Net.RestClient.Dto.Stats
             /// Number of losses for this queue type. Returned for ranked queue types only.
             /// </summary>
             [DataMember(Name = "losses")]
-            public int? Losses { get; set; }
+            public int Losses { get; set; }
 
             /// <summary>
             /// Date stats were last modified specified as epoch milliseconds.
