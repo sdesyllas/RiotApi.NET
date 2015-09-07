@@ -92,7 +92,7 @@ The goal of this project is to provide .net application developers with a high l
 to use in their apps. I hope you will like it! Please feel free to contribute.
 
 # Web UI
-[LoLUniverse](https://github.com/sdesyllas/LoLUniverse) is a separated project that utilizing this API and provides a user iterface and a prototype League of Legends web application. The project is build in ASP.NET MVC framework and you can find it [here](https://github.com/sdesyllas/LoLUniverse).
+[LoLUniverse](https://github.com/sdesyllas/LoLUniverse) is a separated project that utilize this API and provides a user interface and a prototype League of Legends web application. The project is build in ASP.NET MVC framework and you can find it [here](https://github.com/sdesyllas/LoLUniverse).
 
 # Third party libraries used
 * [SimpleJson by Prabir Shrestha](https://github.com/facebook-csharp-sdk/simple-json)
