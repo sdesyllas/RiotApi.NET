@@ -106,7 +106,7 @@ to use in their apps. I hope you will like it! Please feel free to contribute.
 * [waffle](project management solution ) for project management
 
 ## License
-This wrapper is under the [MIT license](LICENSE).
+This wrapper is under the [MIT license](https://raw.githubusercontent.com/sdesyllas/RiotApi.NET/master/LICENSE).
 
 ## Disclaimer
 This product is not endorsed, certified or otherwise approved in any way by Riot Games, Inc. or any of its affiliates.
