@@ -19,7 +19,7 @@ PM> Install-Package RiotApi.NET
 Ofcourse you can always download the source code and use it in your project as you like.
 
 #How to use
-The usage of the RiotApi.Net is a piece of cake! In less than three lines of code you can retrieve any data
+The usage of the RiotApi.Net is a piece of cake! In less than three lines of code you can retrieve any kind of data
 from Riot's services. 
 For instance you can fetch all free to play champions and print them to screen as you can see in the following example.
 
