@@ -88,8 +88,9 @@ ALBAN1AN god - wins:224  loss:158 points:1125
 
 Download the full api documentation reference [here (chm format)] (https://github.com/sdesyllas/RiotApi.NET/blob/master/Documentation/Help/Documentation.chm?raw=true)
 
-The goal of this project is to provide .net application developers with a high level tool for Riot games' API 
-to use in their apps. I hope you will like it! Please feel free to contribute.
+The goal of this project is to save time to .net application developers, it handles all the communication details
+with Riot games for you so you can focus only on your actual application needs.
+I hope you will like it! Please feel free to contribute.
 
 # Need help?
 You can post a question on StackOverflow using the tags [riot-games-api](http://stackoverflow.com/questions/tagged/riot-games-api)
