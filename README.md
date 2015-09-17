@@ -5,7 +5,8 @@
 
 This is a .net wrapper Api for Riot Games League of Legends written in C#. The goal of this project is to provide a higher 
 level of interaction with the Riot's API Rest service, json responses are deserialized into typed objects and all Http calls
-are handled by this wrapper as documented by Riot.
+are handled by this wrapper as documented by Riot. Thus you can save time and focus on your actual application needs
+and let this api do all the communication work.
 
 #Install
 The easiest way to install this api to your project is using [NuGet](https://www.nuget.org/packages/RiotApi.NET/)
@@ -87,10 +88,6 @@ ALBAN1AN god - wins:224  loss:158 points:1125
 ```
 
 Download the full api documentation reference [here (chm format)] (https://github.com/sdesyllas/RiotApi.NET/blob/master/Documentation/Help/Documentation.chm?raw=true)
-
-The goal of this project is to save time to .net application developers, it handles all the communication details
-with Riot games for you so you can focus only on your actual application needs.
-I hope you will like it! Please feel free to contribute.
 
 # Need help?
 You can post a question on StackOverflow using the tags [riot-games-api](http://stackoverflow.com/questions/tagged/riot-games-api)
