@@ -5,7 +5,7 @@
 
 This is a .net wrapper Api for Riot Games League of Legends written in C#. The goal of this project is to provide a higher 
 level of interaction with the Riot's API Rest service, json responses are deserialized into typed objects and all Http calls
-are handled by this wrapper as documented by Riot. Thus you can save time and focus on your actual application needs
+are handled by this wrapper as documented by Riot. You can save time and focus on your actual application needs
 and let this api do all the communication work.
 
 #Install
