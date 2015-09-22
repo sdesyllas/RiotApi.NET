@@ -1,10 +1,7 @@
 ﻿using System;
-using System.Configuration;
 using NUnit.Framework;
-using RiotApi.Net.RestClient.ApiCalls;
 using RiotApi.Net.RestClient.Configuration;
 using RiotApi.Net.RestClient.Helpers;
-using RiotApi.Net.RestClient.Interfaces;
 
 namespace RiotApi.Net.Tests.ApiCallTests
 {
