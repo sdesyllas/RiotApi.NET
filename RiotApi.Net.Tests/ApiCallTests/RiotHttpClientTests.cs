@@ -73,7 +73,6 @@ namespace RiotApi.Net.Tests.ApiCallTests
             Console.WriteLine($"There are {championList.Champions.Count()} free to play champions to play with!");
         }
 
-        [Test]
         public void Example2()
         {
             IRiotClient riotClient = new RiotClient("your api key here");
@@ -86,7 +85,6 @@ namespace RiotApi.Net.Tests.ApiCallTests
                 $"{fnatictop.Name} is level {fnatictop.SummonerLevel} and {xeyanord.Name} is {xeyanord.SummonerLevel}, its because {xeyanord.Name} is a slacker!");
         }
 
-        [Test]
         public void Example3()
         {
             IRiotClient riotClient = new RiotClient("your api key here");
