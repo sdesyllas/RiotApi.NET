@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>RiotApi.NET</id>
-    <version>1.3.2</version>
+    <version>1.3.3</version>
     <title>RiotApi.NET</title>
     <authors>Spyros Desyllas</authors>
     <owners>Spyros Desyllas</owners>
@@ -12,7 +12,7 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>This is a .net Api for Riot Games League of Legends written in C#.</description>
 	<summary>This is a .net Api for Riot Games League of Legends written in C#.</summary>
-	<releaseNotes> losses in Dto PlayerStatsSummaryDto is null #13 (https://github.com/sdesyllas/RiotApi.NET/issues/13)
+	<releaseNotes>Add xml summaries for interfaces in RiotClient class #18 (https://github.com/sdesyllas/RiotApi.NET/issues/18)
 	</releaseNotes>
     <copyright>Copyright 2015</copyright>
     <tags>riotapi leagueoflegends lol riot games wrapper c# api rest league legends</tags>

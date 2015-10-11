@@ -4,7 +4,7 @@ using RiotApi.Net.RestClient.Dto.Match.MatchHistory;
 namespace RiotApi.Net.RestClient.Interfaces
 {
     /// <summary>
-    ///  matchhistory-v2.2 [BR, EUNE, EUW, KR, LAN, LAS, NA, OCE, RU, TR] 
+    /// matchhistory-v2.2 [BR, EUNE, EUW, KR, LAN, LAS, NA, OCE, RU, TR] 
     /// </summary>
     public interface IMatchHistory
     {

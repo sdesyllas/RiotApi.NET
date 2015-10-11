@@ -77,18 +77,57 @@ namespace RiotApi.Net.RestClient
             this.Team = team;
         }
 
+        /// <summary>
+        /// champion-v1.2 [BR, EUNE, EUW, KR, LAN, LAS, NA, OCE, RU, TR]
+        /// </summary>
         public IChampion Champion { get; set; }
+        /// <summary>
+        /// current-game-v1.0 [BR, EUNE, EUW, KR, LAN, LAS, NA, OCE, PBE, RU, TR] 
+        /// </summary>
         public ICurrentGame CurrentGame { get; set; }
+        /// <summary>
+        /// featured-games-v1.0 [BR, EUNE, EUW, KR, LAN, LAS, NA, OCE, PBE, RU, TR] 
+        /// </summary>
         public IFeaturedGames FeaturedGames { get; set; }
+        /// <summary>
+        /// game-v1.3 [BR, EUNE, EUW, KR, LAN, LAS, NA, OCE, RU, TR]
+        /// </summary>
         public IGame Game { get; set; }
+        /// <summary>
+        /// league-v2.5 [BR, EUNE, EUW, KR, LAN, LAS, NA, OCE, RU, TR]
+        /// </summary>
         public ILeague League { get; set; }
+        /// <summary>
+        /// lol-static-data-v1.2 [BR, EUNE, EUW, KR, LAN, LAS, NA, OCE, PBE, RU, TR]
+        /// </summary>
         public ILolStaticData LolStaticData { get; set; }
+        /// <summary>
+        /// lol-status-v1.0 [BR, EUNE, EUW, LAN, LAS, NA, OCE, PBE, RU, TR]
+        /// </summary>
         public ILolStatus LolStatus { get; set; }
+        /// <summary>
+        /// match-v2.2 [BR, EUNE, EUW, KR, LAN, LAS, NA, OCE, RU, TR]
+        /// </summary>
         public IMatch Match { get; set; }
+        /// <summary>
+        /// matchhistory-v2.2 [BR, EUNE, EUW, KR, LAN, LAS, NA, OCE, RU, TR]
+        /// </summary>
         public IMatchHistory MatchHistory { get; set; }
+        /// <summary>
+        /// matchlist-v2.2 [BR, EUNE, EUW, KR, LAN, LAS, NA, OCE, RU, TR]
+        /// </summary>
         public IMatchList MatchList { get; set; }
+        /// <summary>
+        /// stats-v1.3 [BR, EUNE, EUW, KR, LAN, LAS, NA, OCE, RU, TR]
+        /// </summary>
         public IStats Stats { get; set; }
+        /// <summary>
+        /// summoner-v1.4 [BR, EUNE, EUW, KR, LAN, LAS, NA, OCE, RU, TR]
+        /// </summary>
         public ISummoner Summoner { get; set; }
+        /// <summary>
+        /// team-v2.4 [BR, EUNE, EUW, KR, LAN, LAS, NA, OCE, RU, TR]
+        /// </summary>
         public ITeam Team { get; set; }
     }
 }

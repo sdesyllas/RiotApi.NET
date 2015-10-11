@@ -5,7 +5,7 @@ using RiotApi.Net.RestClient.Dto.LolStatus;
 namespace RiotApi.Net.RestClient.Interfaces
 {
     /// <summary>
-    ///  lol-status-v1.0 [BR, EUNE, EUW, LAN, LAS, NA, OCE, PBE, RU, TR] 
+    /// lol-status-v1.0 [BR, EUNE, EUW, LAN, LAS, NA, OCE, PBE, RU, TR] 
     /// </summary>
     public interface ILolStatus
     {

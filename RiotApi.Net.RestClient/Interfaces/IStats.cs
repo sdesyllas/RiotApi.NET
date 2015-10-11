@@ -4,7 +4,7 @@ using RiotApi.Net.RestClient.Dto.Stats;
 namespace RiotApi.Net.RestClient.Interfaces
 {
     /// <summary>
-    ///  stats-v1.3 [BR, EUNE, EUW, KR, LAN, LAS, NA, OCE, RU, TR] 
+    /// stats-v1.3 [BR, EUNE, EUW, KR, LAN, LAS, NA, OCE, RU, TR] 
     /// </summary>
     public interface IStats
     {

@@ -7,7 +7,7 @@ using RiotApi.Net.RestClient.Dto.Summoner.Runes;
 namespace RiotApi.Net.RestClient.Interfaces
 {
     /// <summary>
-    ///  summoner-v1.4 [BR, EUNE, EUW, KR, LAN, LAS, NA, OCE, RU, TR] 
+    /// summoner-v1.4 [BR, EUNE, EUW, KR, LAN, LAS, NA, OCE, RU, TR] 
     /// </summary>
     public interface ISummoner
     {

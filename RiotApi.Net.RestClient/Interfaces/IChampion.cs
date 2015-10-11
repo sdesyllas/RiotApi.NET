@@ -10,7 +10,7 @@ namespace RiotApi.Net.RestClient.Interfaces
     public interface IChampion
     {
         /// <summary>
-        /// Retrieve all champions. (REST)
+        /// Retrieve all champions.
         /// </summary>
         /// <param name="region">Region where to retrieve the data.</param>
         /// <param name="freeToPlay">Optional filter param to retrieve only free to play champions.</param>
