@@ -120,7 +120,7 @@ You can post a question on StackOverflow using the tags [riot-games-api](http://
 
 ## Also using
 * [Appveyor](http://www.appveyor.com/) for continuous integration and build server.
-* [waffle](project management solution ) for project management
+* [waffle](https://waffle.io) for project management
 
 ## License
 This wrapper is under the [MIT license](https://raw.githubusercontent.com/sdesyllas/RiotApi.NET/master/LICENSE).
