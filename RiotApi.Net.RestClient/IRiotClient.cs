@@ -40,10 +40,6 @@ namespace RiotApi.Net.RestClient
         /// </summary>
         IMatch Match { get; set; }
         /// <summary>
-        /// matchhistory-v2.2 [BR, EUNE, EUW, KR, LAN, LAS, NA, OCE, RU, TR]
-        /// </summary>
-        IMatchHistory MatchHistory { get; set; }
-        /// <summary>
         /// matchlist-v2.2 [BR, EUNE, EUW, KR, LAN, LAS, NA, OCE, RU, TR]
         /// </summary>
         IMatchList MatchList { get; set; }

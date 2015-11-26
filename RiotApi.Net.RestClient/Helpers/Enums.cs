@@ -111,9 +111,9 @@ namespace RiotApi.Net.RestClient.Helpers
 
         public enum MasteryTree
         {
-            Defense,
-            Offense,
-            Utility
+            Cunning,
+            Ferocity,
+            Resolve
         }
 
         public enum AscendedType

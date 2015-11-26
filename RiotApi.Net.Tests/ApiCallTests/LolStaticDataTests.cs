@@ -83,10 +83,10 @@ namespace RiotApi.Net.Tests.ApiCallTests
         [Test]
         public void GetMasteryById()
         {
-            var dto = GlobalSetup.RiotHttpClient.LolStaticData.GetMasteryById(RestClient.Configuration.RiotApiConfig.Regions.EUNE, 4214, masteryData: "all");
+            var dto = GlobalSetup.RiotHttpClient.LolStaticData.GetMasteryById(RestClient.Configuration.RiotApiConfig.Regions.EUNE, 6121, masteryData: "all");
             Assert.NotNull(dto);
             Console.WriteLine(dto);
-            Assert.AreEqual(4214, dto.Id);
+            Assert.AreEqual(6121, dto.Id);
             Console.WriteLine($"mastery:{dto.Name}, {dto.Description.FirstOrDefault()}, {dto.Image.Full}");
         }
 
