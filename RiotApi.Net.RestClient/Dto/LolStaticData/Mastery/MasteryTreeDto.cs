@@ -12,20 +12,20 @@ namespace RiotApi.Net.RestClient.Dto.LolStaticData.Mastery
         /// <summary>
         /// No description available from Riot Documentation
         /// </summary>
-        [DataMember(Name = "Defense")]
-        public IEnumerable<MasteryTreeListDto> Defense { get; set; }
+        [DataMember(Name = "Cunning")]
+        public IEnumerable<MasteryTreeListDto> Cunning { get; set; }
 
         /// <summary>
         /// No description available from Riot Documentation
         /// </summary>
-        [DataMember(Name = "Offense")]
-        public IEnumerable<MasteryTreeListDto> Offense { get; set; }
+        [DataMember(Name = "Ferocity")]
+        public IEnumerable<MasteryTreeListDto> Ferocity { get; set; }
 
                 /// <summary>
         /// No description available from Riot Documentation
         /// </summary>
-        [DataMember(Name = "Utility")]
-        public IEnumerable<MasteryTreeListDto> Utility { get; set; }
+        [DataMember(Name = "Resolve")]
+        public IEnumerable<MasteryTreeListDto> Resolve { get; set; }
 
         [DataContract]
         public class MasteryTreeListDto

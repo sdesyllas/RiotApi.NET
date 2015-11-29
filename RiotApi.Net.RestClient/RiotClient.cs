@@ -22,7 +22,6 @@ namespace RiotApi.Net.RestClient
             ILolStaticData lolStaticData = new LolStaticData(apiKey);
             ILolStatus lolStatus = new LolStatus();
             IMatch match = new Match(apiKey);
-            IMatchHistory matchHistory = new MatchHistory(apiKey);
             IMatchList matchList = new MatchList(apiKey);
             IStats stats = new Stats(apiKey);
             ISummoner summoner = new Summoner(apiKey);
@@ -36,7 +35,6 @@ namespace RiotApi.Net.RestClient
             this.LolStaticData = lolStaticData;
             this.LolStatus = lolStatus;
             this.Match = match;
-            this.MatchHistory = matchHistory;
             this.MatchList = matchList;
             this.Stats = stats;
             this.Summoner = summoner;
@@ -60,7 +58,7 @@ namespace RiotApi.Net.RestClient
         /// <param name="summoner">The summoner.</param>
         /// <param name="team">The team.</param>
         public RiotClient(IChampion champion, ICurrentGame currentGame, IFeaturedGames featuredGames, IGame game, ILeague league, ILolStaticData lolStaticData,
-            ILolStatus lolStatus, IMatch match, IMatchHistory matchHistory, IMatchList matchList, IStats stats, ISummoner summoner, ITeam team)
+            ILolStatus lolStatus, IMatch match, IMatchList matchList, IStats stats, ISummoner summoner, ITeam team)
         {
             this.Champion = champion;
             this.CurrentGame = currentGame;
@@ -70,7 +68,6 @@ namespace RiotApi.Net.RestClient
             this.LolStaticData = lolStaticData;
             this.LolStatus = lolStatus;
             this.Match = match;
-            this.MatchHistory = matchHistory;
             this.MatchList = matchList;
             this.Stats = stats;
             this.Summoner = summoner;
@@ -109,10 +106,6 @@ namespace RiotApi.Net.RestClient
         /// match-v2.2 [BR, EUNE, EUW, KR, LAN, LAS, NA, OCE, RU, TR]
         /// </summary>
         public IMatch Match { get; set; }
-        /// <summary>
-        /// matchhistory-v2.2 [BR, EUNE, EUW, KR, LAN, LAS, NA, OCE, RU, TR]
-        /// </summary>
-        public IMatchHistory MatchHistory { get; set; }
         /// <summary>
         /// matchlist-v2.2 [BR, EUNE, EUW, KR, LAN, LAS, NA, OCE, RU, TR]
         /// </summary>

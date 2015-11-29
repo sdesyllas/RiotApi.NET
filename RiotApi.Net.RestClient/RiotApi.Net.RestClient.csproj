@@ -52,7 +52,6 @@
     <Compile Include="ApiCalls\LolStaticData.cs" />
     <Compile Include="ApiCalls\LolStatus.cs" />
     <Compile Include="ApiCalls\Match.cs" />
-    <Compile Include="ApiCalls\MatchHistory.cs" />
     <Compile Include="ApiCalls\MatchList.cs" />
     <Compile Include="ApiCalls\Stats.cs" />
     <Compile Include="ApiCalls\Summoner.cs" />
@@ -136,7 +135,6 @@
     <Compile Include="Interfaces\ILolStaticData.cs" />
     <Compile Include="Interfaces\ILolStatus.cs" />
     <Compile Include="Interfaces\IMatch.cs" />
-    <Compile Include="Interfaces\IMatchHistory.cs" />
     <Compile Include="Interfaces\IMatchList.cs" />
     <Compile Include="Interfaces\IStats.cs" />
     <Compile Include="Interfaces\ISummoner.cs" />

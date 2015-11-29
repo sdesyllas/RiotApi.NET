@@ -34,7 +34,6 @@ namespace RiotApi.Net.Tests.NinjectModules
             Bind<ILolStaticData>().To<LolStaticData>().WithConstructorArgument(_apiKey);
             Bind<ILolStatus>().To<LolStatus>().WithConstructorArgument(_apiKey);
             Bind<IMatch>().To<Match>().WithConstructorArgument(_apiKey);
-            Bind<IMatchHistory>().To<MatchHistory>().WithConstructorArgument(_apiKey);
             Bind<IMatchList>().To<MatchList>().WithConstructorArgument(_apiKey);
             Bind<IStats>().To<Stats>().WithConstructorArgument(_apiKey);
             Bind<ISummoner>().To<Summoner>().WithConstructorArgument(_apiKey);
