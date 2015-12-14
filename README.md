@@ -1,4 +1,4 @@
-<img src="http://i58.tinypic.com/qplz85.jpg" border="0" alt="Image and video hosting by TinyPic">
+<img src="http://i66.tinypic.com/2j4dqv6.jpg" border="0" alt="Image and video hosting by TinyPic">
 # RiotApi.NET 
 [![NuGet](https://img.shields.io/nuget/v/RiotApi.NET.svg)](https://www.nuget.org/packages/RiotApi.NET/) [![NuGet](https://img.shields.io/nuget/dt/RiotApi.NET.svg)](https://www.nuget.org/packages/RiotApi.NET/)
 [![Build status](https://ci.appveyor.com/api/projects/status/ij46s81pk4cjbgmr?svg=true)](https://ci.appveyor.com/project/sdesyllas/riotapi-net) [![Stories in Ready](https://badge.waffle.io/sdesyllas/RiotApi.NET.svg?label=ready&title=Ready)](http://waffle.io/sdesyllas/RiotApi.NET)
