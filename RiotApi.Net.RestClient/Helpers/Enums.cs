@@ -59,6 +59,7 @@ namespace RiotApi.Net.RestClient.Helpers
             RANKED_SOLO_5x5,
             RANKED_TEAM_3x3,
             RANKED_TEAM_5x5,
+            TEAM_BUILDER_DRAFT_RANKED_5x5
         }
 
         public enum QueueType
