@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>RiotApi.NET</id>
-    <version>1.4.1</version>
+    <version>1.4.2</version>
     <title>RiotApi.NET</title>
     <authors>Spyros Desyllas</authors>
     <owners>Spyros Desyllas</owners>
@@ -12,9 +12,10 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>This is a .net Api for Riot Games League of Legends written in C#.</description>
 	<summary>This is a .net Api for Riot Games League of Legends written in C#.</summary>
-	<releaseNotes>SON serialization error #26 (https://github.com/sdesyllas/RiotApi.NET/issues/26)
+	<releaseNotes>Per DNA666777's suggestion, added TEAM_BUILDER_DRAFT_UNRANKED_5X5 and TEAM_BUILDER_DRAFT_RANKED_5X5 to the QueueType enum. This will fix the Match bug. 
+(https://github.com/sdesyllas/RiotApi.NET/pull/30)
 	</releaseNotes>
-    <copyright>Copyright 2015</copyright>
+    <copyright>Copyright 2016</copyright>
     <tags>riotapi leagueoflegends lol riot games wrapper c# api rest league legends</tags>
   </metadata>
 </package>
