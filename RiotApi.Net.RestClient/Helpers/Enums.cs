@@ -96,7 +96,9 @@ namespace RiotApi.Net.RestClient.Helpers
             KING_PORO_5x5,
             COUNTER_PICK,
             BILGEWATER_ARAM_5x5,
-            BILGEWATER_5x5
+            BILGEWATER_5x5,
+            TEAM_BUILDER_DRAFT_UNRANKED_5X5,
+            TEAM_BUILDER_DRAFT_RANKED_5X5
         }
 
         public enum Tier
