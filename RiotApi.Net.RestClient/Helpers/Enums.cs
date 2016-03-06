@@ -146,7 +146,7 @@ namespace RiotApi.Net.RestClient.Helpers
             PORO_KING_SUMMON,
             SKILL_LEVEL_UP,
             WARD_KILL,
-            WARD_PLACED,
+            WARD_PLACED
         }
 
         public enum LaneType
@@ -168,6 +168,7 @@ namespace RiotApi.Net.RestClient.Helpers
             BLUE_GOLEM,
             DRAGON,
             RED_LIZARD,
+            RIFTHERALD,
             VILEMAW
         }
 
@@ -192,6 +193,7 @@ namespace RiotApi.Net.RestClient.Helpers
 
         public enum WardType
         {
+            BLUE_TRINKET,
             SIGHT_WARD,
             TEEMO_MUSHROOM,
             UNDEFINED,
