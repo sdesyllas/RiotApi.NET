@@ -26,6 +26,7 @@ namespace RiotApi.Net.RestClient
             IStats stats = new Stats(apiKey);
             ISummoner summoner = new Summoner(apiKey);
             ITeam team = new Team(apiKey);
+            IChampionMastery championMastery = new ChampionMastery(apiKey);
 
             this.Champion = champion;
             this.CurrentGame = currentGame;
@@ -39,6 +40,7 @@ namespace RiotApi.Net.RestClient
             this.Stats = stats;
             this.Summoner = summoner;
             this.Team = team;
+            this.ChampionMastery = championMastery;
         }
 
         /// <summary>
@@ -57,8 +59,9 @@ namespace RiotApi.Net.RestClient
         /// <param name="stats">The stats.</param>
         /// <param name="summoner">The summoner.</param>
         /// <param name="team">The team.</param>
+        /// <param name="championMastery">Champion Masteries</param>
         public RiotClient(IChampion champion, ICurrentGame currentGame, IFeaturedGames featuredGames, IGame game, ILeague league, ILolStaticData lolStaticData,
-            ILolStatus lolStatus, IMatch match, IMatchList matchList, IStats stats, ISummoner summoner, ITeam team)
+            ILolStatus lolStatus, IMatch match, IMatchList matchList, IStats stats, ISummoner summoner, ITeam team, IChampionMastery championMastery)
         {
             this.Champion = champion;
             this.CurrentGame = currentGame;
@@ -72,12 +75,17 @@ namespace RiotApi.Net.RestClient
             this.Stats = stats;
             this.Summoner = summoner;
             this.Team = team;
+            this.ChampionMastery = championMastery;
         }
 
         /// <summary>
         /// champion-v1.2 [BR, EUNE, EUW, KR, LAN, LAS, NA, OCE, RU, TR]
         /// </summary>
         public IChampion Champion { get; set; }
+        /// <summary>
+        /// championmastery [BR, EUNE, EUW, JP, KR, LAN, LAS, NA, OCE, RU, TR]
+        /// </summary>
+        public IChampionMastery ChampionMastery { get; set; }
         /// <summary>
         /// current-game-v1.0 [BR, EUNE, EUW, KR, LAN, LAS, NA, OCE, PBE, RU, TR] 
         /// </summary>

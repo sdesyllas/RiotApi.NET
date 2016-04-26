@@ -12,6 +12,10 @@ namespace RiotApi.Net.RestClient
         /// </summary>
         IChampion Champion { get; set; }
         /// <summary>
+        /// championmastery [BR, EUNE, EUW, JP, KR, LAN, LAS, NA, OCE, RU, TR]
+        /// </summary>
+        IChampionMastery ChampionMastery { get; set; }
+        /// <summary>
         /// current-game-v1.0 [BR, EUNE, EUW, KR, LAN, LAS, NA, OCE, PBE, RU, TR] 
         /// </summary>
         ICurrentGame CurrentGame { get; set; }
