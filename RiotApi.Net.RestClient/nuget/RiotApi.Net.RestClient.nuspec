@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>RiotApi.NET</id>
-    <version>1.4.3</version>
+    <version>1.4.4</version>
     <title>RiotApi.NET</title>
     <authors>Spyros Desyllas</authors>
     <owners>Spyros Desyllas</owners>
@@ -12,8 +12,8 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>This is a .net Api for Riot Games League of Legends written in C#.</description>
 	<summary>This is a .net Api for Riot Games League of Legends written in C#.</summary>
-	<releaseNotes>Added MonsterType RIFTHERALD. Added WardType BLUE_TRINKET.
-(https://github.com/sdesyllas/RiotApi.NET/pull/32)
+	<releaseNotes>Adding Mapping for the ChampionMastery endpoint
+(https://github.com/sdesyllas/RiotApi.NET/pull/36)
 	</releaseNotes>
     <copyright>Copyright 2016</copyright>
     <tags>riotapi leagueoflegends lol riot games wrapper c# api rest league legends</tags>
