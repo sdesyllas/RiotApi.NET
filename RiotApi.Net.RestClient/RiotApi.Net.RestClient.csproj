@@ -44,6 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ApiCalls\Champion.cs" />
+    <Compile Include="ApiCalls\ChampionMastery.cs" />
     <Compile Include="ApiCalls\CurrentGame.cs" />
     <Compile Include="ApiCalls\FeaturedGames.cs" />
     <Compile Include="ApiCalls\Game.cs" />
@@ -57,6 +58,7 @@
     <Compile Include="ApiCalls\Summoner.cs" />
     <Compile Include="ApiCalls\Team.cs" />
     <Compile Include="Configuration\RiotApiConfig.cs" />
+    <Compile Include="Dto\ChampionMastery\ChampionMasteryDto.cs" />
     <Compile Include="Dto\Champion\ChampionListDto.cs" />
     <Compile Include="Dto\CurrentGame\CurrentGameInfo.cs" />
     <Compile Include="Dto\FeaturedGames\FeaturedGames.cs" />
@@ -128,6 +130,7 @@
     <Compile Include="Helpers\RiotSerializerStrategy.cs" />
     <Compile Include="Helpers\SimpleJson.cs" />
     <Compile Include="Interfaces\IChampion.cs" />
+    <Compile Include="Interfaces\IChampionMastery.cs" />
     <Compile Include="Interfaces\ICurrentGame.cs" />
     <Compile Include="Interfaces\IFeaturedGames.cs" />
     <Compile Include="Interfaces\IGame.cs" />

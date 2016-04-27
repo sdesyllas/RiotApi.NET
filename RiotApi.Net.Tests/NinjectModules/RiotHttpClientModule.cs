@@ -27,6 +27,7 @@ namespace RiotApi.Net.Tests.NinjectModules
         {
             //let ninject glue things together
             Bind<IChampion>().To<Champion>().WithConstructorArgument(_apiKey);
+            Bind<IChampionMastery>().To<ChampionMastery>().WithConstructorArgument(_apiKey);
             Bind<ICurrentGame>().To<CurrentGame>().WithConstructorArgument(_apiKey);
             Bind<IFeaturedGames>().To<FeaturedGames>().WithConstructorArgument(_apiKey);
             Bind<IGame>().To<Game>().WithConstructorArgument(_apiKey);
