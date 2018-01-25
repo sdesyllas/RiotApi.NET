@@ -1,7 +1,5 @@
 <img src="http://i66.tinypic.com/2j4dqv6.jpg" border="0" alt="Image and video hosting by TinyPic">
 # RiotApi.NET 
-[![NuGet](https://img.shields.io/nuget/v/RiotApi.NET.svg)](https://www.nuget.org/packages/RiotApi.NET/) 
-[![Build status](https://ci.appveyor.com/api/projects/status/ij46s81pk4cjbgmr?svg=true)](https://ci.appveyor.com/project/sdesyllas/riotapi-net) [![Stories in Ready](https://badge.waffle.io/sdesyllas/RiotApi.NET.svg?label=ready&title=Ready)](http://waffle.io/sdesyllas/RiotApi.NET)
 
 This is a .net wrapper Api for Riot Games League of Legends written in C#. The goal of this project is to provide a higher 
 level of interaction with the Riot's API Rest service, json responses are deserialized into typed objects and all Http calls
