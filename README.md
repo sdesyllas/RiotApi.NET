@@ -1,5 +1,6 @@
 <img src="http://i66.tinypic.com/2j4dqv6.jpg" border="0" alt="Image and video hosting by TinyPic">
-#RiotApi.NET 
+
+## RiotApi.NET 
 
 This is a .net wrapper Api for Riot Games League of Legends written in C#. The goal of this project is to provide a higher 
 level of interaction with the Riot's API Rest service, json responses are deserialized into typed objects and all Http calls
